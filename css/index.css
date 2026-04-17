@@ -254,8 +254,31 @@ nav ul li a:hover {
     font-weight: 600; 
     justify-content: center;
     align-items: center;
+}
+
+.skillss {  
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.skill-taggs {  
+    display: flex;  
+    flex-wrap: wrap;  
+    gap: 0.5rem; 
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 10px;
 }  
 
+.skill-tagg {  
+    background-color: black;  
+    color: var(--primary-color);  
+    padding: 0.5rem 0.5rem;  
+    border-radius: 10px;  
+    font-size: 1rem; 
+    font-weight: 400; 
+    justify-content: center;
+    align-items: center;
+}
 /* Projects Section */  
 .projects {  
     background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));  
@@ -265,6 +288,7 @@ nav ul li a:hover {
     display: grid;  
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  
     gap: 2rem;  
+    /* width: 90%; */
 }  
 
 .project-card {  
