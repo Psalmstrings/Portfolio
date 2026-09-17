@@ -1,489 +1,1343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abimbola Samuel | Web Developer</title>
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="shortcut icon" href="./media/WhatsApp_Image_2025-04-04_at_04.52.12_e46090e3-removebg-preview.png" type="image/x-icon">
-    
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="container header-container">
-        <a href="#" class="logo"
-          ><img
-            src="./media/WhatsApp_Image_2025-04-04_at_04.52.12_e46090e3-removebg-preview.png"
-            alt=""
-        /></a>
-        <div class="hamburger">☰</div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="container hero-content fade-in">
-        <h1>Hi, I'm <span>Abimbola Samuel</span></h1>
-        <p>
-          A passionate web developer dedicated to creating beautiful,
-          functional, and user-friendly websites and applications.
+  <!-- ── SEO ── -->
+  <title>Psalmstrings | Full-Stack Web Developer &amp; Digital Technologist</title>
+  <meta name="description" content="Psalmstrings is a Full-Stack Web Developer and Digital Technologist building modern websites, web applications and digital solutions. MERN Stack | React | Node.js | MongoDB." />
+  <meta name="keywords" content="Full-Stack Web Developer, MERN Stack Developer, React Developer, Node.js Developer, Web Developer Nigeria, Frontend Developer, Backend Developer, Web Applications, Digital Solutions, Psalmstrings" />
+  <meta name="author" content="Psalmstrings — Abimbola Samuel" />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Psalmstrings | Full-Stack Web Developer &amp; Digital Technologist" />
+  <meta property="og:description" content="Building modern websites, web applications and digital solutions that combine thoughtful user experiences with reliable technology." />
+  <meta property="og:url" content="https://psalmstrings.vercel.app/" />
+  <meta property="og:image" content="./media/IMG_E1138.JPG" />
+
+  <!-- ── Twitter / X ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@psalmstrings_" />
+  <meta name="twitter:title" content="Psalmstrings | Full-Stack Web Developer &amp; Digital Technologist" />
+  <meta name="twitter:description" content="Building modern websites, web applications and digital solutions that combine thoughtful user experiences with reliable technology." />
+  <meta name="twitter:image" content="./media/IMG_E1138.JPG" />
+
+  <!-- ── Favicon ── -->
+  <link rel="shortcut icon" href="./media/WhatsApp_Image_2025-04-04_at_04.52.12_e46090e3-removebg-preview.png" type="image/png" />
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <!-- ── Hero above-fold style (prevents FOUC) ── -->
+  <style>
+    body { background: #0D0D0D; }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+
+      <a href="#home" class="navbar__logo" aria-label="Psalmstrings — Go to top">
+        ABIMBOLA_SAMUEL
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="navbar__cta" target="_blank" rel="noopener" aria-label="Let's talk on WhatsApp">
+        Let's Talk
+      </a>
+
+      <!-- Hamburger -->
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section id="home" class="hero" aria-label="Hero introduction">
+
+    <!-- Left — Text -->
+    <div class="hero__text">
+      <span class="hero__eyebrow">Digital Technologist / Full-Stack Developer</span>
+
+      <h1 class="hero__heading">
+        I Build Digital<br/>
+        <em>Experiences</em><br/>
+        That Solve Real<br/>
+        Problems.
+      </h1>
+
+      <p class="hero__sub">
+        I design and develop modern websites, web applications and digital solutions
+        that combine thoughtful user experiences with reliable technology.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">
+          View My Work <span class="btn-arrow">→</span>
+        </a>
+        <a href="#contact" class="btn btn--outline">
+          Let's Work Together
+        </a>
+      </div>
+
+      <div class="hero__socials" aria-label="Social links">
+        <span class="hero__socials-label">Find me on</span>
+        <a href="https://github.com/Psalmstrings/" class="hero__social-link" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://x.com/psalmstrings_" class="hero__social-link" target="_blank" rel="noopener" aria-label="X / Twitter">X / Twitter</a>
+        <a href="https://www.instagram.com/psalmstrings_/" class="hero__social-link" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+
+    <!-- Right — Portrait -->
+    <div class="hero__image-wrap">
+      <img
+        src="./media/IMG_E1138.JPG"
+        alt="Psalmstrings — Full-Stack Web Developer and Digital Technologist"
+        loading="eager"
+      />
+
+      <!-- Technical overlay metadata -->
+      <div class="hero__meta" aria-hidden="true">
+        <span class="hero__meta-item">ROLE: FULL-STACK DEVELOPER</span>
+        <span class="hero__meta-item">STACK: MERN / FIREBASE</span>
+        <span class="hero__meta-item">STATUS: AVAILABLE FOR WORK</span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       STATEMENT
+       ============================================================ -->
+  <section class="statement" aria-label="Personal statement">
+    <div class="container">
+      <div class="statement__inner reveal">
+        <p class="statement__quote">
+          I don't just write code.<br/>
+          <em>I turn ideas, problems and opportunities</em><br/>
+          into digital solutions.
         </p>
-        <div>
-          <a href="#projects" class="btn1">View My Work</a>
-          <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="btn btn1-outline">Contact Me</a>
-        </div>
+        <span class="statement__line" aria-hidden="true"></span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About <span>Me</span></h2>
-        <div class="about-container">
-          <div class="about-img fade-in">
-            <img src="./media/IMG_E1138.JPG" alt="Abimbola Samuel Ibitayo" />
-          </div>
-          <div class="about-content fade-in">
-            <h3>Full-Stack Web Developer</h3>
-            <p>
-              I am a Full-Stack Web Developer specializing in building scalable, high-performance, and user-focused web applications from concept to deployment. I combine strong expertise in both frontend and backend development to deliver complete digital solutions that are not only visually engaging but also robust, secure, and efficient under the hood.
 
-              On the frontend, I craft responsive and intuitive user interfaces using modern technologies such as React and Figma, Tailwind and Bootstrap, with a strong focus on performance optimization, accessibility, and seamless user experience across all devices. On the backend, I develop secure and scalable server-side applications using Node.js, Express, MongoDB, and SQL, designing efficient RESTful APIs, authentication systems, and well-structured databases that support real-world, production-level applications.
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section id="about" class="section" aria-labelledby="about-heading">
+    <div class="container">
 
-              I have hands-on experience building and deploying full-scale systems including dashboards, e-commerce platforms, content management systems, real-time applications, and API-driven web apps. I prioritize clean architecture, reusable code, and maintainable solutions that can scale as business needs grow.
+      <span class="section-label">01 / About</span>
 
-              What sets me apart is my ability to think beyond code—I understand product goals, user behavior, and business value. I collaborate effectively with teams, communicate clearly, and consistently deliver solutions that align with both technical requirements and real-world impact.
+      <div class="about__grid">
 
-              I am passionate about continuous learning and staying updated with modern development practices, ensuring every project I build reflects current industry standards and best practices.
-            </p>
-            
+        <!-- Image -->
+        <div class="about__image-wrap reveal">
+          <img
+            src="./media/IMG_E1138.JPG"
+            alt="Psalmstrings — Abimbola Samuel, Full-Stack Developer"
+            loading="lazy"
+          />
+        </div>
 
-            <div class="skills">
-              <h4>My Skills</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Express</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Responsive Design</span>
-                <span class="skill-tag">UI/UX</span>
-                <span class="skill-tag">Firebase</span>
-              </div>
+        <!-- Content -->
+        <div class="about__content">
+          <h2 id="about-heading" class="section-heading reveal">
+            More Than<br/>Just Code.
+          </h2>
+
+          <p class="about__body reveal reveal--delay-1">
+            I'm <strong>Abimbola Samuel</strong>, a Full-Stack Web Developer and Digital Technologist
+            based in Nigeria. I build complete digital products — from the interface a user sees to the
+            systems that power it in the background.
+          </p>
+
+          <p class="about__body reveal reveal--delay-2">
+            My work sits at the intersection of <strong>technology, creativity, and problem-solving</strong>.
+            I care about understanding what a product needs to accomplish, then building it the right way —
+            clean code, solid architecture, and a user experience that actually works.
+          </p>
+
+          <p class="about__body reveal reveal--delay-3">
+            I'm experienced across the full stack: <strong>React</strong> frontends, <strong>Node.js / Express</strong>
+            backends, <strong>MongoDB &amp; Firebase</strong> databases, REST API design, authentication systems,
+            and responsive UI implementation. I also understand the wider digital ecosystem — video,
+            design, social, data, and AI-assisted workflows.
+          </p>
+
+          <!-- Pillars -->
+          <div class="about__pillars">
+            <div class="about__pillar reveal reveal--delay-1">
+              <div class="about__pillar-icon" aria-hidden="true">⬛</div>
+              <div class="about__pillar-title">Think &amp; Plan</div>
+              <div class="about__pillar-desc">Understand the problem before writing a single line.</div>
+            </div>
+            <div class="about__pillar reveal reveal--delay-2">
+              <div class="about__pillar-icon" aria-hidden="true">◻</div>
+              <div class="about__pillar-title">Design &amp; Build</div>
+              <div class="about__pillar-desc">Create interfaces and systems that are clean and reliable.</div>
+            </div>
+            <div class="about__pillar reveal reveal--delay-3">
+              <div class="about__pillar-icon" aria-hidden="true">▣</div>
+              <div class="about__pillar-title">Solve &amp; Deliver</div>
+              <div class="about__pillar-desc">Ship complete, tested, production-ready solutions.</div>
+            </div>
+            <div class="about__pillar reveal reveal--delay-4">
+              <div class="about__pillar-icon" aria-hidden="true">▧</div>
+              <div class="about__pillar-title">Learn &amp; Improve</div>
+              <div class="about__pillar-desc">Continuously expand across the digital landscape.</div>
             </div>
           </div>
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h2 class="section-title" id="section-title">
-          <span>My Projects</span>
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       EXPERTISE / SKILLS
+       ============================================================ -->
+  <section class="section section--dark" aria-labelledby="expertise-heading">
+    <div class="container">
+
+      <span class="section-label">02 / Expertise</span>
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem;">
+        <h2 id="expertise-heading" class="section-heading text-white reveal">
+          Technology Stack &amp;<br/>Capabilities
         </h2>
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/Portfilo.JPG" alt="Project 3" />
-            </div>
-            <div class="project-info">
-              <h3>Personal Portfolio Website</h3>
-              <p>
-                A professionally designed and developed personal portfolio website built using HTML, CSS, and JavaScript to effectively showcase my technical skills, projects, and professional experience.
+        <p class="text-muted reveal" style="max-width: 300px; font-size: 0.9rem; line-height: 1.65;">
+          Tools and technologies I use to build modern, reliable digital products.
+        </p>
+      </div>
 
-                The website is fully responsive and mobile-optimized, ensuring a consistent and seamless user experience across all devices. It incorporates interactive UI elements and smooth navigation to enhance engagement and provide a modern, user-friendly interface.
+      <div class="skills__grid reveal">
 
-                This project reflects strong attention to frontend development best practices, UI/UX design principles, and responsive web design techniques.
-              </p>
-                <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                  </div>
-                </div>
-              <div class="project-links">
-                <a href="https://psalmstrings.github.io/Portfolioo/" class="btn">Live Demo</a>
-              </div>
-            </div>
+        <div class="skills__category">
+          <span class="skills__cat-label">Frontend</span>
+          <div class="skills__tags">
+            <span class="skills__tag">HTML5 / CSS3</span>
+            <span class="skills__tag">JavaScript (ES6+)</span>
+            <span class="skills__tag">React.js</span>
+            <span class="skills__tag">Responsive Design</span>
+            <span class="skills__tag">UI / UX</span>
+            <span class="skills__tag">Tailwind CSS</span>
           </div>
-
-          <!-- Project 2 -->
-          <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/NANSPro.png" alt="Project 2" />
-            </div>
-            <div class="project-info">
-              <h3>Blog - NANS ZoneD</h3>
-              <p>
-                This is a modern and fully functional web platform built for the NANS Zone D PRO Office using the MERN Stack. It features an integrated blog system, a KYS (Know Your Senator) system, and a secure Blogger Management System where approved bloggers can create, edit, and publish posts from their dashboards.
-                The site is fully responsive, fast, and structured with clean APIs, secure authentication (JWT), and a scalable MongoDB database. It improves communication, transparency, and information access for the entire Zone D student community.
-              </p>
-              <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                    <span class="skill-tagg">NodeJs</span>
-                    <span class="skill-tagg">ExpressJs</span>
-                    <span class="skill-tagg">MongoDB</span>
-                  </div>
-                </div>
-              <div class="project-links">
-                <a
-                  href="http://officeoftheprozoned.com/"
-                  class="btn"
-                  >Live Demo</a
-                >
-                <!-- <a href="#" class="btn btn-outline">Code</a>   -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/HireNija.png" alt="Project 1" />
-            </div>
-            <div class="project-info">
-              <h3>HireNija-AI – Hiring Management System</h3>
-              <p>
-                HireNija-AI is a responsive web application designed to simplify and enhance the recruitment process. Built with a modern frontend architecture, the platform integrates a third-party API developed by a backend engineer to deliver intelligent candidate evaluation.
-                The system allows users to upload CVs and automatically analyze them to identify the best-fit candidates based on defined criteria. It features a clean, user-friendly interface, fast performance, and seamless API integration for real-time results.
-                This project highlights my strength in API consumption, responsive UI development, and building practical, user-focused solutions that streamline hiring workflows.
-              </p>
-              <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                  </div>
-                </div>
-              <div class="project-links">
-                <a href="https://hire-ai-fawn.vercel.app/" class="btn"
-                  >Live Demo</a
-                >
-                <!-- <a href="#" class="btn btn-outline">Code</a>   -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-           <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/Moveappp.JPG" alt="Project 3" />
-            </div>
-            <div class="project-info">
-              <h3>Movie App – Web Application</h3>
-              <p>
-                Movie App is a dynamic client-side web application built with HTML, CSS, and vanilla JavaScript, designed for efficient browsing, searching, and interaction with movie datasets. The application integrates Firebase services, including Authentication for user management, Cloud Firestore/Realtime Database for structured data storage, and real-time listeners for instant UI updates.
-
-                The architecture emphasizes asynchronous data handling, modular code structure, and optimized DOM manipulation to ensure high performance and scalability. This project demonstrates proficiency in frontend engineering, state handling, and Firebase integration for real-time applications.
-              </p>
-              <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                    <span class="skill-tagg">Firebase</span>
-                  </div>
-                </div>
-              <div class="project-links">
-                <a href="https://psalmstrings.github.io/Movie-App/" class="btn">Live Demo</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-           <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/TelentForge (1).png" alt="Project 3" />
-            </div>
-            <div class="project-info">
-              <h3>TalentForge - HR Management System</h3>
-              <p>
-                TalentForge is a modern HR management system built with React, designed to streamline recruitment and workforce management processes. The application integrates with external APIs to handle data efficiently and deliver a seamless user experience.
-                The system supports three core roles: Admin, Recruiter, and User. Recruiters can manage job postings and review candidates, users can explore opportunities and apply for roles, while admins oversee the entire platform, ensuring smooth operations and access control.
-                With a responsive interface, structured workflows, and reliable API integration, TalentForge demonstrates my ability to build scalable, role-based systems that solve real-world HR challenges.
-              </p>
-              <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                  </div>
-                </div>
-              <div class="project-links">
-                <a href="#" class="btn">Live Demo</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-           <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/Landbay.png" alt="Project 3" />
-            </div>
-            <div class="project-info">
-              <h3>Landbay – Real Estate Website</h3>
-              <p>
-                Landbay is a fully responsive real estate website built using HTML, CSS, JavaScript, and Firebase. The platform allows users to explore available properties with a clean, modern interface, while the backend—powered by Firebase—handles data storage, authentication, and real-time updates.
-                An integrated Admin Page enables the Landbay team to easily manage listings, update property details, upload images, and control product visibility. This ensures that the website always displays the latest available properties.
-                Landbay highlights my ability to build functional, visually appealing web applications with smooth frontend–backend interaction and efficient real-time data management.
-              </p>
-              <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                    <span class="skill-tagg">Firebase</span>
-                </div>
-              <div class="project-links">
-                <a href="#" class="btn">Live Demo</a>
-              </div>
-            </div>
-          </div>
-
-           
-
-          <!-- Project 7 -->
         </div>
 
-          <!-- Project 7 -->
-           <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/SavingsPlus.JPG" alt="Project 3" />
-            </div>
-            <div class="project-info">
-              <h3>Savings Plus – Online Banking System</h3>
-              <p>
-                Savings Plus is a fully functional online banking system built with HTML, CSS, JavaScript, and Firebase, designed to deliver a secure and seamless digital banking experience.
-                The platform provides real-time financial operations, including instant transaction updates, fund transfers, and account management. It integrates Firebase Authentication for secure user access and ensures data integrity through real-time database synchronization.
-                Users can view transaction history, manage accounts efficiently, and perform transfers with immediate updates across the system, offering a smooth and responsive banking experience.
-
-                This project demonstrates strong expertise in building secure, real-time, data-driven web applications with Firebase integration and modern frontend technologies.
-              </p>
-              <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                    <span class="skill-tagg">Firebase</span>
-                  </div>
-                </div>
-              <div class="project-links">
-                <a href="https://savingsplus.github.io/MyBank/" class="btn">Live Demo</a>
-              </div>
-            </div>
+        <div class="skills__category">
+          <span class="skills__cat-label">Backend</span>
+          <div class="skills__tags">
+            <span class="skills__tag">Node.js</span>
+            <span class="skills__tag">Express.js</span>
+            <span class="skills__tag">REST APIs</span>
+            <span class="skills__tag">JWT Authentication</span>
+            <span class="skills__tag">API Integration</span>
           </div>
+        </div>
 
-          <!-- Project 8 -->
-          <div class="project-card fade-in">
-            <div class="project-img">
-              <img src="./media/FullStack MovieApp.JPG" alt="Project 3" />
-            </div>
-            <div class="project-info">
-              <h3>Psalmstrings – Full-Stack Movie Web Application</h3>
-              <p>
-                Psalmstrings is a scalable full-stack web application built for movie enthusiasts to discover, explore, and manage their favorite films. Developed using the MERN stack (MongoDB, Express.js, React.js, Node.js) alongside HTML, CSS, and JavaScript, the platform delivers a seamless integration between a responsive frontend and a robust backend architecture.
-                The application features advanced search and filtering capabilities, dynamic movie browsing, and a personalized user experience powered by secure authentication and authorization mechanisms (JWT-based). Users can create accounts, log in securely, and manage customized watchlists in real time.
-                The backend is designed with RESTful APIs, efficient data modeling, and optimized query handling, while the frontend leverages component-based architecture and state management to ensure performance, scalability, and a smooth user experience.
-
-                This project demonstrates strong proficiency in full-stack development, secure authentication systems, API design, and building interactive, data-driven applications.
-              </p>
-              <div class="skillss">
-                  <h4>Tools</h4>
-                  <div class="skill-taggs">
-                    <span class="skill-tagg">HTML5</span>
-                    <span class="skill-tagg">CSS3</span>
-                    <span class="skill-tagg">JavaScript</span>
-                    <span class="skill-tagg">Responsive Design</span>
-                    <span class="skill-tagg">UI/UX</span>
-                    <span class="skill-tagg">NodeJs</span>
-                    <span class="skill-tagg">ExpressJs</span>
-                    <span class="skill-tagg">MongoDB</span>
-                  </div>
-                </div>
-              <div class="project-links">
-                <a href="https://movieapp-teal-three.vercel.app" class="btn">Live Demo</a>
-              </div>
-            </div>
+        <div class="skills__category">
+          <span class="skills__cat-label">Database</span>
+          <div class="skills__tags">
+            <span class="skills__tag">MongoDB</span>
+            <span class="skills__tag">Firebase Firestore</span>
+            <span class="skills__tag">Realtime Database</span>
+            <span class="skills__tag">Firebase Auth</span>
           </div>
+        </div>
+
+        <div class="skills__category">
+          <span class="skills__cat-label">Tools</span>
+          <div class="skills__tags">
+            <span class="skills__tag">Git / GitHub</span>
+            <span class="skills__tag">Vercel</span>
+            <span class="skills__tag">Figma</span>
+            <span class="skills__tag">VS Code</span>
+            <span class="skills__tag">Cloudinary</span>
+          </div>
+        </div>
+
+        <div class="skills__category">
+          <span class="skills__cat-label">AI &amp; Digital</span>
+          <div class="skills__tags">
+            <span class="skills__tag">AI-Powered Workflows</span>
+            <span class="skills__tag">API-Driven Solutions</span>
+            <span class="skills__tag">Digital Problem Solving</span>
+            <span class="skills__tag">Content Automation</span>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
-        <p>
-          Have a project in mind or want to discuss potential opportunities?
-          Feel free to reach out!
+
+  <!-- ============================================================
+       FEATURED PROJECT
+       ============================================================ -->
+  <section id="work" class="featured-project" aria-labelledby="featured-heading">
+    <div class="container">
+
+      <div class="featured-project__header">
+        <div>
+          <span class="section-label">03 / Selected Work</span>
+          <h2 id="featured-heading" class="section-heading reveal">Featured Project</h2>
+        </div>
+        <a href="#all-projects" class="btn btn--dark-outline reveal" style="align-self: flex-end;">
+          View All Projects <span class="btn-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="featured-project__body">
+
+        <!-- Image -->
+        <div class="featured-project__img-wrap reveal">
+          <img
+            src="./media/NANSPro.png"
+            alt="NANS ZoneD PRO Hub — MERN Stack web platform"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Info -->
+        <div class="featured-project__info reveal reveal--delay-2">
+          <span class="featured-project__number">PROJECT / 01</span>
+          <h3 class="featured-project__title">NANS ZoneD PRO Hub</h3>
+
+          <p class="featured-project__desc">
+            A modern, full-featured web platform built for the NANS (National Association of Nigerian Students)
+            Zone D PRO Office. The platform serves as the official digital presence for the organisation,
+            enabling communication, transparency, and information access for the entire Zone D student community.
+          </p>
+
+          <div class="featured-project__meta">
+            <div class="featured-project__meta-row">
+              <span class="featured-project__meta-key">Problem</span>
+              <span class="featured-project__meta-val">No central digital platform for the organisation's content, blog, or student engagement.</span>
+            </div>
+            <div class="featured-project__meta-row">
+              <span class="featured-project__meta-key">Solution</span>
+              <span class="featured-project__meta-val">Full MERN stack platform with a blog system, KYS (Know Your Senator) module, and a secure Blogger Management System with role-based dashboards.</span>
+            </div>
+            <div class="featured-project__meta-row">
+              <span class="featured-project__meta-key">Stack</span>
+              <span class="featured-project__meta-val">MongoDB · Express.js · React.js · Node.js · JWT Auth · REST API</span>
+            </div>
+            <div class="featured-project__meta-row">
+              <span class="featured-project__meta-key">Type</span>
+              <span class="featured-project__meta-val">Full-Stack Web Application · Content Management · Civic Tech</span>
+            </div>
+          </div>
+
+          <div class="featured-project__links">
+            <a href="http://officeoftheprozoned.com/" class="btn btn--dark" target="_blank" rel="noopener" aria-label="View NANS ZoneD PRO Hub live">
+              View Live Project <span class="btn-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       ALL PROJECTS
+       ============================================================ -->
+  <section id="all-projects" class="projects-section" aria-labelledby="projects-heading">
+    <div class="container">
+
+      <div class="projects-section__header">
+        <div>
+          <span class="section-label">03 / Selected Work</span>
+          <h2 id="projects-heading" class="section-heading reveal">More Projects</h2>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 — Wide (Psalmstrings Cinema MERN) -->
+        <article class="project-card project-card--wide reveal" aria-label="Psalmstrings Cinema project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/FullStack MovieApp.JPG"
+              alt="Psalmstrings Cinema — MERN Stack movie application"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <span class="project-card__overlay-text">View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 02</span>
+            <h3 class="project-card__title">Psalmstrings Cinema</h3>
+            <p class="project-card__desc">
+              A scalable full-stack movie platform built on the MERN stack. Users can discover, search, and manage
+              personalised watchlists. Features secure JWT authentication, role-based access, RESTful APIs, and
+              a component-driven React frontend with real-time state management.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">MongoDB</span>
+              <span class="project-card__tag">Express.js</span>
+              <span class="project-card__tag">React.js</span>
+              <span class="project-card__tag">Node.js</span>
+              <span class="project-card__tag">JWT Auth</span>
+              <span class="project-card__tag">REST API</span>
+              <span class="project-card__tag">Vercel</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://movieapp-teal-three.vercel.app" class="project-card__link" target="_blank" rel="noopener" aria-label="View Psalmstrings Cinema live demo">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 — Half (HireNija AI) -->
+        <article class="project-card reveal" aria-label="HireNija AI project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/HireNija.png"
+              alt="HireNija-AI — AI-powered recruitment platform"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <span class="project-card__overlay-text">View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 03</span>
+            <h3 class="project-card__title">HireNija-AI</h3>
+            <p class="project-card__desc">
+              An AI-powered recruitment platform that analyses uploaded CVs to identify the best-fit candidates.
+              Built with a modern frontend architecture, seamless third-party API integration, and a clean
+              interface that streamlines the hiring workflow.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">React</span>
+              <span class="project-card__tag">API Integration</span>
+              <span class="project-card__tag">AI Workflow</span>
+              <span class="project-card__tag">Responsive UI</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://hire-ai-fawn.vercel.app/" class="project-card__link" target="_blank" rel="noopener" aria-label="View HireNija AI live demo">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 — Half (SavingsPlus) -->
+        <article class="project-card reveal reveal--delay-1" aria-label="SavingsPlus banking project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/SavingsPlus.JPG"
+              alt="SavingsPlus Bank — Online banking web application"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <span class="project-card__overlay-text">View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 04</span>
+            <h3 class="project-card__title">SavingsPlus Bank</h3>
+            <p class="project-card__desc">
+              A fully functional online banking system featuring real-time transactions, fund transfers,
+              account management, and transaction history. Powered by Firebase Authentication and
+              Realtime Database for secure, instant data synchronisation.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">Firebase Auth</span>
+              <span class="project-card__tag">Realtime Database</span>
+              <span class="project-card__tag">JavaScript</span>
+              <span class="project-card__tag">Fintech</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://savingsplus.github.io/MyBank/" class="project-card__link" target="_blank" rel="noopener" aria-label="View SavingsPlus Bank live">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 — Wide (TalentForge) -->
+        <article class="project-card project-card--wide reveal" aria-label="TalentForge HRM project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/TelentForge (1).png"
+              alt="TalentForge HRM — Human Resource Management System"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <span class="project-card__overlay-text">Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 05</span>
+            <h3 class="project-card__title">TalentForge HRM</h3>
+            <p class="project-card__desc">
+              A modern HR management system built with React that streamlines recruitment and workforce management.
+              The platform supports three roles — Admin, Recruiter, and User — each with dedicated dashboards.
+              Recruiters manage postings, users apply for roles, and admins oversee the full system with access control.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">React</span>
+              <span class="project-card__tag">Context API</span>
+              <span class="project-card__tag">React Router</span>
+              <span class="project-card__tag">Role-Based Access</span>
+              <span class="project-card__tag">API Integration</span>
+            </div>
+            <div class="project-card__links">
+              <span class="project-card__link project-card__link--muted" aria-label="Coming soon">In Development</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 — Half (MovieApp Firebase) -->
+        <article class="project-card reveal" aria-label="MovieApp Firebase project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/Moveappp.JPG"
+              alt="MovieApp — Firebase-powered movie browsing app"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <span class="project-card__overlay-text">View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 06</span>
+            <h3 class="project-card__title">MovieApp</h3>
+            <p class="project-card__desc">
+              A client-side movie browsing app with Firebase Authentication, Cloud Firestore data storage,
+              and real-time listeners for instant UI updates. Built with vanilla JavaScript and optimised
+              DOM manipulation for strong performance.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">Firebase</span>
+              <span class="project-card__tag">Vanilla JS</span>
+              <span class="project-card__tag">Firestore</span>
+              <span class="project-card__tag">Real-time</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://psalmstrings.github.io/Movie-App/" class="project-card__link" target="_blank" rel="noopener" aria-label="View MovieApp live">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 — Half (Landbay) -->
+        <article class="project-card reveal reveal--delay-1" aria-label="Landbay Real Estate project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/Landbay.png"
+              alt="Landbay Realty — Real Estate web platform"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <span class="project-card__overlay-text">Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 07</span>
+            <h3 class="project-card__title">Landbay Realty</h3>
+            <p class="project-card__desc">
+              A fully responsive real estate platform with Firebase-powered data storage, authentication,
+              and real-time listing updates. An integrated admin panel allows the team to manage property
+              listings, images, and visibility — keeping the site always current.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">Firebase</span>
+              <span class="project-card__tag">Firestore</span>
+              <span class="project-card__tag">Admin CMS</span>
+              <span class="project-card__tag">Real Estate</span>
+            </div>
+            <div class="project-card__links">
+              <span class="project-card__link project-card__link--muted" aria-label="Coming soon">In Development</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7 — Wide (Portfolio) -->
+        <article class="project-card project-card--wide reveal" aria-label="Personal portfolio project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/Portfilo.JPG"
+              alt="Psalmstrings Portfolio — Personal developer portfolio website"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <span class="project-card__overlay-text">View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 08</span>
+            <h3 class="project-card__title">Personal Portfolio</h3>
+            <p class="project-card__desc">
+              A professionally designed personal portfolio website built to showcase technical skills, projects,
+              and professional experience. Fully responsive across all devices with interactive UI, smooth navigation,
+              and strong attention to frontend best practices and UI/UX principles.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML5</span>
+              <span class="project-card__tag">CSS3</span>
+              <span class="project-card__tag">JavaScript</span>
+              <span class="project-card__tag">UI/UX</span>
+              <span class="project-card__tag">Responsive</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://psalmstrings.github.io/Portfolioo/" class="project-card__link" target="_blank" rel="noopener" aria-label="View personal portfolio live">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+         <!-- =========================================================
+             PROJECT / RHASLW
+        ========================================================= -->
+
+        <article class="project-card project-card--wide reveal" aria-label="RHASLW Website project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/Screenshot (245).png"
+              alt="Renewed Hope Ambassadors Lagos Students Wing website"
+              loading="lazy"
+            />
+
+        <div class="project-card__overlay">
+          <span class="project-card__overlay-text">View Project ↗</span>
+        </div>
+
+
+          </div>
+
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 08</span>
+
+        <h3 class="project-card__title">
+          Renewed Hope Ambassadors — Lagos Students Wing
+        </h3>
+
+        <p class="project-card__desc">
+          A modern student-focused community platform designed to connect young
+          people, encourage leadership development, coordinate volunteer activities,
+          and create opportunities for student participation and community
+          engagement.
         </p>
 
-        <div class="contact-form fade-in">
-          <div>
-            <div class="project-links2">
-              <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="btn"
-                >WhatsApp</a
-              >
-              <a href="https://x.com/psalmstrings_" class="btn">Twitter</a>
-              <a href="https://www.instagram.com/psalmstrings_/" class="btn" id="insta"
-                >Instagram</a
-              >
-              <a href="https://github.com/Psalmstrings/" class="btn" id="insta"
-                >GitHub</a
-              >
-            </div>
+        <p class="project-card__desc">
+          The platform provides dedicated sections for organizational information,
+          focus areas, activities, opportunities and volunteer participation, while
+          also providing an administrative area for managing the platform.
+        </p>
+
+        <div class="project-card__tags">
+          <span class="project-card__tag">React.js</span>
+          <span class="project-card__tag">Node.js</span>
+          <span class="project-card__tag">Express.js</span>
+          <span class="project-card__tag">MongoDB</span>
+          <span class="project-card__tag">REST API</span>
+          <span class="project-card__tag">Authentication</span>
+          <span class="project-card__tag">Responsive UI</span>
+          <span class="project-card__tag">Vercel</span>
+        </div>
+
+        <div class="project-card__links">
+          <a
+            href="https://batkohsa.org/"
+            class="project-card__link"
+            target="_blank"
+            rel="noopener"
+            aria-label="View RHASLW live website"
+          >
+            Live Demo ↗
+          </a>
+        </div>
+       
+
+          </div>
+        </article>
+
+        <!-- =========================================================
+            PROJECT / DX SPORT
+        ========================================================= -->
+
+        <article class="project-card project-card--wide reveal" aria-label="DX Sport project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/Screenshot (246).png"
+              alt="DX Sport Nigeria sports news and football platform"
+              loading="lazy"
+            />
+
+        <div class="project-card__overlay">
+          <span class="project-card__overlay-text">View Project ↗</span>
+        </div>
+
           </div>
 
-          <!-- <form id="contactForm">  
-                    <div class="form-group">  
-                        <label for="name">Name</label>  
-                        <input type="text" id="name" name="name" required>  
-                    </div>  
-                    <div class="form-group">  
-                        <label for="email">Email</label>  
-                        <input type="email" id="email" name="email" required>  
-                    </div>  
-                    <div class="form-group">  
-                        <label for="message">Message</label>  
-                        <textarea id="message" name="message" required></textarea>  
-                    </div>  
-                    <button type="submit" class="btn">Send Message</button>  
-                </form>   -->
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 09</span>
+
+        <h3 class="project-card__title">
+          DX Sport
+        </h3>
+
+        <p class="project-card__desc">
+          A modern Nigerian sports media platform built around football news,
+          competitions, match information, live scores and sports content. The
+          platform was designed to give sports fans a centralized and engaging
+          digital experience for following Nigerian and international football.
+        </p>
+
+        <p class="project-card__desc">
+          The application combines a dynamic frontend with structured sports data
+          and API-driven content. Users can browse sports stories, competitions,
+          fixtures, results and other football information through an interface
+          optimized for both desktop and mobile devices.
+        </p>
+
+        <div class="project-card__tags">
+          <span class="project-card__tag">React.js</span>
+          <span class="project-card__tag">JavaScript</span>
+          <span class="project-card__tag">REST API</span>
+          <span class="project-card__tag">Sports API</span>
+          <span class="project-card__tag">Mongo DB</span>
+          <span class="project-card__tag">Node Js</span>
+          <span class="project-card__tag">Cloudinary</span>
+          <span class="project-card__tag">Dynamic Data</span>
+          <span class="project-card__tag">Responsive UI</span>
+          <span class="project-card__tag">Vercel</span>
         </div>
-      </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <!-- <div class="social-links">
-          <a href="https://github.com/Psalmstrings" aria-label="GitHub"
-            ><i>GitHub</i></a
-          >
+        <div class="project-card__links">
           <a
-            href="https://www.linkedin.com/in/psalmstringss/"
-            aria-label="LinkedIn"
-            ><i>LinkedIn</i></a
+            href="https://dx-sport.vercel.app/"
+            class="project-card__link"
+            target="_blank"
+            rel="noopener"
+            aria-label="View DX Sport live website"
           >
-          <a href="https://x.com/psalmstrings_" aria-label="Twitter"
-            ><i>Twitter</i></a
+            Live Demo ↗
+          </a>
+        </div>
+
+          </div>
+        </article>
+
+        <!-- =========================================================
+            PROJECT / OVATION MUSIC HOUSE
+        ========================================================= -->
+
+        <article class="project-card project-card--wide reveal" aria-label="Ovation Music House project">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/Screenshot (247).png"
+              alt="Ovation Music House music and sound solutions website"
+              loading="lazy"
+            />
+
+        <div class="project-card__overlay">
+          <span class="project-card__overlay-text">View Project ↗</span>
+        </div>
+
+
+          </div>
+
+          <div class="project-card__body">
+            <span class="project-card__number">PROJECT / 10</span>
+
+        <h3 class="project-card__title">
+          Ovation Music House
+        </h3>
+
+        <p class="project-card__desc">
+          A premium business website developed for a complete music and sound
+          solutions company. The platform brings music education, professional
+          recording, musical equipment, studio services and large-scale event sound
+          solutions together into one digital experience.
+        </p>
+
+        <p class="project-card__desc">
+          The website allows visitors to explore the academy, recording studio,
+          equipment catalogue and event sound services, while providing direct
+          consultation and customer enquiry functionality. It also includes an
+          administrative portal and structured content sections for managing the
+          business ecosystem.
+        </p>
+
+        <div class="project-card__tags">
+          <span class="project-card__tag">HTML5</span>
+          <span class="project-card__tag">CSS3</span>
+          <span class="project-card__tag">JavaScript</span>
+          <span class="project-card__tag">Firebase</span>
+          <span class="project-card__tag">Responsive Design</span>
+          <span class="project-card__tag">Admin Portal</span>
+          <span class="project-card__tag">Form Integration</span>
+          <span class="project-card__tag">Vercel</span>
+        </div>
+
+        <div class="project-card__links">
+          <a
+            href="https://www.ovationmusichouse.com/"
+            class="project-card__link"
+            target="_blank"
+            rel="noopener"
+            aria-label="View Ovation Music House live website"
           >
-          <a href="psalmstringss@gmail.com" aria-label="Email"><i>Email</i></a>
-        </div> -->
-        <p class="copyright">© 2025 Psalmstrings. All rights reserved.</p>
+            Live Demo ↗
+          </a>
+        </div>
+
+          </div>
+        </article>
+
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES
+       ============================================================ -->
+  <section id="services" class="section section--dark" aria-labelledby="services-heading">
+    <div class="container">
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <span class="section-label">04 / Services</span>
+          <h2 id="services-heading" class="section-heading text-white reveal">What I Can Build</h2>
+        </div>
+        <a href="#contact" class="btn btn--outline reveal" style="align-self: flex-end;">
+          Start a Project <span class="btn-arrow">→</span>
+        </a>
       </div>
-    </footer>
 
-    <script>
-      // Mobile Navigation Toggle
-      const hamburger = document.querySelector(".hamburger");
-      const nav = document.querySelector("nav");
+      <div class="services__grid reveal">
 
-      hamburger.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        <div class="service-card">
+          <span class="service-card__num">01</span>
+          <span class="service-card__icon" aria-hidden="true">🌐</span>
+          <h3 class="service-card__title">Web Development</h3>
+          <p class="service-card__desc">Modern, responsive websites and web applications built for performance, clarity, and real results.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card__num">02</span>
+          <span class="service-card__icon" aria-hidden="true">⚙️</span>
+          <h3 class="service-card__title">Full-Stack Development</h3>
+          <p class="service-card__desc">Complete frontend + backend applications — one engineer covering the entire product stack.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card__num">03</span>
+          <span class="service-card__icon" aria-hidden="true">🏢</span>
+          <h3 class="service-card__title">Business Websites</h3>
+          <p class="service-card__desc">Professional websites designed around business goals, not just aesthetics. Built to convert and communicate.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card__num">04</span>
+          <span class="service-card__icon" aria-hidden="true">📱</span>
+          <h3 class="service-card__title">Web Applications</h3>
+          <p class="service-card__desc">Dashboards, portals, management systems and custom platforms that solve specific business problems.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card__num">05</span>
+          <span class="service-card__icon" aria-hidden="true">🔌</span>
+          <h3 class="service-card__title">API &amp; Backend</h3>
+          <p class="service-card__desc">REST APIs, authentication systems, database architecture, and third-party service integrations.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card__num">06</span>
+          <span class="service-card__icon" aria-hidden="true">🎨</span>
+          <h3 class="service-card__title">UI/UX Implementation</h3>
+          <p class="service-card__desc">Turning designs and ideas into responsive, accessible, pixel-precise interfaces.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card__num">07</span>
+          <span class="service-card__icon" aria-hidden="true">🤖</span>
+          <h3 class="service-card__title">AI-Powered Solutions</h3>
+          <p class="service-card__desc">Integrating AI tools and APIs into practical business and digital workflows that deliver real value.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROCESS
+       ============================================================ -->
+  <section class="section" aria-labelledby="process-heading">
+    <div class="container">
+
+      <span class="section-label">05 / Process</span>
+      <h2 id="process-heading" class="section-heading reveal" style="margin-bottom: 3.5rem;">How I Work</h2>
+
+      <div class="process__steps">
+
+        <div class="process__step reveal">
+          <span class="process__step-num">01</span>
+          <h3 class="process__step-title">Discover</h3>
+          <p class="process__step-desc">Understand the problem, the users, and the goal. Ask the right questions before building anything.</p>
+        </div>
+
+        <div class="process__step reveal reveal--delay-1">
+          <span class="process__step-num">02</span>
+          <h3 class="process__step-title">Plan</h3>
+          <p class="process__step-desc">Define the structure, data flow, technology choices, and solution architecture.</p>
+        </div>
+
+        <div class="process__step reveal reveal--delay-2">
+          <span class="process__step-num">03</span>
+          <h3 class="process__step-title">Design</h3>
+          <p class="process__step-desc">Create the experience and interface — focused on clarity, usability, and purpose.</p>
+        </div>
+
+        <div class="process__step reveal reveal--delay-3">
+          <span class="process__step-num">04</span>
+          <h3 class="process__step-title">Build</h3>
+          <p class="process__step-desc">Develop the frontend and backend with clean, maintainable code and good engineering practice.</p>
+        </div>
+
+        <div class="process__step reveal reveal--delay-4">
+          <span class="process__step-num">05</span>
+          <h3 class="process__step-title">Test</h3>
+          <p class="process__step-desc">Review performance, responsiveness, browser compatibility, and reliability across devices.</p>
+        </div>
+
+        <div class="process__step reveal reveal--delay-5">
+          <span class="process__step-num">06</span>
+          <h3 class="process__step-title">Deploy</h3>
+          <p class="process__step-desc">Launch, monitor, and maintain. The work doesn't stop at shipping.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       STATS
+       ============================================================ -->
+  <section class="stats" aria-label="Key indicators">
+    <div class="container">
+      <div class="stats__grid">
+
+        <div class="stat-item reveal">
+          <span class="stat-item__value">10+</span>
+          <span class="stat-item__label">Projects Built</span>
+        </div>
+
+        <div class="stat-item reveal reveal--delay-1">
+          <span class="stat-item__value">MERN</span>
+          <span class="stat-item__label">Stack Expertise</span>
+        </div>
+
+        <div class="stat-item reveal reveal--delay-2">
+          <span class="stat-item__value">Full</span>
+          <span class="stat-item__label">Stack Coverage</span>
+        </div>
+
+        <div class="stat-item reveal reveal--delay-3">
+          <span class="stat-item__value">100%</span>
+          <span class="stat-item__label">Problem-Solving Focus</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section id="contact" class="contact" aria-labelledby="contact-heading">
+    <div class="container">
+
+      <span class="section-label">06 / Contact</span>
+
+      <div class="contact__grid">
+
+        <!-- Left — CTA & social links -->
+        <div>
+          <h2 id="contact-heading" class="contact__headline reveal">
+            Have an Idea?<br/>
+            Let's Build It.
+          </h2>
+
+          <p class="contact__sub reveal reveal--delay-1">
+            Have a project, business idea, digital problem, or collaboration in mind?
+            I'm available for freelance work, full-time roles, and partnerships.
+            Let's talk.
+          </p>
+
+          <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="btn btn--dark reveal reveal--delay-2" target="_blank" rel="noopener" aria-label="Start a project on WhatsApp" style="margin-bottom: 3rem;">
+            Start a Project <span class="btn-arrow">→</span>
+          </a>
+
+          <!-- Contact links -->
+          <nav class="contact__links" aria-label="Contact channels">
+
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="contact__link-item" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <div class="contact__link-left">
+                <span class="contact__link-platform">WhatsApp</span>
+                <span class="contact__link-handle">+Message me directly</span>
+              </div>
+              <span class="contact__link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="https://github.com/Psalmstrings/" class="contact__link-item" target="_blank" rel="noopener" aria-label="GitHub">
+              <div class="contact__link-left">
+                <span class="contact__link-platform">GitHub</span>
+                <span class="contact__link-handle">@Psalmstrings</span>
+              </div>
+              <span class="contact__link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="https://x.com/psalmstrings_" class="contact__link-item" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <div class="contact__link-left">
+                <span class="contact__link-platform">X / Twitter</span>
+                <span class="contact__link-handle">@psalmstrings_</span>
+              </div>
+              <span class="contact__link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="https://www.instagram.com/psalmstrings_/" class="contact__link-item" target="_blank" rel="noopener" aria-label="Instagram">
+              <div class="contact__link-left">
+                <span class="contact__link-platform">Instagram</span>
+                <span class="contact__link-handle">@psalmstrings_</span>
+              </div>
+              <span class="contact__link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+          </nav>
+        </div>
+
+        <!-- Right — Contact Form -->
+        <div class="reveal reveal--delay-2">
+          <form class="contact__form" id="contact-form" novalidate aria-label="Contact form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="your@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input
+                type="text"
+                id="contact-subject"
+                name="subject"
+                placeholder="What's this about?"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-type">Project Type</label>
+              <select id="contact-type" name="project_type">
+                <option value="" disabled selected>Select a project type</option>
+                <option value="website">Website</option>
+                <option value="webapp">Web Application</option>
+                <option value="fullstack">Full-Stack Project</option>
+                <option value="api">API / Backend</option>
+                <option value="ui">UI/UX Implementation</option>
+                <option value="ai">AI-Powered Solution</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="Tell me about your project or idea…"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--dark" id="form-submit" aria-label="Send message">
+              Send Message <span class="btn-arrow">→</span>
+            </button>
+
+            <p id="form-status" role="status" aria-live="polite" style="font-size:0.85rem; margin-top:0.75rem; color: var(--gray);"></p>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <div class="footer__brand-name">Psalmstrings</div>
+          <div class="footer__brand-title">Digital Technologist</div>
+          <div class="footer__brand-title">Full-Stack Web Developer</div>
+          <div class="footer__tagline">Build. Solve. Transform.</div>
+        </div>
+
+        <div>
+          <span class="footer__col-heading">Navigation</span>
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#all-projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener" aria-label="GitHub">
+              <span aria-hidden="true">→</span> GitHub
+            </a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <span aria-hidden="true">→</span> X / Twitter
+            </a>
+            <a href="https://www.instagram.com/psalmstrings_/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">
+              <span aria-hidden="true">→</span> Instagram
+            </a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <span aria-hidden="true">→</span> WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Psalmstrings. All rights reserved.</span>
+        <span class="footer__copy-right">Built &amp; designed by Psalmstrings</span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    'use strict';
+
+    /* ── Navbar scroll behaviour ── */
+    const navbar = document.getElementById('navbar');
+    const onScroll = () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 30);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ── Mobile hamburger ── */
+    const hamburger = document.getElementById('hamburger');
+    const navbarNav = document.getElementById('navbar-nav');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navbarNav.classList.toggle('open');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    /* Close menu on nav link click */
+    navbarNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbarNav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
       });
+    });
 
-      // Smooth Scrolling for Navigation Links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
+    /* ── Smooth scroll for all anchor links ── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
           e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
 
-          nav.classList.remove("active");
+    /* ── Scroll reveal (Intersection Observer) ── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
 
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ── Custom cursor (pointer devices only) ── */
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const cursor = document.getElementById('cursor');
+      const follower = document.getElementById('cursor-follower');
+      let mx = 0, my = 0, fx = 0, fy = 0;
+
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX;
+        my = e.clientY;
+        cursor.style.left = mx + 'px';
+        cursor.style.top  = my + 'px';
       });
 
-      // Form Submission
-      const contactForm = document.getElementById("contactForm");
-
-      contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Get form values
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        // Here you would typically send this data to a server
-        console.log("Form submitted:", { name, email, message });
-
-        // Show success message
-        alert(
-          "Thank you for your message, " +
-            name +
-            "! I will get back to you soon."
-        );
-
-        // Reset form
-        contactForm.reset();
-      });
-
-      // Scroll Animation
-      const fadeElements = document.querySelectorAll(".fade-in");
-
-      const fadeInOnScroll = () => {
-        fadeElements.forEach((element) => {
-          const elementTop = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-
-          if (elementTop < windowHeight - 100) {
-            element.style.opacity = "1";
-            element.style.transform = "translateY(0)";
-          }
-        });
+      const animateFollower = () => {
+        fx += (mx - fx) * 0.1;
+        fy += (my - fy) * 0.1;
+        follower.style.left = fx + 'px';
+        follower.style.top  = fy + 'px';
+        requestAnimationFrame(animateFollower);
       };
+      animateFollower();
 
-      // Initialize elements as invisible
-      fadeElements.forEach((element) => {
-        element.style.opacity = "0";
-        element.style.transform = "translateY(20px)";
-        element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+      /* Grow cursor on interactive elements */
+      const interactives = document.querySelectorAll('a, button, [role="button"]');
+      interactives.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.style.width  = '18px';
+          cursor.style.height = '18px';
+          follower.style.width  = '56px';
+          follower.style.height = '56px';
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.style.width  = '10px';
+          cursor.style.height = '10px';
+          follower.style.width  = '36px';
+          follower.style.height = '36px';
+        });
       });
 
-      // Check on scroll and on load
-      window.addEventListener("scroll", fadeInOnScroll);
-      window.addEventListener("load", fadeInOnScroll);
-    </script>
-  </body>
+      /* Shrink on images */
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('mouseenter', () => {
+          cursor.style.opacity = '0';
+        });
+        img.addEventListener('mouseleave', () => {
+          cursor.style.opacity = '1';
+        });
+      });
+    }
+
+    /* ── Contact form (frontend-only handler) ── */
+    const contactForm = document.getElementById('contact-form');
+    const formStatus  = document.getElementById('form-status');
+    const formSubmit  = document.getElementById('form-submit');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        formSubmit.textContent = 'Sending…';
+        formSubmit.disabled = true;
+
+        /* ── Connect to an email service (e.g. EmailJS, Formspree) here ── */
+        /* Example Formspree endpoint: fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(contactForm), headers: { Accept: 'application/json' } }) */
+
+        /* Simulated delay for demo */
+        await new Promise(r => setTimeout(r, 800));
+
+        /* Restore button and show confirmation */
+        formSubmit.textContent = 'Send Message →';
+        formSubmit.disabled = false;
+        formStatus.textContent = '✓ Message received — I will get back to you shortly.';
+        formStatus.style.color = 'var(--color-success)';
+        formStatus.style.fontWeight = '600';
+        contactForm.reset();
+
+        setTimeout(() => { formStatus.textContent = ''; }, 6000);
+      });
+    }
+
+    /* ── Developer greeting ── */
+    console.log(
+      '%cPSALMSTRINGS',
+      'color:#FFC107; background:#0D0D0D; font-size:18px; font-weight:800; padding:8px 16px; border:1px solid #FFC107; font-family: monospace;'
+    );
+    console.log(
+      '%cFull-Stack Web Developer · Digital Technologist\nhttps://psalmstrings.vercel.app',
+      'color:#A3A3A3; font-size:12px; padding:4px 0;'
+    );
+  </script>
+
+</body>
 </html>
