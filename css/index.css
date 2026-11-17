@@ -20,24 +20,24 @@
   --text-secondary: #A1A1AA;    /* Secondary / description text */
   --text-muted: #71717A;        /* Tertiary labels and metadata */
 
-  /* Accents */
-  --accent: #6366F1;            /* Vibrant Indigo */
-  --accent-secondary: #8B5CF6;  /* Violet */
-  --accent-gradient: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-  --accent-hover: #4F46E5;
-  --accent-light: rgba(99, 102, 241, 0.12);
-  --accent-glow: rgba(99, 102, 241, 0.25);
+  /* Signature Brand Accents (Amber Yellow Gold) */
+  --accent: #FFC107;            /* Iconic Yellow / Amber Gold */
+  --accent-secondary: #FFB300;  /* Warm Deep Amber */
+  --accent-gradient: linear-gradient(135deg, #FFD54F 0%, #FFC107 50%, #FF9800 100%);
+  --accent-hover: #E5AC04;
+  --accent-light: rgba(255, 193, 7, 0.12);
+  --accent-glow: rgba(255, 193, 7, 0.28);
 
   /* Borders & Dividers */
   --border-subtle: #27272A;
   --border-hover: #3F3F46;
-  --border-accent: rgba(99, 102, 241, 0.35);
+  --border-accent: rgba(255, 193, 7, 0.35);
 
   /* Status Colors */
   --color-success: #10B981;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
-  --color-info: #6366F1;
+  --color-info: #FFC107;
 
   /* Backward Compatibility Aliases for Case Studies */
   --color-primary: var(--accent);
@@ -112,7 +112,7 @@ body {
 /* ── Selection ── */
 ::selection {
   background: var(--accent);
-  color: #FFFFFF;
+  color: #09090B;
 }
 
 /* ── Links & Images ── */
@@ -211,7 +211,8 @@ img {
 
 .btn--primary {
   background: var(--accent-gradient);
-  color: #FFFFFF;
+  color: #09090B;
+  font-weight: 700;
   box-shadow: var(--shadow-accent);
 }
 
@@ -411,8 +412,8 @@ img {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
-              radial-gradient(circle at 10% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+  background: radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(255, 179, 0, 0.05) 0%, transparent 50%),
               var(--bg-primary);
 }
 
@@ -854,7 +855,8 @@ img {
 
 .filter-btn.active {
   background: var(--accent);
-  color: #FFFFFF;
+  color: #09090B;
+  font-weight: 700;
   border-color: var(--accent);
 }
 
@@ -1043,7 +1045,7 @@ img {
 }
 
 .project-card__link-cs:hover {
-  color: #8B5CF6;
+  color: var(--accent-secondary);
   gap: 0.55rem;
 }
 
@@ -1249,13 +1251,13 @@ img {
 }
 
 .resume-item__btn--pdf {
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: rgba(255, 193, 7, 0.4);
   color: var(--accent);
 }
 
 .resume-item__btn--pdf:hover {
   background: var(--accent);
-  color: #FFFFFF;
+  color: #09090B;
 }
 
 /* ============================================================
@@ -1364,7 +1366,7 @@ img {
 .form-textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
 }
 
 .form-textarea {
@@ -1494,7 +1496,7 @@ img {
   left: 0;
   width: 32px;
   height: 32px;
-  border: 1px solid rgba(99, 102, 241, 0.4);
+  border: 1px solid rgba(255, 193, 7, 0.45);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
