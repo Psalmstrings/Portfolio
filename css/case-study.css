@@ -1,33 +1,33 @@
 /* ============================================================
-   CASE STUDY STYLESHEET
-   Extends index.css with specialized case study layouts,
-   architecture diagrams, technical metric grids, and code callouts.
+   CASE STUDY STYLESHEET — DARK-FIRST EDITION
+   Matches Psalmstrings Portfolio Dark Theme
+   Palette: Zinc / Deep Charcoal + Electric Indigo / Violet
    ============================================================ */
 
 /* ── Case Study Hero ── */
 .cs-hero {
   padding-top: calc(var(--nav-h) + 4rem);
   padding-bottom: 4rem;
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   position: relative;
-  border-bottom: 1px solid var(--border-subtle-dark);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .cs-breadcrumb {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-family: var(--font-display);
-  color: var(--color-gray-light);
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .cs-breadcrumb a {
-  color: var(--color-primary);
+  color: var(--accent);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -41,11 +41,11 @@
   align-items: center;
   gap: 0.4rem;
   padding: 0.35rem 0.85rem;
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
-  border: 1px solid var(--border-yellow-glow);
-  border-radius: 999px;
-  font-size: 0.8rem;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -59,14 +59,14 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 1.25rem;
-  color: var(--color-white);
+  color: var(--text-primary);
 }
 
 .cs-tagline {
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  color: var(--color-gray-light);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
   max-width: 850px;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 2.5rem;
 }
 
@@ -76,9 +76,9 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   padding: 1.75rem 2rem;
-  background-color: var(--color-dark-surface);
-  border: 1px solid var(--border-subtle-dark);
-  border-radius: 12px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   margin-bottom: 2.5rem;
 }
 
@@ -93,14 +93,14 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-primary);
+  color: var(--accent);
   font-family: var(--font-display);
 }
 
 .cs-meta-value {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--color-white);
+  color: var(--text-primary);
 }
 
 .cs-hero-actions {
@@ -113,8 +113,8 @@
 /* ── Content Layout ── */
 .cs-main {
   padding: 4.5rem 0;
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .cs-layout {
@@ -135,9 +135,9 @@
 .cs-sidebar {
   position: sticky;
   top: calc(var(--nav-h) + 2rem);
-  background-color: var(--color-light-surface);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   padding: 1.75rem;
 }
 
@@ -149,14 +149,14 @@
 
 .cs-sidebar-title {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-dark-gray);
+  color: var(--text-primary);
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--accent);
 }
 
 .cs-toc-list {
@@ -167,8 +167,8 @@
 }
 
 .cs-toc-link {
-  font-size: 0.9rem;
-  color: var(--color-gray);
+  font-size: 0.88rem;
+  color: var(--text-muted);
   text-decoration: none;
   transition: all var(--transition-fast);
   display: flex;
@@ -178,14 +178,13 @@
 
 .cs-toc-link:hover,
 .cs-toc-link.active {
-  color: var(--color-black);
-  font-weight: 600;
+  color: var(--text-primary);
   transform: translateX(4px);
 }
 
 .cs-toc-link.active::before {
   content: "→";
-  color: var(--color-primary);
+  color: var(--accent);
   font-weight: 700;
 }
 
@@ -205,13 +204,14 @@
 
 .cs-section-num {
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: var(--color-primary);
-  background-color: var(--color-black);
+  color: var(--accent);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   display: inline-block;
   padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   margin-bottom: 0.75rem;
   letter-spacing: 0.05em;
 }
@@ -220,20 +220,20 @@
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--text-primary);
   margin-bottom: 1.25rem;
   letter-spacing: -0.01em;
 }
 
 .cs-prose {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   line-height: 1.8;
-  color: #333333;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .cs-prose strong {
-  color: var(--color-black);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -264,17 +264,17 @@
 
 .cs-box {
   padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
 }
 
 .cs-box--problem {
-  background-color: #FEF2F2;
-  border-color: #FCA5A5;
+  background-color: rgba(239, 68, 68, 0.06);
+  border-color: rgba(239, 68, 68, 0.25);
 }
 
 .cs-box--problem h4 {
-  color: #991B1B;
+  color: #EF4444;
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin-bottom: 1rem;
@@ -284,12 +284,12 @@
 }
 
 .cs-box--solution {
-  background-color: #F0FDF4;
-  border-color: #86EFAC;
+  background-color: rgba(16, 185, 129, 0.06);
+  border-color: rgba(16, 185, 129, 0.25);
 }
 
 .cs-box--solution h4 {
-  color: #166534;
+  color: #10B981;
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin-bottom: 1rem;
@@ -298,56 +298,65 @@
   gap: 0.5rem;
 }
 
+.cs-box--info {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
 /* Feature Cards Grid */
-.cs-feature-grid {
+.cs-feature-grid, .cs-grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.cs-feature-card {
-  background-color: var(--color-light-surface);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
+.cs-feature-card, .cs-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   padding: 1.75rem;
   transition: all var(--transition-fast);
 }
 
-.cs-feature-card:hover {
+.cs-feature-card:hover, .cs-card:hover {
   transform: translateY(-4px);
-  border-color: var(--color-black);
+  border-color: var(--border-hover);
   box-shadow: var(--shadow-md);
 }
 
-.cs-feature-icon {
+.cs-feature-icon, .cs-card-icon {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   display: inline-block;
 }
 
-.cs-feature-title {
+.cs-feature-title, .cs-card-title {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
-.cs-feature-desc {
-  font-size: 0.95rem;
+.cs-feature-desc, .cs-card-text {
+  font-size: 0.92rem;
   line-height: 1.65;
-  color: var(--color-gray);
+  color: var(--text-secondary);
 }
 
 /* Architecture & Diagram Block */
 .cs-arch-box {
-  background-color: var(--color-dark-gray);
-  color: var(--color-white);
-  border-radius: 12px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
   padding: 2.25rem;
   margin: 2rem 0;
-  border: 1px solid var(--border-subtle-dark);
+  border: 1px solid var(--border-subtle);
 }
 
 .cs-arch-header {
@@ -356,14 +365,14 @@
   align-items: center;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-subtle-dark);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .cs-arch-title {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--accent);
 }
 
 .cs-arch-flow {
@@ -377,9 +386,9 @@
   grid-template-columns: 140px 1fr;
   gap: 1.5rem;
   padding: 1rem 1.25rem;
-  background-color: var(--color-dark-surface);
-  border-radius: 8px;
-  border-left: 3px solid var(--color-primary);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
 }
 
 @media (max-width: 640px) {
@@ -394,24 +403,24 @@
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--accent);
   letter-spacing: 0.05em;
 }
 
 .cs-tier-desc {
   font-size: 0.92rem;
-  color: var(--color-gray-light);
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
 /* Engineering Decisions Box */
-.cs-decision-card {
-  background: linear-gradient(135deg, #171717 0%, #1e1e1e 100%);
-  border: 1px solid var(--border-subtle-dark);
-  border-left: 4px solid var(--color-primary);
-  border-radius: 10px;
+.cs-decision-card, .cs-decision-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
   padding: 1.75rem;
-  color: var(--color-white);
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -422,167 +431,269 @@
   margin-bottom: 0.75rem;
 }
 
-.cs-decision-title {
+.cs-decision-title, .cs-decision-item h4 {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
 }
 
 .cs-decision-badge {
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.2rem 0.6rem;
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
-  border-radius: 4px;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
   text-transform: uppercase;
 }
 
-.cs-decision-text {
+.cs-decision-text, .cs-decision-item p {
   font-size: 0.95rem;
-  color: var(--color-gray-light);
+  color: var(--text-secondary);
   line-height: 1.65;
 }
 
+/* Feature List (01, 02 style) */
+.cs-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.cs-feature-item {
+  display: flex;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+}
+
+.cs-feature-badge {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.cs-feature-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Contributions Grid */
+.cs-contributions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .cs-contributions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cs-contrib-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+}
+
+.cs-contrib-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cs-contrib-card p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Tech Grid */
+.cs-tech-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.cs-tech-pill {
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.cs-tech-pill strong {
+  color: var(--accent);
+}
+
 /* Metrics & Impact Grid */
-.cs-metrics-grid {
+.cs-metrics-grid, .cs-impact-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.cs-metric-card {
-  padding: 1.75rem;
-  background-color: var(--color-light-surface);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
+.cs-metric-card, .cs-metric-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2rem;
   text-align: center;
 }
 
 .cs-metric-num {
   font-family: var(--font-display);
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: var(--color-black);
+  color: var(--accent);
   line-height: 1;
   margin-bottom: 0.5rem;
-}
-
-.cs-metric-num.highlight {
-  color: #B45309; /* Deep amber for readability on light */
-}
-
-.cs-metric-label {
-  font-size: 0.85rem;
-  color: var(--color-gray);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Tech Badges List */
-.cs-tech-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.5rem 0;
-}
-
-.cs-tech-pill {
-  padding: 0.5rem 1rem;
-  background-color: var(--color-dark-gray);
-  color: var(--color-white);
-  border-radius: 6px;
-  font-size: 0.88rem;
-  font-family: var(--font-display);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-/* Image Showcase in Case Study */
-.cs-media-wrap {
-  margin: 2.5rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border-light);
-  background-color: #F0F0F0;
-  box-shadow: var(--shadow-md);
-}
-
-.cs-media-wrap img {
-  width: 100%;
-  height: auto;
   display: block;
 }
 
-.cs-media-caption {
-  padding: 0.85rem 1.25rem;
+.cs-metric-label {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Verification Callout Box */
+.cs-verification-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2.25rem;
+  margin: 2rem 0;
+}
+
+.cs-verification-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.cs-verification-icon {
+  font-size: 1.75rem;
+}
+
+.cs-verification-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+/* Code Snippet Box */
+.cs-code-box {
+  background-color: #09090B;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-family: 'SF Mono', Consolas, Monaco, monospace;
   font-size: 0.85rem;
-  color: var(--color-gray);
-  background-color: var(--color-white);
-  border-top: 1px solid var(--border-light);
-  text-align: center;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
-/* Case Study Navigation (Prev / Next) */
-.cs-nav-footer {
-  border-top: 1px solid var(--border-light);
+.cs-code-box pre {
+  margin: 0;
+}
+
+/* Links & CTAs Box */
+.cs-links-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2.5rem 0 1rem;
+}
+
+/* Project Navigation Bar */
+.cs-nav-bar {
   padding: 3rem 0;
-  background-color: var(--color-light-surface);
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.cs-nav-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.cs-nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 2rem;
 }
 
 @media (max-width: 640px) {
-  .cs-nav-grid {
-    grid-template-columns: 1fr;
+  .cs-nav-inner {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
-.cs-nav-card {
-  padding: 1.75rem;
-  background-color: var(--color-white);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  text-decoration: none;
-  color: inherit;
-  transition: all var(--transition-fast);
+.cs-nav-btn {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
+  text-decoration: none;
+  padding: 1.25rem 1.75rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  max-width: 320px;
 }
 
-.cs-nav-card:hover {
-  border-color: var(--color-black);
-  transform: translateY(-3px);
+.cs-nav-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
 
-.cs-nav-card.next {
-  text-align: right;
-  align-items: flex-end;
-}
-
-.cs-nav-dir {
-  font-size: 0.8rem;
+.cs-nav-direction {
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  color: #B45309;
-  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
   font-family: var(--font-display);
-  letter-spacing: 0.05em;
 }
 
-.cs-nav-name {
+.cs-nav-title {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--text-primary);
+}
+
+.cs-nav-btn--next {
+  text-align: right;
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  .cs-nav-btn--next {
+    text-align: left;
+    margin-left: 0;
+  }
 }

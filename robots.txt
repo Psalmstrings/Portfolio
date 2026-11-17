@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://psalmstrings.vercel.app/sitemap.xml

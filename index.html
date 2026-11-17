@@ -3,577 +3,645 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-  <!-- â”€â”€ SEO â”€â”€ -->
-  <title>Abimbola Samuel | Digital Technologist &amp; Full-Stack Software Engineer</title>
-  <meta name="description" content="Abimbola Samuel is a Digital Technologist, Full-Stack Developer, and Technology Solutions Builder. I don't just build websites &mdash; I build digital systems that solve real problems. MERN Stack | Node.js | React | Express | MongoDB | Paystack | AI Integrations." />
-  <meta name="keywords" content="Abimbola Samuel, Digital Technologist, Full-Stack Developer, Software Engineer, Technology Solutions Builder, MERN Stack, React Developer, Node.js Developer, Web Systems Nigeria, Paystack Integrations, REST APIs, Cloud Architecture" />
-  <meta name="author" content="Abimbola Samuel" />
+  <title>Psalmstrings | Digital Technologist &amp; Full-Stack Developer</title>
+  <meta name="description" content="Explore the portfolio of Psalmstrings, a Digital Technologist and Full-Stack Developer building modern web applications, digital platforms and practical technology solutions." />
+  <meta name="keywords" content="Digital Technologist, Full-Stack Developer, Software Engineer, MERN Stack, React, Node.js, Express, MongoDB, Systems Architecture, Lagos Nigeria" />
+  <meta name="author" content="Psalmstrings (Abimbola Samuel)" />
   <link rel="canonical" href="https://psalmstrings.vercel.app/" />
 
-  <!-- â”€â”€ Open Graph â”€â”€ -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Abimbola Samuel | Digital Technologist &amp; Full-Stack Software Engineer" />
-  <meta property="og:description" content="I don't just build websites. I build digital systems that solve real problems. Explore full-stack systems across Event Ticketing, Campus Marketplaces, Multi-Tenant ERPs, AI HR Tech, and Civic Platforms." />
   <meta property="og:url" content="https://psalmstrings.vercel.app/" />
-  <meta property="og:image" content="./media/IMG_E1138.JPG" />
+  <meta property="og:title" content="Psalmstrings | Digital Technologist &amp; Full-Stack Developer" />
+  <meta property="og:description" content="Explore the portfolio of Psalmstrings, a Digital Technologist and Full-Stack Developer building modern web applications, digital platforms and practical technology solutions." />
+  <meta property="og:image" content="https://psalmstrings.vercel.app/media/IMG_E1138.JPG" />
 
-  <!-- â”€â”€ Twitter / X â”€â”€ -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@psalmstrings_" />
-  <meta name="twitter:title" content="Abimbola Samuel | Digital Technologist &amp; Full-Stack Software Engineer" />
-  <meta name="twitter:description" content="I don't just build websites. I build digital systems that solve real problems. Explore 9 major full-stack engineering case studies." />
-  <meta name="twitter:image" content="./media/IMG_E1138.JPG" />
+  <meta name="twitter:url" content="https://psalmstrings.vercel.app/" />
+  <meta name="twitter:title" content="Psalmstrings | Digital Technologist &amp; Full-Stack Developer" />
+  <meta name="twitter:description" content="Explore the portfolio of Psalmstrings, a Digital Technologist and Full-Stack Developer building modern web applications, digital platforms and practical technology solutions." />
+  <meta name="twitter:image" content="https://psalmstrings.vercel.app/media/IMG_E1138.JPG" />
 
-  <!-- â”€â”€ Favicon â”€â”€ -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./media/WhatsApp_Image_2025-04-04_at_04.52.12_e46090e3-removebg-preview.png" type="image/png" />
 
-  <!-- â”€â”€ Google Fonts â”€â”€ -->
+  <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- â”€â”€ Stylesheet â”€â”€ -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="./css/index.css" />
 
-  <!-- â”€â”€ Hero above-fold style (prevents FOUC on hero only) â”€â”€ -->
-  <style>
-    #home.hero { background-color: #0D0D0D; }
-  </style>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Psalmstrings",
+    "alternateName": "Abimbola Samuel Ibitayo",
+    "url": "https://psalmstrings.vercel.app",
+    "jobTitle": "Digital Technologist & Full-Stack Developer",
+    "sameAs": [
+      "https://github.com/Psalmstrings",
+      "https://x.com/psalmstrings_",
+      "https://wa.me/message/IAFOOBWCOL4VO1"
+    ],
+    "knowsAbout": [
+      "Full-Stack Web Development",
+      "Systems Architecture",
+      "MERN Stack",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "RESTful API Engineering",
+      "Paystack Payment Integrations"
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="home">
 
-  <!-- Custom Cursor (desktop only) -->
+  <!-- Custom Cursor (Desktop Only) -->
   <div class="cursor" id="cursor" aria-hidden="true"></div>
   <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
 
   <!-- ============================================================
-       NAVBAR
+       A. NAVIGATION
        ============================================================ -->
   <header class="navbar" id="navbar" role="banner">
     <div class="container navbar__inner">
-
-      <a href="#home" class="navbar__logo" aria-label="Abimbola Samuel &mdash; Go to top">
-        ABIMBOLA SAMUEL
+      <a href="#home" class="navbar__logo" aria-label="Psalmstrings - Return to top">
+        <span class="navbar__logo-title">PSALMSTRINGS</span>
+        <span class="navbar__logo-subtitle">Digital Technologist</span>
       </a>
 
-      <!-- Desktop nav -->
-      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <!-- Desktop Nav -->
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#home" class="navbar__link active">Home</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#expertise" class="navbar__link">Expertise</a>
+        <a href="#projects" class="navbar__link">Projects</a>
+        <a href="#approach" class="navbar__link">Approach</a>
+        <a href="#experience" class="navbar__link">Experience</a>
+        <a href="#contact" class="navbar__link">Contact</a>
       </nav>
 
-      <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="navbar__cta" target="_blank" rel="noopener" aria-label="Let's talk on WhatsApp">
-        Let's Talk
-      </a>
+      <!-- Desktop Actions -->
+      <div class="navbar__actions">
+        <a href="#contact" class="btn btn--primary navbar__cta">
+          Let’s Talk <span class="btn-arrow">&rarr;</span>
+        </a>
+      </div>
 
-      <!-- Hamburger -->
-      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-nav">
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
     </div>
   </header>
 
-
   <!-- ============================================================
-       HERO
+       B. HERO SECTION
        ============================================================ -->
-  <section id="home" class="hero" aria-label="Hero introduction">
+  <section class="hero" aria-label="Introduction">
+    <div class="container">
+      <div class="hero__grid">
 
-    <!-- Left &mdash; Text -->
-    <div class="hero__text">
-      <span class="hero__eyebrow">Digital Technologist &middot; Full-Stack Software Engineer &middot; Solutions Builder</span>
+        <!-- Left Column: Narrative & CTAs -->
+        <div class="hero__content">
+          <div class="hero__status">
+            <span class="hero__status-dot"></span>
+            Available for Senior Roles &amp; Engineering Contracts
+          </div>
 
-      <h1 class="hero__heading">
-        I Build Digital<br/>
-        <em>Systems</em><br/>
-        That Solve Real<br/>
-        Problems.
-      </h1>
+          <span class="hero__role-badge">Digital Technologist &amp; Full-Stack Developer</span>
 
-      <p class="hero__sub">
-        I don't just build websites. I engineer robust full-stack web applications, multi-tenant enterprise platforms, civic data systems, payment infrastructures, and AI-driven solutions that address real-world operational challenges.
-      </p>
+          <h1 class="hero__title">
+            Building Digital Solutions That <span class="hero__title-accent">Make a Difference.</span>
+          </h1>
 
-      <div class="hero__actions">
-        <a href="#work" class="btn btn--primary">
-          Explore Case Studies <span class="btn-arrow">&rarr;</span>
-        </a>
-        <a href="#contact" class="btn btn--outline">
-          Let's Work Together
-        </a>
-      </div>
+          <p class="hero__intro">
+            I design and build modern digital experiences, scalable web applications and practical technology solutions that help businesses, institutions and individuals solve real-world problems.
+          </p>
 
-      <div class="hero__socials" aria-label="Social links">
-        <span class="hero__socials-label">Find me on</span>
-        <a href="https://github.com/Psalmstrings/" class="hero__social-link" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-        <a href="https://x.com/psalmstrings_" class="hero__social-link" target="_blank" rel="noopener" aria-label="X / Twitter">X / Twitter</a>
-        <a href="https://www.instagram.com/psalmstrings_/" class="hero__social-link" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <p class="hero__support">
+            From concept to deployment, I turn ideas into functional digital products through thoughtful engineering, creative problem-solving and a commitment to quality.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">
+              Explore My Projects <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="#contact" class="btn btn--outline">
+              Let’s Work Together
+            </a>
+          </div>
+
+          <!-- Social Shortcuts -->
+          <div class="hero__socials">
+            <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="hero__social-link" aria-label="GitHub Profile">
+              <span>&rarr;</span> GitHub
+            </a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" target="_blank" rel="noopener" class="hero__social-link" aria-label="WhatsApp Contact">
+              <span>&rarr;</span> WhatsApp
+            </a>
+            <a href="https://x.com/psalmstrings_" target="_blank" rel="noopener" class="hero__social-link" aria-label="X / Twitter Profile">
+              <span>&rarr;</span> X / Twitter
+            </a>
+            <a href="mailto:psalmstringss@gmail.com" class="hero__social-link" aria-label="Email Address">
+              <span>&rarr;</span> Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Composition -->
+        <div class="hero__visual">
+          <div class="hero__card reveal">
+            <div class="hero__card-header">
+              <div class="hero__card-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="hero__card-label">psalmstrings.config.ts</span>
+            </div>
+
+            <div class="hero__profile-row">
+              <img
+                src="./media/IMG_E1138.JPG"
+                alt="Psalmstrings - Digital Technologist and Full-Stack Developer"
+                class="hero__avatar"
+                loading="eager"
+              />
+              <div class="hero__profile-info">
+                <h3>Psalmstrings</h3>
+                <p>Digital Technologist &middot; Full-Stack Engineer</p>
+                <div class="hero__profile-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Lagos, Nigeria (Remote / Global)
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__terminal">
+              <div class="hero__terminal-line">
+                <span class="hero__terminal-prompt">&gt;</span>
+                <span class="hero__terminal-cmd">psalmstrings.getCoreStack()</span>
+              </div>
+              <div class="hero__terminal-out">
+                ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Paystack', 'REST APIs']
+              </div>
+              <div class="hero__terminal-line" style="margin-top: 0.4rem;">
+                <span class="hero__terminal-prompt">&gt;</span>
+                <span class="hero__terminal-cmd">psalmstrings.getEngineeringMotto()</span>
+              </div>
+              <div class="hero__terminal-out" style="color: #6366F1;">
+                "I don’t just build websites. I build digital systems that solve real problems."
+              </div>
+            </div>
+
+            <div class="hero__stack-pills">
+              <span class="hero__stack-pill">Full-Stack Architecture</span>
+              <span class="hero__stack-pill">Multi-Tenant ERP</span>
+              <span class="hero__stack-pill">Paystack Gateways</span>
+              <span class="hero__stack-pill">Cryptographic Passes</span>
+              <span class="hero__stack-pill">310+ Automated Tests</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <!-- Right &mdash; Portrait -->
-    <div class="hero__image-wrap">
-      <img
-        src="./media/IMG_E1138.JPG"
-        alt="Abimbola Samuel &mdash; Digital Technologist and Full-Stack Software Engineer"
-        loading="eager"
-      />
-
-      <!-- Technical overlay metadata -->
-      <div class="hero__meta" aria-hidden="true">
-        <span class="hero__meta-item">NAME: ABIMBOLA SAMUEL</span>
-        <span class="hero__meta-item">IDENTITY: DIGITAL TECHNOLOGIST</span>
-        <span class="hero__meta-item">ROLE: FULL-STACK ENGINEER</span>
-        <span class="hero__meta-item">STACK: MERN / PAYSTACK / AI</span>
-        <span class="hero__meta-item">STATUS: AVAILABLE FOR CONTRACT &amp; ROLES</span>
-      </div>
-    </div>
-
   </section>
 
 
   <!-- ============================================================
-       STATEMENT
+       C. ABOUT ME
        ============================================================ -->
-  <section class="statement" aria-label="Personal statement">
+  <section id="about" class="section section--alt" aria-labelledby="about-heading">
     <div class="container">
-      <div class="statement__inner reveal">
-        <p class="statement__quote">
-          I don't just build websites.<br/>
-          <em>I build functional digital systems</em><br/>
-          that solve real-world problems.
-        </p>
-        <span class="statement__line" aria-hidden="true"></span>
+
+      <div class="section-header reveal">
+        <span class="section-label">01 / About Me</span>
+        <h2 id="about-heading" class="section-title">More Than Code. Building Solutions.</h2>
       </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       ABOUT
-       ============================================================ -->
-  <section id="about" class="section section--white" aria-labelledby="about-heading">
-    <div class="container">
-
-      <span class="section-label">01 / About</span>
 
       <div class="about__grid">
 
-        <!-- Image -->
-        <div class="about__image-wrap reveal">
-          <img
-            src="./media/IMG_E1138.JPG"
-            alt="Abimbola Samuel &mdash; Digital Technologist and Full-Stack Software Engineer"
-            loading="lazy"
-          />
-        </div>
-
-        <!-- Content -->
-        <div class="about__content">
-          <h2 id="about-heading" class="section-heading reveal">
-            More Than<br/>Just Websites.
-          </h2>
-
-          <p class="about__body reveal reveal--delay-1">
-            I'm <strong>Abimbola Samuel</strong>, a Digital Technologist, Full-Stack Developer, and Technology Solutions Builder based in Nigeria. I focus on identifying real-world operational challenges and engineering functional digital systems that solve them.
+        <!-- Left: Verified Professional Narrative -->
+        <div class="about__narrative reveal">
+          <p>
+            I’m a <strong>Digital Technologist and Full-Stack Developer</strong> passionate about building technology that solves meaningful problems.
           </p>
-
-          <p class="about__body reveal reveal--delay-2">
-            My work sits at the intersection of <strong>software engineering, systems architecture, and business operations</strong>. I operate across the complete software development lifecycle: frontend engineering, backend architecture, database modeling, JWT authentication, Paystack financial integrations, offline cryptographic verification, and AI-assisted workflows.
+          <p>
+            My work spans <strong>web application development, backend engineering, system architecture, interface design and digital product development</strong>.
           </p>
-
-          <p class="about__body reveal reveal--delay-3">
-            My primary development ecosystem includes: <strong>MongoDB, Express.js, React.js, Node.js (MERN), REST APIs, Cloudinary, Git/GitHub, Render, Vercel, Paystack, and Gemini API integrations</strong>. I also use modern AI-assisted development tools alongside conventional software engineering practices to accelerate research, debugging, automated testing, and production deployment.
+          <p>
+            I enjoy taking ideas from their earliest stages and transforming them into functional, reliable and user-friendly products.
           </p>
-
-          <!-- Pillars -->
-          <div class="about__pillars">
-            <div class="about__pillar reveal reveal--delay-1">
-              <div class="about__pillar-icon" aria-hidden="true">â¬›</div>
-              <div class="about__pillar-title">Architect &amp; Model</div>
-              <div class="about__pillar-desc">Design robust schemas, multi-tenant boundaries, and secure API contracts.</div>
-            </div>
-            <div class="about__pillar reveal reveal--delay-2">
-              <div class="about__pillar-icon" aria-hidden="true">â—»</div>
-              <div class="about__pillar-title">Engineer Full-Stack</div>
-              <div class="about__pillar-desc">Build reactive interfaces and reliable, high-concurrency Node.js backends.</div>
-            </div>
-            <div class="about__pillar reveal reveal--delay-3">
-              <div class="about__pillar-icon" aria-hidden="true">â–£</div>
-              <div class="about__pillar-title">Integrate &amp; Secure</div>
-              <div class="about__pillar-desc">Paystack payments, Cloudinary CDN, QR cryptography, and automated test suites.</div>
-            </div>
-            <div class="about__pillar reveal reveal--delay-4">
-              <div class="about__pillar-icon" aria-hidden="true">â–§</div>
-              <div class="about__pillar-title">Deploy &amp; Maintain</div>
-              <div class="about__pillar-desc">Ship production-ready systems on Vercel, Render, and MongoDB Atlas.</div>
-            </div>
+          <div class="about__quote">
+            “Technology should be practical, accessible and purposeful. My goal is to build systems that not only look good but also deliver real value to the people who use them.”
           </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-
-  <!-- ============================================================
-       EXPERTISE / SKILLS
-       ============================================================ -->
-  <section class="section section--dark" aria-labelledby="expertise-heading">
-    <div class="container">
-
-      <span class="section-label">02 / Expertise</span>
-
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem;">
-        <h2 id="expertise-heading" class="section-heading text-white reveal">
-          Core Engineering &amp;<br/>System Capabilities
-        </h2>
-        <p class="text-muted reveal" style="max-width: 340px; font-size: 0.9rem; line-height: 1.65;">
-          End-to-end full-stack engineering tools and methodologies applied across production web applications, multi-tenant portals, and secure commerce systems.
-        </p>
-      </div>
-
-      <div class="skills__grid reveal">
-
-        <div class="skills__category">
-          <span class="skills__cat-label">Frontend Engineering</span>
-          <div class="skills__tags">
-            <span class="skills__tag">React.js (18 / 19)</span>
-            <span class="skills__tag">JavaScript (ES6+)</span>
-            <span class="skills__tag">HTML5 / Modern CSS3</span>
-            <span class="skills__tag">Tailwind CSS</span>
-            <span class="skills__tag">Vite Bundler</span>
-            <span class="skills__tag">Responsive &amp; Mobile-First</span>
-            <span class="skills__tag">Camera QR PWA Scanners</span>
-            <span class="skills__tag">Print CSS Engines</span>
-          </div>
-        </div>
-
-        <div class="skills__category">
-          <span class="skills__cat-label">Backend Architecture</span>
-          <div class="skills__tags">
-            <span class="skills__tag">Node.js (ESM / CJS)</span>
-            <span class="skills__tag">Express.js Framework</span>
-            <span class="skills__tag">RESTful API Design</span>
-            <span class="skills__tag">JWT &amp; Cookie Auth</span>
-            <span class="skills__tag">Role-Based Access (RBAC)</span>
-            <span class="skills__tag">Multi-Tenancy Boundaries</span>
-            <span class="skills__tag">Microservice Decoupling</span>
-            <span class="skills__tag">Multer Streams</span>
-          </div>
-        </div>
-
-        <div class="skills__category">
-          <span class="skills__cat-label">Database &amp; Storage</span>
-          <div class="skills__tags">
-            <span class="skills__tag">MongoDB Atlas</span>
-            <span class="skills__tag">Mongoose ORM</span>
-            <span class="skills__tag">Compound Indexing</span>
-            <span class="skills__tag">Atomic DB Operators</span>
-            <span class="skills__tag">Firebase Realtime / Firestore</span>
-            <span class="skills__tag">Cloudinary Media CDN</span>
-          </div>
-        </div>
-
-        <div class="skills__category">
-          <span class="skills__cat-label">Payments &amp; Hardware</span>
-          <div class="skills__tags">
-            <span class="skills__tag">Paystack Gateway (â‚¦ NGN)</span>
-            <span class="skills__tag">Webhook Crypto Verification</span>
-            <span class="skills__tag">Escrow &amp; Virtual Ledgers</span>
-            <span class="skills__tag">External Paystack Refunds</span>
-            <span class="skills__tag">HMAC QR Offline Passes</span>
-            <span class="skills__tag">ISO CR80 ID Card Specs</span>
-          </div>
-        </div>
-
-        <div class="skills__category">
-          <span class="skills__cat-label">AI &amp; Quality Engineering</span>
-          <div class="skills__tags">
-            <span class="skills__tag">Gemini API Integrations</span>
-            <span class="skills__tag">Zero-Fabrication Prompts</span>
-            <span class="skills__tag">Automated Test Suites (Vitest)</span>
-            <span class="skills__tag">ReDoS Security Mitigation</span>
-            <span class="skills__tag">Integer-Kobo Accounting</span>
-            <span class="skills__tag">Immutable Audit Trails</span>
-            <span class="skills__tag">ExcelJS Data Streaming</span>
-            <span class="skills__tag">Render &amp; Vercel CI/CD</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       FEATURED PROJECT
-       ============================================================ -->
-  <section id="work" class="featured-project" aria-labelledby="featured-heading">
-    <div class="container">
-
-      <div class="featured-project__header">
-        <div>
-          <span class="section-label">03 / Selected Work</span>
-          <h2 id="featured-heading" class="section-heading reveal">Featured System</h2>
-        </div>
-        <a href="#all-projects" class="btn btn--dark-outline reveal" style="align-self: flex-end;">
-          Explore All 10 Case Studies <span class="btn-arrow">&rarr;</span>
-        </a>
-      </div>
-
-      <div class="featured-project__body">
-
-        <!-- Image -->
-        <div class="featured-project__img-wrap reveal" style="background:#0D0D0D; display:flex; align-items:center; justify-content:center; padding:1.5rem;">
-          <img
-            src="./media/tickza-hero.jpg"
-            alt="Tickza &mdash; Production Event Ticketing and Admission Infrastructure"
-            loading="lazy"
-            style="max-height: 380px; width: auto; object-fit: contain;"
-          />
-        </div>
-
-        <!-- Info -->
-        <div class="featured-project__info reveal reveal--delay-2">
-          <span class="featured-project__number">FLAGSHIP / COMMERCE &amp; HARDWARE</span>
-          <h3 class="featured-project__title">Tickza &mdash; Production Event Ticketing &amp; Gate Admission Infrastructure</h3>
-
-          <p class="featured-project__desc">
-            A high-concurrency event ticketing and gate verification ecosystem engineered for Nigerian event promoters, concert organizers, and campus festivals. Combines Paystack Naira checkout, multi-tier ticket quotas, an escrow and virtual ledger marketplace model, offline cryptographic HMAC QR admission, and a test suite of 206 automated assertions.
+          <p>
+            Over time, I’ve worked on solutions across different sectors, including <strong>education, recruitment, event management, sports, marketplaces, organizational administration and business services</strong>.
           </p>
-
-          <div class="featured-project__meta">
-            <div class="featured-project__meta-row">
-              <span class="featured-project__meta-key">Problem</span>
-              <span class="featured-project__meta-val">Ticket duplication via screenshot fraud, gate congestion during network outages, manual bank transfer reconciliation, and opaque organizer revenue splits.</span>
-            </div>
-            <div class="featured-project__meta-row">
-              <span class="featured-project__meta-key">Solution</span>
-              <span class="featured-project__meta-val">Sub-second QR gate scanner with atomic double-check-in guards, cryptographic dynamic-salt HMAC passes, Paystack webhook lifecycle handling, and external Paystack refund integration.</span>
-            </div>
-            <div class="featured-project__meta-row">
-              <span class="featured-project__meta-key">Stack</span>
-              <span class="featured-project__meta-val">React 19 &middot; Node.js (ESM) &middot; Express.js &middot; MongoDB Atlas &middot; Paystack API &middot; Tailwind CSS v4</span>
-            </div>
-            <div class="featured-project__meta-row">
-              <span class="featured-project__meta-key">QA &amp; Audit</span>
-              <span class="featured-project__meta-val">206 Passing Automated Tests (100% Pass Rate) &middot; Conditionally Production Ready</span>
-            </div>
-          </div>
-
-          <div class="featured-project__links" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
-            <a href="./case-studies/tickza.html" class="btn btn--dark" aria-label="View Tickza Deep Dive Case Study">
-              Read Deep-Dive Case Study <span class="btn-arrow">&rarr;</span>
-            </a>
-            <a href="https://github.com/Psalmstrings" class="btn btn--dark-outline" target="_blank" rel="noopener" aria-label="Inspect Psalmstrings GitHub">
-              GitHub Repositories <span class="btn-arrow">&nearr;</span>
-            </a>
-          </div>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <!-- Right: Supporting Capability Pillars -->
+        <div class="about__pillars reveal reveal--delay-1">
 
-  <hr class="divider" />
-
-
-  <!-- ============================================================
-       ALL PROJECTS & CASE STUDIES
-       ============================================================ -->
-  <section id="all-projects" class="projects-section" aria-labelledby="projects-heading">
-    <div class="container">
-
-      <div class="projects-section__header">
-        <div>
-          <span class="section-label">03 / Engineering Showcase</span>
-          <h2 id="projects-heading" class="section-heading reveal">Systems &amp; Case Studies</h2>
-        </div>
-        <p class="text-muted reveal" style="max-width: 360px; font-size: 0.9rem; line-height: 1.65;">
-          Ten comprehensive, production-grade digital solutions engineered across enterprise systems, education, luxury e-commerce, AI, and civic infrastructure.
-        </p>
-      </div>
-
-      <!-- Filter Controls -->
-      <div class="projects-filter-bar reveal" role="toolbar" aria-label="Project category filter">
-        <button type="button" class="filter-btn active" data-filter="all">All Systems (13)</button>
-        <button type="button" class="filter-btn" data-filter="civic">Civic &amp; Mobilisation</button>
-        <button type="button" class="filter-btn" data-filter="commerce">E-Commerce &amp; Ticketing</button>
-        <button type="button" class="filter-btn" data-filter="edtech">EdTech &amp; HR Systems</button>
-        <button type="button" class="filter-btn" data-filter="sports-logistics">Sports &amp; Logistics</button>
-      </div>
-
-      <div class="projects-grid" id="projects-grid">
-
-        <!-- =========================================================
-             1. CAMPUSMART (E-Commerce / EdTech) &mdash; WIDE
-        ========================================================= -->
-        <article class="project-card project-card--wide reveal" data-category="commerce edtech" aria-label="CampusMart Student Marketplace">
-          <div class="project-card__img-wrap">
-            <img
-              src="./media/campusmart-hero.jpg"
-              alt="CampusMart &mdash; Mobile-First Peer-to-Peer Student Marketplace"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <a href="./case-studies/campusmart.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
-            </div>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__badge-pill">E-Commerce &middot; Student Marketplace</span>
-            <span class="project-card__number">PROJECT / 01 &middot; 104 AUTOMATED TESTS</span>
-            <h3 class="project-card__title">CampusMart &mdash; Mobile-First Peer-to-Peer Student Marketplace</h3>
-            <p class="project-card__desc">
-              A hyper-localized campus commerce platform connecting students across UNILAG, YABATECH, and LASU. Replaces chaotic, disappearing WhatsApp group sales with structured catalog indexing, ReDoS-safe search escaping, student identity verification, administrative moderation queues, and one-tap WhatsApp seller handoff tracking.
+          <div class="pillar-card">
+            <div class="pillar-card__icon">🏛️</div>
+            <h3 class="pillar-card__title">Systems Architecture &amp; Multi-Tenancy</h3>
+            <p class="pillar-card__desc">
+              Designing isolated database schemas, role-gated operational portals, and high-concurrency workflows that guarantee zero data leakage across large organizational structures.
             </p>
-            <div class="project-card__tags">
-              <span class="project-card__tag">React 19</span>
-              <span class="project-card__tag">Node.js (v22)</span>
-              <span class="project-card__tag">Express.js</span>
-              <span class="project-card__tag">MongoDB Atlas</span>
-              <span class="project-card__tag">Cloudinary CDN</span>
-              <span class="project-card__tag">104 Automated Tests</span>
-              <span class="project-card__tag">Tailwind CSS v4</span>
-            </div>
-            <div class="project-card__links">
-              <a href="./case-studies/campusmart.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
-              </a>
-              <a href="https://github.com/Psalmstrings" class="project-card__link" target="_blank" rel="noopener">
-                GitHub Codebase &nearr;
-              </a>
-            </div>
           </div>
-        </article>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon">💳</div>
+            <h3 class="pillar-card__title">Financial Engineering &amp; Verification</h3>
+            <p class="pillar-card__desc">
+              Integrating resilient payment lifecycles with Paystack webhooks, integer-kobo precision bursary ledgers, and offline HMAC SHA-256 cryptographic ticket validation.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon">⚡</div>
+            <h3 class="pillar-card__title">Quality &amp; Automated Testing</h3>
+            <p class="pillar-card__desc">
+              Committing to production-grade software delivery through comprehensive unit and integration test suites (over 310+ passing assertions across core applications).
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       D. TECHNICAL EXPERTISE
+       ============================================================ -->
+  <section id="expertise" class="section" aria-labelledby="expertise-heading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">02 / Capabilities</span>
+        <h2 id="expertise-heading" class="section-title">Technical Expertise</h2>
+        <p class="section-desc">
+          A structured overview of the programming languages, frameworks, architectural patterns, and development tools I employ across the full software lifecycle.
+        </p>
+      </div>
+
+      <div class="expertise__grid">
+
+        <!-- 1. Frontend Development -->
+        <div class="expertise-card reveal">
+          <div class="expertise-card__header">
+            <div class="expertise-card__icon">🎨</div>
+            <h3 class="expertise-card__title">Frontend Development</h3>
+          </div>
+          <p class="expertise-card__desc">
+            Crafting responsive, accessible, and high-performance client interfaces with modern state management, component hierarchies, and fluid animations.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-pill">React.js (v18/19)</span>
+            <span class="tech-pill">JavaScript (ES6+)</span>
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3 / Modern CSS</span>
+            <span class="tech-pill">Tailwind CSS v4</span>
+            <span class="tech-pill">Responsive Design</span>
+            <span class="tech-pill">UI Implementation</span>
+          </div>
+        </div>
+
+        <!-- 2. Backend Development -->
+        <div class="expertise-card reveal reveal--delay-1">
+          <div class="expertise-card__header">
+            <div class="expertise-card__icon">⚙️</div>
+            <h3 class="expertise-card__title">Backend Development</h3>
+          </div>
+          <p class="expertise-card__desc">
+            Architecting robust, secure server-side infrastructures, asynchronous request pipelines, authentication boundaries, and clean business logic.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-pill">Node.js (ESM)</span>
+            <span class="tech-pill">Express.js</span>
+            <span class="tech-pill">REST API Development</span>
+            <span class="tech-pill">JWT &amp; RBAC Auth</span>
+            <span class="tech-pill">Backend Architecture</span>
+            <span class="tech-pill">Database Integration</span>
+            <span class="tech-pill">Middleware Pipelines</span>
+          </div>
+        </div>
+
+        <!-- 3. Database & Storage -->
+        <div class="expertise-card reveal reveal--delay-2">
+          <div class="expertise-card__header">
+            <div class="expertise-card__icon">🗄️</div>
+            <h3 class="expertise-card__title">Database &amp; Storage</h3>
+          </div>
+          <p class="expertise-card__desc">
+            Modeling reliable document and relational data schemas, optimizing queries, managing indexes, and orchestrating media delivery networks.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-pill">MongoDB Atlas</span>
+            <span class="tech-pill">Mongoose ODM</span>
+            <span class="tech-pill">Firebase Firestore</span>
+            <span class="tech-pill">SQL Principles</span>
+            <span class="tech-pill">Cloudinary CDN</span>
+            <span class="tech-pill">Schema Modeling</span>
+            <span class="tech-pill">Data Indexing</span>
+          </div>
+        </div>
+
+        <!-- 4. Payments & Integrations -->
+        <div class="expertise-card reveal">
+          <div class="expertise-card__header">
+            <div class="expertise-card__icon">💳</div>
+            <h3 class="expertise-card__title">Payments &amp; Integrations</h3>
+          </div>
+          <p class="expertise-card__desc">
+            Engineering bulletproof payment flows with automated webhook lifecycle processing, escrow virtual ledgers, and third-party API communication.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-pill">Paystack (₦ NGN)</span>
+            <span class="tech-pill">Payment Webhooks</span>
+            <span class="tech-pill">Flutterwave</span>
+            <span class="tech-pill">Third-Party APIs</span>
+            <span class="tech-pill">HMAC Cryptography</span>
+            <span class="tech-pill">Email Services</span>
+            <span class="tech-pill">WhatsApp API / Redirection</span>
+          </div>
+        </div>
+
+        <!-- 5. Tools & Deployment -->
+        <div class="expertise-card reveal reveal--delay-1">
+          <div class="expertise-card__header">
+            <div class="expertise-card__icon">🚀</div>
+            <h3 class="expertise-card__title">Tools &amp; Deployment</h3>
+          </div>
+          <p class="expertise-card__desc">
+            Maintaining production continuous delivery pipelines, disciplined version control, environment security, and API contract verification.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-pill">Git</span>
+            <span class="tech-pill">GitHub</span>
+            <span class="tech-pill">Vercel</span>
+            <span class="tech-pill">Render</span>
+            <span class="tech-pill">Postman</span>
+            <span class="tech-pill">VS Code</span>
+            <span class="tech-pill">Linux / Bash</span>
+          </div>
+        </div>
+
+        <!-- 6. Additional Capabilities -->
+        <div class="expertise-card reveal reveal--delay-2">
+          <div class="expertise-card__header">
+            <div class="expertise-card__icon">💡</div>
+            <h3 class="expertise-card__title">Additional Capabilities</h3>
+          </div>
+          <p class="expertise-card__desc">
+            Bridging technical execution with strategic product design, automated quality verification, and user-centered problem-solving.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-pill">UI/UX Design</span>
+            <span class="tech-pill">Technical Problem-Solving</span>
+            <span class="tech-pill">System Development</span>
+            <span class="tech-pill">Software Testing (Vitest/Jest)</span>
+            <span class="tech-pill">Website Optimization</span>
+            <span class="tech-pill">Digital Product Development</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       E. FEATURED PROJECTS
+       ============================================================ -->
+  <section id="projects" class="section section--alt" aria-labelledby="projects-heading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">03 / Selected Work</span>
+        <h2 id="projects-heading" class="section-title">Featured Systems &amp; Case Studies</h2>
+        <p class="section-desc">
+          Real-world applications engineered to solve genuine problems for individuals, businesses, educational institutions, and civic organizations.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal" role="toolbar" aria-label="Filter projects by domain">
+        <button type="button" class="filter-btn active" data-filter="all">All Systems (10)</button>
+        <button type="button" class="filter-btn" data-filter="commerce">Commerce &amp; Ticketing</button>
+        <button type="button" class="filter-btn" data-filter="edtech">EdTech &amp; Careers</button>
+        <button type="button" class="filter-btn" data-filter="civic">Civic &amp; Governance</button>
+        <button type="button" class="filter-btn" data-filter="logistics">Logistics &amp; Sports</button>
+      </div>
+
+      <div class="projects-grid">
 
         <!-- =========================================================
-             2. TICKZA (Commerce / Hardware) &mdash; STANDARD
+             1. TICKZA (Flagship - Event Technology / Ticketing)
         ========================================================= -->
-        <article class="project-card reveal" data-category="commerce" aria-label="Tickza Event Ticketing Infrastructure">
+        <article class="project-card project-card--wide reveal" data-category="commerce" aria-label="Tickza Event Ticketing Infrastructure">
           <div class="project-card__img-wrap">
             <img
               src="./media/tickza-hero.jpg"
-              alt="Tickza Event Ticketing and Gate Admission"
+              alt="Tickza Event Ticketing and Gate Admission Infrastructure"
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/tickza.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/tickza.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Event Technology &middot; Payments</span>
-            <span class="project-card__number">PROJECT / 02 &middot; 206 PASSING TESTS</span>
-            <h3 class="project-card__title">Tickza &mdash; Event Ticketing &amp; Gate Admission Infrastructure</h3>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Event Technology &middot; Ticketing Platform</span>
+              <span class="project-card__num">FLAGSHIP / 206 TESTS</span>
+            </div>
+            <h3 class="project-card__title">Tickza &mdash; Event Ticketing &amp; Gate Admission Platform</h3>
             <p class="project-card__desc">
-              Production event commerce platform with multi-tier ticket sales, native Paystack Naira checkout, escrow virtual ledgers, and offline cryptographic HMAC QR gate scanners running at sub-500ms validation latency.
+              Tickza is a digital event ticketing and management platform designed to simplify how event organizers create events, sell tickets and manage attendee entry with verified financial settlements.
             </p>
-            <div class="project-card__tags">
-              <span class="project-card__tag">React 19</span>
-              <span class="project-card__tag">Node.js (ESM)</span>
-              <span class="project-card__tag">Paystack (₦ NGN)</span>
-              <span class="project-card__tag">QR Cryptography</span>
-              <span class="project-card__tag">MongoDB</span>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Traditional event ticketing is difficult to coordinate—organizers struggle with screenshot duplication fraud, chaotic door check-ins during network blackouts, manual transfer reconciliation, and opaque payouts.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> A structured ticketing platform featuring Paystack checkout, an escrow virtual ledger model, and sub-500ms offline cryptographic HMAC QR gate admission verification backed by 206 automated tests.</p>
             </div>
-            <div class="project-card__links">
-              <a href="./case-studies/tickza.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- =========================================================
-             3. HIREFIT (EdTech / HR Tech) &mdash; STANDARD
-        ========================================================= -->
-        <article class="project-card reveal reveal--delay-1" data-category="edtech" aria-label="HireFit AI CV Optimization Platform">
-          <div class="project-card__img-wrap">
-            <img
-              src="./media/hirefit-hero.jpg"
-              alt="HireFit AI CV Optimization Platform"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <a href="./case-studies/hirefit.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
-            </div>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__badge-pill">HR Tech &middot; Artificial Intelligence</span>
-            <span class="project-card__number">PROJECT / 03 &middot; ZERO-FABRICATION GUARANTEE</span>
-            <h3 class="project-card__title">HireFit &mdash; Production AI CV Optimization Engine</h3>
-            <p class="project-card__desc">
-              AI-assisted career platform analyzing resumes against job descriptions with a strict Zero-Fabrication Guarantee. Features 6-category ATS scoring, structure-preserving extraction (PDF/DOCX), and interactive before/after diff editing.
-            </p>
             <div class="project-card__tags">
               <span class="project-card__tag">React.js</span>
               <span class="project-card__tag">Node.js</span>
-              <span class="project-card__tag">Gemini API / LLM</span>
-              <span class="project-card__tag">pdf-parse</span>
-              <span class="project-card__tag">ATS Export</span>
+              <span class="project-card__tag">Express.js</span>
+              <span class="project-card__tag">MongoDB</span>
+              <span class="project-card__tag">Paystack (₦ NGN)</span>
+              <span class="project-card__tag">HMAC QR Cryptography</span>
+              <span class="project-card__tag">Vitest</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/hirefit.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/tickza.html" class="project-card__link-cs">
+                Read Deep-Dive Case Study <span class="btn-arrow">&rarr;</span>
               </a>
-              <a href="https://hire-ai-fawn.vercel.app/" class="project-card__link" target="_blank" rel="noopener">
-                Live Prototype &nearr;
+              <a href="https://tickza.vercel.app/home" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Prototype ↗
               </a>
             </div>
           </div>
         </article>
 
         <!-- =========================================================
-             4. SCHOOLMEG (EdTech / ERP) &mdash; WIDE
+             2. SCHOOLMEG (EdTech / School ERP)
         ========================================================= -->
         <article class="project-card project-card--wide reveal" data-category="edtech" aria-label="SchoolMeg Multi-Tenant School ERP">
           <div class="project-card__img-wrap">
             <img
               src="./media/schoolmeg-hero.jpg"
-              alt="SchoolMeg &mdash; Multi-Tenant School Management ERP and Live Campus Feed"
+              alt="SchoolMeg Multi-Tenant School Management ERP and Live Gate Scanner"
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/schoolmeg.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/schoolmeg.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Educational Technology &middot; School ERP</span>
-            <span class="project-card__number">PROJECT / 04 &middot; 6 INTEGRATED ROLES</span>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Education Technology &middot; School Management</span>
+              <span class="project-card__num">MULTI-TENANT / 6 ROLES</span>
+            </div>
             <h3 class="project-card__title">SchoolMeg &mdash; Multi-Tenant School Management ERP &amp; Gate Scanner</h3>
             <p class="project-card__desc">
-              A comprehensive school management system engineered for Nigerian institutions. Enforces strict tenant database isolation, generates printable ISO/IEC 7810 CR80 PVC ID cards, automates arrival/departure gate attendance via opaque cryptographic QR scans, computes Nigerian CA + Exam terminal results, and enforces strict integer-kobo financial accounting.
+              SchoolMeg brings essential school operations into a centralized digital platform, helping educational institutions manage their administrative, academic, and financial operations digitally.
             </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Schools depend on fragmented manual processes: paper gate notebooks that endanger student tracking, manual CA/Exam report calculations that take weeks, and floating-point errors in fee bookkeeping.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> A multi-tenant system with isolated tenant databases, ISO/IEC 7810 CR80 PVC student ID card generation, cryptographic QR arrival gate scanning, Nigerian CA+Exam results computation, and integer-kobo bursary accounting.</p>
+            </div>
             <div class="project-card__tags">
-              <span class="project-card__tag">Multi-Tenant MERN</span>
-              <span class="project-card__tag">CR80 ID Studio</span>
+              <span class="project-card__tag">React.js</span>
+              <span class="project-card__tag">Node.js</span>
+              <span class="project-card__tag">Express.js</span>
+              <span class="project-card__tag">MongoDB</span>
+              <span class="project-card__tag">CR80 PVC Studio</span>
               <span class="project-card__tag">QR Gate Scanner</span>
-              <span class="project-card__tag">Nigerian Grading</span>
-              <span class="project-card__tag">Integer-Kobo Bursary</span>
-              <span class="project-card__tag">Vitest</span>
+              <span class="project-card__tag">Cloudinary</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/schoolmeg.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/schoolmeg.html" class="project-card__link-cs">
+                Read Deep-Dive Case Study <span class="btn-arrow">&rarr;</span>
               </a>
-              <a href="https://github.com/Psalmstrings" class="project-card__link" target="_blank" rel="noopener">
-                GitHub Repo &nearr;
+              <a href="https://schoolmeg.vercel.app" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Prototype ↗
               </a>
             </div>
           </div>
         </article>
 
         <!-- =========================================================
-             5. PBAT-KOH (Civic & Mobilisation) &mdash; WIDE
+             3. CAMPUSMART (Marketplace / E-commerce)
         ========================================================= -->
-        <article class="project-card project-card--wide reveal" data-category="civic" aria-label="PBAT-KOH Mobilisation Platform">
+        <article class="project-card reveal" data-category="commerce" aria-label="CampusMart Student Marketplace">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/campusmart-hero.jpg"
+              alt="CampusMart Peer-to-Peer Student Marketplace"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <a href="./case-studies/campusmart.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Marketplace &middot; E-Commerce</span>
+              <span class="project-card__num">104 AUTOMATED TESTS</span>
+            </div>
+            <h3 class="project-card__title">CampusMart &mdash; Student Peer-to-Peer Marketplace</h3>
+            <p class="project-card__desc">
+              CampusMart is a student-focused digital marketplace connecting buyers and sellers across university campuses including UNILAG, YABATECH, and LASU.
+            </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Students struggle to discover relevant essentials on campus, while sellers rely on chaotic, disappearing WhatsApp status updates with high scam risks.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> Structured campus catalog with ReDoS-safe search escaping, student identity verification, moderation queues, Cloudinary media optimization, and one-tap WhatsApp seller handoff tracking.</p>
+            </div>
+            <div class="project-card__tags">
+              <span class="project-card__tag">React 19</span>
+              <span class="project-card__tag">Node.js (v22)</span>
+              <span class="project-card__tag">Express.js</span>
+              <span class="project-card__tag">MongoDB Atlas</span>
+              <span class="project-card__tag">Tailwind CSS v4</span>
+              <span class="project-card__tag">Cloudinary</span>
+            </div>
+            <div class="project-card__links">
+              <a href="./case-studies/campusmart.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
+              </a>
+              <a href="https://bimsmart.vercel.app" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Marketplace ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================
+             4. HIREFIT (Recruitment Tech / Career Development)
+        ========================================================= -->
+        <article class="project-card reveal reveal--delay-1" data-category="edtech" aria-label="HireFit CV Optimization Platform">
+          <div class="project-card__img-wrap">
+            <img
+              src="./media/hirefit-hero.jpg"
+              alt="HireFit CV Optimization Platform"
+              loading="lazy"
+            />
+            <div class="project-card__overlay">
+              <a href="./case-studies/hirefit.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Recruitment Tech &middot; Career Development</span>
+              <span class="project-card__num">ZERO-FABRICATION GUARANTEE</span>
+            </div>
+            <h3 class="project-card__title">HireFit &mdash; CV Optimization &amp; ATS Diagnostic Engine</h3>
+            <p class="project-card__desc">
+              HireFit is a CV optimization platform designed to help job seekers analyze, improve, and tailor their resumes directly against target job descriptions.
+            </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Generic CVs fail modern applicant tracking systems (ATS), while careless automated rewriting frequently hallucinates fake skills and unverified job titles.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> A strict Zero-Fabrication diagnostic engine providing 6-category ATS scoring, structure-preserving extraction (PDF/DOCX), and an interactive before/after split-diff editing workspace.</p>
+            </div>
+            <div class="project-card__tags">
+              <span class="project-card__tag">React.js</span>
+              <span class="project-card__tag">Node.js</span>
+              <span class="project-card__tag">Express.js</span>
+              <span class="project-card__tag">MongoDB</span>
+              <span class="project-card__tag">Gemini API</span>
+              <span class="project-card__tag">pdf-parse</span>
+              <span class="project-card__tag">Diff Viewer</span>
+            </div>
+            <div class="project-card__links">
+              <a href="./case-studies/hirefit.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
+              </a>
+              <a href="https://hire-fitt.vercel.app" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Prototype ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================
+             5. PBAT-KOH TEMA (Membership Management / Civic)
+        ========================================================= -->
+        <article class="project-card reveal" data-category="civic" aria-label="PBAT-KOH TEMA Mobilisation Platform">
           <div class="project-card__img-wrap">
             <img
               src="./media/pbat-koh-hero.jpg"
@@ -581,39 +649,45 @@
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/pbat-koh.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/pbat-koh.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Civic Technology &middot; Mobilisation</span>
-            <span class="project-card__number">PROJECT / 05 &middot; 14 TERTIARY CAMPUSES</span>
-            <h3 class="project-card__title">PBAT-KOH &mdash; Tertiary Mobilisation &amp; Membership Management Platform</h3>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Membership Management &middot; Civic Tech</span>
+              <span class="project-card__num">14 CAMPUSES / 20 LGAS</span>
+            </div>
+            <h3 class="project-card__title">PBAT-KOH TEMA &mdash; Tertiary Mobilisation Platform</h3>
             <p class="project-card__desc">
-              An organizational mobilization platform (operating publicly as batkohsa.org) designed to coordinate student volunteers, campus captains, coupon referral attribution, and executive analytics across 14 Lagos tertiary institutions (UNILAG, LASU, YABATECH, LASUSTECH, etc.) and all 20 Local Government Areas.
+              PBAT-KOH TEMA is a centralized mobilization and membership management platform designed to support structured registration, captain coordination, and administrative monitoring across Lagos tertiary institutions.
             </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Large-scale mobilization exercises struggle with tracking membership provenance, attributing registrations to captains, manual record verification, and duplicate records.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> Role-based portals (Member, Captain, Coordinator, Admin) with referral code attribution, VIN format validation, institutional filtering, and ExcelJS streaming exports.</p>
+            </div>
             <div class="project-card__tags">
               <span class="project-card__tag">React.js (BHKYS)</span>
               <span class="project-card__tag">Node.js / Express</span>
               <span class="project-card__tag">MongoDB Atlas</span>
-              <span class="project-card__tag">Captain Coupon Attribution</span>
+              <span class="project-card__tag">Captain Attribution</span>
               <span class="project-card__tag">ExcelJS Streaming</span>
-              <span class="project-card__tag">Vercel &amp; Render</span>
+              <span class="project-card__tag">Render</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/pbat-koh.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/pbat-koh.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
               </a>
-              <a href="https://batkohsa.org/" class="project-card__link" target="_blank" rel="noopener">
-                Live Deployment &nearr;
+              <a href="https://batkohsa.org/" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Deployment ↗
               </a>
             </div>
           </div>
         </article>
 
         <!-- =========================================================
-             6. BVDI (Civic / Data Transformation) &mdash; STANDARD
+             6. BVDI PROJECT (Civic / Data Governance)
         ========================================================= -->
-        <article class="project-card reveal" data-category="civic" aria-label="BVDI Badagry Voters Digitization Initiative">
+        <article class="project-card reveal reveal--delay-1" data-category="civic" aria-label="Badagry Voters Digitization Initiative">
           <div class="project-card__img-wrap">
             <img
               src="./media/bvdi-hero.jpg"
@@ -621,17 +695,22 @@
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/bvdi.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/bvdi.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
-          </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Civic Tech &middot; Data Privacy</span>
-            <span class="project-card__number">PROJECT / 06 &middot; 10 OFFICIAL WARDS</span>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Civic Technology &middot; Data Governance</span>
+              <span class="project-card__num">10 WARDS / 100% CONSENTED</span>
+            </div>
             <h3 class="project-card__title">BVDI &mdash; Badagry Voters Digitization Initiative</h3>
             <p class="project-card__desc">
-              A civic information platform delivering consented voter registration, recruiter code attribution, demographic telemetry, cryptographic VIN masking, and immutable audit logs across all 10 official wards of Badagry Local Government.
+              A secure civic information and voter digitization platform developed to build an accurate, consented database across all 10 official wards of Badagry Local Government.
             </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Civic mobilization historically suffered from vulnerable paper lists, missing citizen consent records, privacy exposure risks, and zero ward-level demographic visibility.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> Consented registration workflows with recruiter code attribution, demographic telemetry, cryptographic VIN masking, and tamper-evident administrative audit logs.</p>
+            </div>
             <div class="project-card__tags">
               <span class="project-card__tag">React (Vite)</span>
               <span class="project-card__tag">Node.js</span>
@@ -641,17 +720,20 @@
               <span class="project-card__tag">Audit Trail Engine</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/bvdi.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/bvdi.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
+              </a>
+              <a href="https://bdgvotersinitiative.com" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Platform ↗
               </a>
             </div>
           </div>
         </article>
 
         <!-- =========================================================
-             7. OFFICE OF THE ZONE D PRO (Civic Tech) &mdash; STANDARD
+             7. OFFICE OF THE ZONE D PRO (Governance / Media)
         ========================================================= -->
-        <article class="project-card reveal reveal--delay-1" data-category="civic" aria-label="Office of the Zone D PRO Official Platform">
+        <article class="project-card reveal" data-category="civic" aria-label="Office of the Zone D PRO Official Platform">
           <div class="project-card__img-wrap">
             <img
               src="./media/zone-d-pro-hero.jpg"
@@ -659,16 +741,22 @@
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/zone-d-pro.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/zone-d-pro.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Civic Tech &middot; Student Governance</span>
-            <span class="project-card__number">PROJECT / 07 &middot; SOUTH-WEST ZONE</span>
-            <h3 class="project-card__title">Office of the Zone D PRO &mdash; Official Civic Platform &amp; Senator Registry</h3>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Organizational Platform &middot; Public Relations</span>
+              <span class="project-card__num">NANS SOUTHWEST ZONE D</span>
+            </div>
+            <h3 class="project-card__title">Office of the Zone D PRO &mdash; Official Civic Platform</h3>
             <p class="project-card__desc">
-              The official communication and student governance portal for NANS Zone D (South West). Unifies an authenticated press CMS, campus blogger network, Cloudinary media delivery, and the Know Your Senator (KYS) institutional directory.
+              The official communication and student governance portal for NANS Zone D (South West), strengthening digital presence and providing structured channels for official communiqués.
             </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Lack of centralized digital channels for press statements, fragmented campus reporter contributions, and no verifiable institutional directory of campus leaders.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> Integrated authenticated press CMS, campus blogger submission workflows, Cloudinary media CDN, and the Know Your Senator (KYS) institutional directory.</p>
+            </div>
             <div class="project-card__tags">
               <span class="project-card__tag">React.js</span>
               <span class="project-card__tag">Dual Node Backends</span>
@@ -677,20 +765,20 @@
               <span class="project-card__tag">MongoDB</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/zone-d-pro.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/zone-d-pro.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
               </a>
-              <a href="http://officeoftheprozoned.com/" class="project-card__link" target="_blank" rel="noopener">
-                Live Website &nearr;
+              <a href="http://officeoftheprozoned.com/" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Website ↗
               </a>
             </div>
           </div>
         </article>
 
         <!-- =========================================================
-             8. DX SPORTZ (Sports & Logistics) &mdash; WIDE
+             8. DX SPORTZ (Sports Technology & LMS)
         ========================================================= -->
-        <article class="project-card project-card--wide reveal" data-category="sports-logistics" aria-label="DX Sportz and DX Academy Platform">
+        <article class="project-card reveal reveal--delay-1" data-category="logistics" aria-label="DX Sportz and DX Academy Platform">
           <div class="project-card__img-wrap">
             <img
               src="./media/Screenshot (246).png"
@@ -698,16 +786,22 @@
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/dx-sportz.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/dx-sportz.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Sports Technology &middot; E-Learning</span>
-            <span class="project-card__number">PROJECT / 08 &middot; MEDIA + VOCATIONAL LMS</span>
-            <h3 class="project-card__title">DX Sportz &mdash; Sports Media Hub &amp; DX Academy E-Learning Platform</h3>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Sports Technology &middot; E-Learning</span>
+              <span class="project-card__num">MATCH CENTER + ACADEMY LMS</span>
+            </div>
+            <h3 class="project-card__title">DX Sportz &mdash; Sports Media Hub &amp; DX Academy Platform</h3>
             <p class="project-card__desc">
-              A sports technology platform combining domestic NPFL and international football match centers, live league standings, multimedia sports journalism, and the DX Academy sports education LMS with automated PDF certificate issuance and cryptographic verification.
+              A sports technology platform combining domestic and international football coverage with the DX Academy sports education LMS for aspiring sports media practitioners.
             </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Fragmented domestic league (NPFL) coverage, limited match schedule indexing, and lack of verified educational certification paths for African sports journalists.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> Real-time NPFL match center, live league tables, sports journalism editorial pipeline, and an LMS module with automated PDF certificate issuance and cryptographic verification.</p>
+            </div>
             <div class="project-card__tags">
               <span class="project-card__tag">React (Vite)</span>
               <span class="project-card__tag">Dual Node Backends</span>
@@ -717,20 +811,20 @@
               <span class="project-card__tag">MongoDB</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/dx-sportz.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/dx-sportz.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
               </a>
-              <a href="https://dx-sport.vercel.app/" class="project-card__link" target="_blank" rel="noopener">
-                Live Deployment &nearr;
+              <a href="https://dx-sport.vercel.app/" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Web App ↗
               </a>
             </div>
           </div>
         </article>
 
         <!-- =========================================================
-             9. SWIFTEXPRESS (Logistics & Delivery) &mdash; STANDARD
+             9. SWIFTEXPRESS (Logistics / Consignment Tracking)
         ========================================================= -->
-        <article class="project-card reveal" data-category="sports-logistics" aria-label="SwiftExpress Logistics Platform">
+        <article class="project-card reveal" data-category="logistics" aria-label="SwiftExpress Logistics Platform">
           <div class="project-card__img-wrap">
             <img
               src="./media/swiftexpress-hero.jpg"
@@ -738,16 +832,22 @@
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/swiftexpress.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/swiftexpress.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Logistics Tech &middot; Delivery Systems</span>
-            <span class="project-card__number">PROJECT / 09 &middot; 13 LIFECYCLE STAGES</span>
-            <h3 class="project-card__title">SwiftExpress &mdash; Logistics &amp; Consignment Tracking Infrastructure</h3>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Logistics &middot; Business Technology</span>
+              <span class="project-card__num">13-STAGE FINITE STATE MACHINE</span>
+            </div>
+            <h3 class="project-card__title">SwiftExpress &mdash; Logistics Tracking Infrastructure</h3>
             <p class="project-card__desc">
-              A package delivery tracking platform featuring instant public waybill search, a 13-stage finite status lifecycle state machine, sub-document timeline event milestones, and role-based operations dispatch command portals.
+              A consignment management and parcel tracking platform engineered for real-time visibility, operational dispatch integrity, and multi-hub package handling.
             </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Unreliable tracking updates, arbitrary status overrides by couriers, and absence of verifiable milestone logs across inter-state logistical corridors.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> Deterministic 13-stage lifecycle state machine with transition guardrails, sub-document timeline event streams (GPS, operator notes, timestamps), and instant public waybill search.</p>
+            </div>
             <div class="project-card__tags">
               <span class="project-card__tag">React.js</span>
               <span class="project-card__tag">Node.js</span>
@@ -757,529 +857,431 @@
               <span class="project-card__tag">JWT Auth</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/swiftexpress.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/swiftexpress.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
+              </a>
+              <a href="https://swift-express-frontend.vercel.app" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Demo ↗
               </a>
             </div>
           </div>
         </article>
 
-        
         <!-- =========================================================
-             10. TOMÉA (Luxury E-Commerce / Commerce) &mdash; WIDE
+             10. TOMÉA (Luxury E-Commerce & Concierge CMS)
         ========================================================= -->
-        <article class="project-card project-card--wide reveal" data-category="commerce" aria-label="TOMÉA Perfumes Luxury E-Commerce">
+        <article class="project-card reveal reveal--delay-1" data-category="commerce" aria-label="TOMÉA Perfumes Luxury E-Commerce">
           <div class="project-card__img-wrap">
             <img
               src="./media/tomea-hero.jpg"
-              alt="TOMÉA Perfumes &mdash; Luxury Artisanal Fragrance E-Commerce and Maison Concierge"
+              alt="TOMÉA Perfumes — Luxury Artisanal Fragrance E-Commerce and Maison Concierge"
               loading="lazy"
             />
             <div class="project-card__overlay">
-              <a href="./case-studies/tomea.html" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Case Study &rarr;</a>
+              <a href="./case-studies/tomea.html" class="project-card__overlay-btn">View Detailed Case Study &rarr;</a>
             </div>
           </div>
           <div class="project-card__body">
-            <span class="project-card__badge-pill">Luxury E-Commerce &middot; Private Concierge CMS</span>
-            <span class="project-card__number">PROJECT / 10 &middot; ZERO-BUILD PERFORMANCE</span>
-            <h3 class="project-card__title">TOMÉA &mdash; Luxury Artisanal Fragrance E-Commerce &amp; Maison Concierge CMS</h3>
+            <div class="project-card__meta-top">
+              <span class="project-card__category">Luxury E-Commerce &middot; Concierge CMS</span>
+              <span class="project-card__num">ZERO-BUILD PERFORMANCE</span>
+            </div>
+            <h3 class="project-card__title">TOMÉA &mdash; Luxury Fragrance E-Commerce &amp; Maison CMS</h3>
             <p class="project-card__desc">
-              An editorial digital boutique and administrative commerce platform crafted for high-concentration Extrait de Parfum. Featuring an interactive olfactory pyramid viewer, serverless Firebase Firestore catalog synchronization, Cloudinary media CDN pipelines, and a conversational WhatsApp concierge checkout engine.
+              An editorial digital boutique and administrative commerce platform crafted for an artisanal Extrait de Parfum brand, delivering high-fashion aesthetics with zero-build performance.
             </p>
+            <div class="project-card__problem-solution">
+              <p><strong>Problem:</strong> Standard e-commerce templates treat luxury fragrance like flat commodity SKUs, generating high cart abandonment and failing to communicate scent structures.</p>
+              <p style="margin-top:0.4rem;"><strong>Solution:</strong> An interactive olfactory pyramid studio visualizing Top, Heart, and Base notes, combined with Cloud Firestore real-time sync, Cloudinary media pipelines, and a WhatsApp VIP concierge checkout generator.</p>
+            </div>
             <div class="project-card__tags">
               <span class="project-card__tag">Vanilla ES6+</span>
               <span class="project-card__tag">Firebase Auth</span>
               <span class="project-card__tag">Cloud Firestore</span>
               <span class="project-card__tag">Cloudinary CDN</span>
-              <span class="project-card__tag">WhatsApp Commerce</span>
+              <span class="project-card__tag">WhatsApp Concierge</span>
               <span class="project-card__tag">Maison CMS</span>
             </div>
             <div class="project-card__links">
-              <a href="./case-studies/tomea.html" class="project-card__cta-btn">
-                Read Case Study &rarr;
+              <a href="./case-studies/tomea.html" class="project-card__link-cs">
+                Read Case Study <span class="btn-arrow">&rarr;</span>
               </a>
-              <a href="https://psalmstrings.github.io/TOMEA/index.html" class="project-card__link" target="_blank" rel="noopener">
-                Live Boutique &nearr;
+              <a href="https://psalmstrings.github.io/TOMEA/index.html" target="_blank" rel="noopener" class="project-card__link-ext">
+                Live Boutique ↗
               </a>
             </div>
           </div>
         </article>
 
-        <!-- =========================================================
-             11. OVATION MUSIC HOUSE (Commercial / Web) &mdash; STANDARD
-        ========================================================= -->
-        <article class="project-card reveal reveal--delay-1" data-category="commerce" aria-label="Ovation Music House project">
-          <div class="project-card__img-wrap">
-            <img
-              src="./media/Screenshot (247).png"
-              alt="Ovation Music House music and sound solutions website"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <a href="https://www.ovationmusichouse.com/" target="_blank" rel="noopener" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Live Site &nearr;</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       F. WORKING APPROACH
+       ============================================================ -->
+  <section id="approach" class="section" aria-labelledby="approach-heading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">04 / Methodology</span>
+        <h2 id="approach-heading" class="section-title">How I Approach Projects</h2>
+        <p class="section-desc">
+          A disciplined, four-stage engineering methodology designed to ensure clarity, structural integrity, and real-world utility in every system I build.
+        </p>
+      </div>
+
+      <div class="process__grid">
+
+        <div class="process-step reveal">
+          <span class="process-step__num">01</span>
+          <h3 class="process-step__title">Understand</h3>
+          <p class="process-step__desc">
+            Understand the problem, identify the users and define the requirements through thorough research and operational discovery.
+          </p>
+        </div>
+
+        <div class="process-step reveal reveal--delay-1">
+          <span class="process-step__num">02</span>
+          <h3 class="process-step__title">Design</h3>
+          <p class="process-step__desc">
+            Plan the user experience, application structure, database models and technical architecture before writing production code.
+          </p>
+        </div>
+
+        <div class="process-step reveal reveal--delay-2">
+          <span class="process-step__num">03</span>
+          <h3 class="process-step__title">Develop</h3>
+          <p class="process-step__desc">
+            Build the frontend, backend, database and integrations with clean code, test-driven validation, and security best practices.
+          </p>
+        </div>
+
+        <div class="process-step reveal reveal--delay-3">
+          <span class="process-step__num">04</span>
+          <h3 class="process-step__title">Deliver</h3>
+          <p class="process-step__desc">
+            Test, refine, deploy and continuously improve the solution through automated monitoring, telemetry, and client support.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       G. PROFESSIONAL EXPERIENCE & ACHIEVEMENTS
+       ============================================================ -->
+  <section id="experience" class="section section--alt" aria-labelledby="experience-heading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">05 / Background</span>
+        <h2 id="experience-heading" class="section-title">Building Technology Through Practical Experience.</h2>
+        <p class="section-desc">
+          Showcasing real-world engineering engagements, architectural contributions, and systems delivered across education, civic governance, digital commerce, and organizational infrastructure.
+        </p>
+      </div>
+
+      <div class="experience__grid">
+
+        <!-- Left: Verified Engagements Timeline -->
+        <div class="experience__timeline">
+
+          <div class="timeline-card reveal">
+            <div class="timeline-card__header">
+              <span class="timeline-card__role">Lead Full-Stack Software Engineer &amp; Product Architect</span>
+              <span class="timeline-card__date">2024 &mdash; PRESENT</span>
             </div>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__badge-pill">Commercial Web &middot; Studio Management</span>
-            <span class="project-card__number">PROJECT / 10 &middot; ENTERPRISE</span>
-            <h3 class="project-card__title">Ovation Music House</h3>
-            <p class="project-card__desc">
-              A business website and service portal for a music solutions company, combining academy admissions, studio booking inquiries, and musical equipment catalogue management with an administrative CMS.
+            <div class="timeline-card__org">Tickza &middot; Event Commerce &amp; Physical Gate Verification</div>
+            <p class="timeline-card__desc">
+              Engineered end-to-end event commerce architecture handling Paystack payment lifecycles, virtual ledger settlements, and sub-second offline cryptographic HMAC QR admission passes backed by 206 automated unit/integration test assertions.
             </p>
-            <div class="project-card__tags">
-              <span class="project-card__tag">HTML5 / CSS3</span>
-              <span class="project-card__tag">JavaScript</span>
-              <span class="project-card__tag">Firebase</span>
-              <span class="project-card__tag">Admin Portal</span>
-              <span class="project-card__tag">Vercel</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://www.ovationmusichouse.com/" class="project-card__link" target="_blank" rel="noopener">
-                Live Website &nearr;
-              </a>
-            </div>
           </div>
-        </article>
 
-        <!-- =========================================================
-             12. CINEMA HUB (Streaming Application) &mdash; STANDARD
-        ========================================================= -->
-        <article class="project-card reveal" data-category="commerce" aria-label="Cinema Hub MERN application">
-          <div class="project-card__img-wrap">
-            <img
-              src="./media/FullStack MovieApp.JPG"
-              alt="Cinema Hub &mdash; MERN Stack movie application"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <a href="https://movieapp-teal-three.vercel.app" target="_blank" rel="noopener" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Live Demo &nearr;</a>
+          <div class="timeline-card reveal reveal--delay-1">
+            <div class="timeline-card__header">
+              <span class="timeline-card__role">Full-Stack Engineer &amp; Systems Developer</span>
+              <span class="timeline-card__date">2024 &mdash; 2025</span>
             </div>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__badge-pill">Full-Stack Application &middot; Streaming</span>
-            <span class="project-card__number">PROJECT / 11 &middot; MERN STACK</span>
-            <h3 class="project-card__title">Cinema Hub (MERN Stack)</h3>
-            <p class="project-card__desc">
-              Full-stack movie discovery and watchlist platform with JWT authentication, role-based access control, RESTful Express APIs, and reactive state management in React.
+            <div class="timeline-card__org">SchoolMeg &middot; Multi-Tenant Educational Operating System</div>
+            <p class="timeline-card__desc">
+              Architected isolated tenant database models for Nigerian primary and secondary institutions, built printable ISO CR80 PVC ID card studios, cryptographic gate arrival attendance tracking, and integer-kobo bursary ledgers.
             </p>
-            <div class="project-card__tags">
-              <span class="project-card__tag">MongoDB</span>
-              <span class="project-card__tag">Express.js</span>
-              <span class="project-card__tag">React.js</span>
-              <span class="project-card__tag">Node.js</span>
-              <span class="project-card__tag">JWT Auth</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://movieapp-teal-three.vercel.app" class="project-card__link" target="_blank" rel="noopener">
-                Live Demo &nearr;
-              </a>
-            </div>
           </div>
-        </article>
 
-        <!-- =========================================================
-             13. SAVINGSPLUS BANK (Fintech Prototype) &mdash; STANDARD
-        ========================================================= -->
-        <article class="project-card reveal reveal--delay-1" data-category="commerce" aria-label="SavingsPlus banking application">
-          <div class="project-card__img-wrap">
-            <img
-              src="./media/SavingsPlus.JPG"
-              alt="SavingsPlus Bank &mdash; Online banking prototype"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <a href="https://savingsplus.github.io/MyBank/" target="_blank" rel="noopener" class="project-card__overlay-text" style="color:#FFC107; text-decoration:none;">View Live Demo &nearr;</a>
+          <div class="timeline-card reveal reveal--delay-2">
+            <div class="timeline-card__header">
+              <span class="timeline-card__role">Civic Technology &amp; Systems Solutions Developer</span>
+              <span class="timeline-card__date">2024 &mdash; 2025</span>
             </div>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__badge-pill">Fintech Architecture &middot; Realtime DB</span>
-            <span class="project-card__number">PROJECT / 12 &middot; PROTOTYPE</span>
-            <h3 class="project-card__title">SavingsPlus Bank</h3>
-            <p class="project-card__desc">
-              Online banking prototype featuring instant account transactions, balance updates, and transaction logging backed by Firebase Realtime Database and client-side security rules.
+            <div class="timeline-card__org">PBAT-KOH TEMA &amp; Badagry Voters Digitization Initiative (BVDI)</div>
+            <p class="timeline-card__desc">
+              Developed large-scale organizational mobilization platforms across 14 tertiary institutions, implementing captain referral attribution, consented voter registrations, cryptographic VIN masking, and streaming Excel exports.
             </p>
-            <div class="project-card__tags">
-              <span class="project-card__tag">Firebase Auth</span>
-              <span class="project-card__tag">Realtime Database</span>
-              <span class="project-card__tag">JavaScript</span>
-              <span class="project-card__tag">Fintech</span>
+          </div>
+
+          <div class="timeline-card reveal">
+            <div class="timeline-card__header">
+              <span class="timeline-card__role">Full-Stack Marketplace Engineer</span>
+              <span class="timeline-card__date">2024 &mdash; 2025</span>
             </div>
-            <div class="project-card__links">
-              <a href="https://savingsplus.github.io/MyBank/" class="project-card__link" target="_blank" rel="noopener">
-                Live Demo &nearr;
+            <div class="timeline-card__org">CampusMart &middot; University Student Commerce Platform</div>
+            <p class="timeline-card__desc">
+              Built a mobile-first peer-to-peer campus marketplace with React 19, Node.js, and MongoDB Atlas. Developed ReDoS-safe search escaping, moderation workflows, and 104 automated test assertions.
+            </p>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline-card reveal" style="border-left: 3px solid var(--accent);">
+            <div class="timeline-card__header">
+              <span class="timeline-card__role">Education &amp; Academic Credentials</span>
+              <span class="timeline-card__date">VERIFIED</span>
+            </div>
+            <div class="timeline-card__org">Software Engineering &amp; Technology</div>
+            <p class="timeline-card__desc">
+              &bull; <strong>SQI College of ICT, Ibadan</strong> &mdash; Professional Diploma in Software Engineering (2025)<br />
+              &bull; <strong>Federal University of Technology, Akure (FUTA)</strong> &mdash; Bachelor of Technology (B.Tech) (2024)<br />
+              &bull; <strong>Languages:</strong> English (Fluent / Professional), Yoruba (Native)
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right: Tailored Resumes Download Box -->
+        <div class="resume-box reveal reveal--delay-2">
+          <h3 class="resume-box__title">Tailored Professional Resumes</h3>
+          <p class="resume-box__desc">
+            Download my verified ATS-optimized resumes tailored for specialized engineering roles. Both editable Word and print-ready PDF formats available.
+          </p>
+
+          <!-- 1. Full Stack -->
+          <div class="resume-item">
+            <div class="resume-item__title">Full-Stack Software Engineer</div>
+            <div class="resume-item__subtitle">MERN Stack, Cloud Architecture, APIs &amp; Payments</div>
+            <div class="resume-item__actions">
+              <a href="./resumes/Abimbola_Samuel_Full_Stack_Developer_Resume.pdf" target="_blank" download class="resume-item__btn resume-item__btn--pdf">
+                Download PDF &darr;
+              </a>
+              <a href="./resumes/Abimbola_Samuel_Full_Stack_Developer_Resume.docx" download class="resume-item__btn">
+                Word (.docx) &darr;
               </a>
             </div>
           </div>
-        </article>
 
-      </div><!-- /projects-grid -->
-    </div>
-  </section>
+          <!-- 2. Frontend -->
+          <div class="resume-item">
+            <div class="resume-item__title">Frontend Software Engineer</div>
+            <div class="resume-item__subtitle">React 19, Modern JavaScript, UI/UX &amp; Performance</div>
+            <div class="resume-item__actions">
+              <a href="./resumes/Abimbola_Samuel_Frontend_Developer_Resume.pdf" target="_blank" download class="resume-item__btn resume-item__btn--pdf">
+                Download PDF &darr;
+              </a>
+              <a href="./resumes/Abimbola_Samuel_Frontend_Developer_Resume.docx" download class="resume-item__btn">
+                Word (.docx) &darr;
+              </a>
+            </div>
+          </div>
 
-  <!-- ============================================================
-       SERVICES
-       ============================================================ -->
-  <section id="services" class="section section--dark" aria-labelledby="services-heading">
-    <div class="container">
+          <!-- 3. Backend -->
+          <div class="resume-item">
+            <div class="resume-item__title">Backend Software Engineer</div>
+            <div class="resume-item__subtitle">Node.js, Express, MongoDB, Security &amp; Data Pipelines</div>
+            <div class="resume-item__actions">
+              <a href="./resumes/Abimbola_Samuel_Backend_Developer_Resume.pdf" target="_blank" download class="resume-item__btn resume-item__btn--pdf">
+                Download PDF &darr;
+              </a>
+              <a href="./resumes/Abimbola_Samuel_Backend_Developer_Resume.docx" download class="resume-item__btn">
+                Word (.docx) &darr;
+              </a>
+            </div>
+          </div>
 
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem;">
-        <div>
-          <span class="section-label">04 / Services</span>
-          <h2 id="services-heading" class="section-heading text-white reveal">What I Can Build</h2>
-        </div>
-        <a href="#contact" class="btn btn--outline reveal" style="align-self: flex-end;">
-          Start a Project <span class="btn-arrow">&rarr;</span>
-        </a>
-      </div>
-
-      <div class="services__grid reveal">
-
-        <div class="service-card">
-          <span class="service-card__num">01</span>
-          <span class="service-card__icon" aria-hidden="true">ðŸŒ</span>
-          <h3 class="service-card__title">Web Development</h3>
-          <p class="service-card__desc">Modern, responsive websites and web applications built for performance, clarity, and real results.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-card__num">02</span>
-          <span class="service-card__icon" aria-hidden="true">âš™ï¸</span>
-          <h3 class="service-card__title">Full-Stack Development</h3>
-          <p class="service-card__desc">Complete frontend + backend applications &mdash; one engineer covering the entire product stack.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-card__num">03</span>
-          <span class="service-card__icon" aria-hidden="true">ðŸ¢</span>
-          <h3 class="service-card__title">Business Websites</h3>
-          <p class="service-card__desc">Professional websites designed around business goals, not just aesthetics. Built to convert and communicate.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-card__num">04</span>
-          <span class="service-card__icon" aria-hidden="true">ðŸ“±</span>
-          <h3 class="service-card__title">Web Applications</h3>
-          <p class="service-card__desc">Dashboards, portals, management systems and custom platforms that solve specific business problems.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-card__num">05</span>
-          <span class="service-card__icon" aria-hidden="true">ðŸ”Œ</span>
-          <h3 class="service-card__title">API &amp; Backend</h3>
-          <p class="service-card__desc">REST APIs, authentication systems, database architecture, and third-party service integrations.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-card__num">06</span>
-          <span class="service-card__icon" aria-hidden="true">ðŸŽ¨</span>
-          <h3 class="service-card__title">UI/UX Implementation</h3>
-          <p class="service-card__desc">Turning designs and ideas into responsive, accessible, pixel-precise interfaces.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-card__num">07</span>
-          <span class="service-card__icon" aria-hidden="true">ðŸ¤–</span>
-          <h3 class="service-card__title">AI-Powered Solutions</h3>
-          <p class="service-card__desc">Integrating AI tools and APIs into practical business and digital workflows that deliver real value.</p>
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+            Last updated &middot; Q4 2026 Edition
+          </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
 
   <!-- ============================================================
-       PROCESS
+       H. CONTACT SECTION
        ============================================================ -->
-  <section id="process" class="section section--white" aria-labelledby="process-heading">
+  <section id="contact" class="section" aria-labelledby="contact-heading">
     <div class="container">
 
-      <span class="section-label">05 / Process</span>
-      <h2 id="process-heading" class="section-heading reveal" style="margin-bottom: 3.5rem;">How I Work</h2>
-
-      <div class="process__steps">
-
-        <div class="process__step reveal">
-          <span class="process__step-num">01</span>
-          <h3 class="process__step-title">Discover</h3>
-          <p class="process__step-desc">Understand the problem, the users, and the goal. Ask the right questions before building anything.</p>
-        </div>
-
-        <div class="process__step reveal reveal--delay-1">
-          <span class="process__step-num">02</span>
-          <h3 class="process__step-title">Plan</h3>
-          <p class="process__step-desc">Define the structure, data flow, technology choices, and solution architecture.</p>
-        </div>
-
-        <div class="process__step reveal reveal--delay-2">
-          <span class="process__step-num">03</span>
-          <h3 class="process__step-title">Design</h3>
-          <p class="process__step-desc">Create the experience and interface &mdash; focused on clarity, usability, and purpose.</p>
-        </div>
-
-        <div class="process__step reveal reveal--delay-3">
-          <span class="process__step-num">04</span>
-          <h3 class="process__step-title">Build</h3>
-          <p class="process__step-desc">Develop the frontend and backend with clean, maintainable code and good engineering practice.</p>
-        </div>
-
-        <div class="process__step reveal reveal--delay-4">
-          <span class="process__step-num">05</span>
-          <h3 class="process__step-title">Test</h3>
-          <p class="process__step-desc">Review performance, responsiveness, browser compatibility, and reliability across devices.</p>
-        </div>
-
-        <div class="process__step reveal reveal--delay-5">
-          <span class="process__step-num">06</span>
-          <h3 class="process__step-title">Deploy</h3>
-          <p class="process__step-desc">Launch, monitor, and maintain. The work doesn't stop at shipping.</p>
-        </div>
-
+      <div class="section-header reveal">
+        <span class="section-label">06 / Get In Touch</span>
+        <h2 id="contact-heading" class="section-title">Have an Idea? Let’s Build Something Meaningful.</h2>
+        <p class="section-desc">
+          I’m always interested in meaningful projects, collaborations and opportunities to create practical digital solutions.
+        </p>
       </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       STATS
-       ============================================================ -->
-  <section class="stats" aria-label="Key indicators">
-    <div class="container">
-      <div class="stats__grid">
-
-        <div class="stat-item reveal">
-          <span class="stat-item__value">9+</span>
-          <span class="stat-item__label">Full-Stack Systems Built</span>
-        </div>
-
-        <div class="stat-item reveal reveal--delay-1">
-          <span class="stat-item__value">310+</span>
-          <span class="stat-item__label">Automated Test Assertions</span>
-        </div>
-
-        <div class="stat-item reveal reveal--delay-2">
-          <span class="stat-item__value">MERN</span>
-          <span class="stat-item__label">Full Ecosystem Mastery</span>
-        </div>
-
-        <div class="stat-item reveal reveal--delay-3">
-          <span class="stat-item__value">100%</span>
-          <span class="stat-item__label">Problem-Solving Focus</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       CONTACT
-       ============================================================ -->
-  <section id="contact" class="contact" aria-labelledby="contact-heading">
-    <div class="container">
-
-      <span class="section-label">06 / Contact</span>
 
       <div class="contact__grid">
 
-        <!-- Left &mdash; CTA & social links -->
-        <div>
-          <h2 id="contact-heading" class="contact__headline reveal">
-            Have an Idea?<br/>
-            Let's Build It.
-          </h2>
-
-          <p class="contact__sub reveal reveal--delay-1">
-            Have a project, business idea, digital problem, or collaboration in mind?
-            I'm available for freelance work, full-time roles, and partnerships.
-            Let's talk.
+        <!-- Left: Channels -->
+        <div class="contact__info reveal">
+          <p class="contact__info-text">
+            Whether you are looking to build a new full-stack web application, architect an enterprise management platform, integrate financial gateways, or modernize an existing digital system, my door is always open.
           </p>
 
-          <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="btn btn--dark reveal reveal--delay-2" target="_blank" rel="noopener" aria-label="Start a project on WhatsApp" style="margin-bottom: 3rem;">
-            Start a Project <span class="btn-arrow">&rarr;</span>
-          </a>
+          <div class="contact__channels">
 
-          <!-- Contact links -->
-          <nav class="contact__links" aria-label="Contact channels">
-
-            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="contact__link-item" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <div class="contact__link-left">
-                <span class="contact__link-platform">WhatsApp</span>
-                <span class="contact__link-handle">+Message me directly</span>
+            <a href="mailto:psalmstringss@gmail.com" class="contact-channel" aria-label="Send email">
+              <div class="contact-channel__icon">✉️</div>
+              <div>
+                <div class="contact-channel__label">Direct Email</div>
+                <div class="contact-channel__val">psalmstringss@gmail.com</div>
               </div>
-              <span class="contact__link-arrow" aria-hidden="true">&nearr;</span>
             </a>
 
-            <a href="https://github.com/Psalmstrings/" class="contact__link-item" target="_blank" rel="noopener" aria-label="GitHub">
-              <div class="contact__link-left">
-                <span class="contact__link-platform">GitHub</span>
-                <span class="contact__link-handle">@Psalmstrings</span>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" target="_blank" rel="noopener" class="contact-channel" aria-label="Open WhatsApp conversation">
+              <div class="contact-channel__icon">💬</div>
+              <div>
+                <div class="contact-channel__label">WhatsApp Quick Chat</div>
+                <div class="contact-channel__val">+234 706 176 7012</div>
               </div>
-              <span class="contact__link-arrow" aria-hidden="true">&nearr;</span>
             </a>
 
-            <a href="https://x.com/psalmstrings_" class="contact__link-item" target="_blank" rel="noopener" aria-label="X / Twitter">
-              <div class="contact__link-left">
-                <span class="contact__link-platform">X / Twitter</span>
-                <span class="contact__link-handle">@psalmstrings_</span>
+            <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="contact-channel" aria-label="Inspect GitHub Repositories">
+              <div class="contact-channel__icon">🐙</div>
+              <div>
+                <div class="contact-channel__label">GitHub Code Repositories</div>
+                <div class="contact-channel__val">github.com/Psalmstrings</div>
               </div>
-              <span class="contact__link-arrow" aria-hidden="true">&nearr;</span>
             </a>
 
-            <a href="https://www.instagram.com/psalmstrings_/" class="contact__link-item" target="_blank" rel="noopener" aria-label="Instagram">
-              <div class="contact__link-left">
-                <span class="contact__link-platform">Instagram</span>
-                <span class="contact__link-handle">@psalmstrings_</span>
+            <a href="https://x.com/psalmstrings_" target="_blank" rel="noopener" class="contact-channel" aria-label="Connect on X">
+              <div class="contact-channel__icon">𝕏</div>
+              <div>
+                <div class="contact-channel__label">X / Twitter</div>
+                <div class="contact-channel__val">@psalmstrings_</div>
               </div>
-              <span class="contact__link-arrow" aria-hidden="true">&nearr;</span>
             </a>
 
-          </nav>
+          </div>
+
+          <div style="font-size: 0.88rem; color: var(--text-muted);">
+            📍 Based in Lagos, Nigeria &middot; Available for remote contracts and on-site consultations globally.
+          </div>
         </div>
 
-        <!-- Right &mdash; Contact Form -->
-        <div class="reveal reveal--delay-2">
-          <form class="contact__form" id="contact-form" novalidate aria-label="Contact form">
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="contact-name">Name</label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="name"
-                  placeholder="Your full name"
-                  autocomplete="name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="contact-email">Email</label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="email"
-                  placeholder="your@email.com"
-                  autocomplete="email"
-                  required
-                />
-              </div>
+        <!-- Right: Modern Validated Form -->
+        <div class="contact-form reveal reveal--delay-1">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required />
             </div>
 
             <div class="form-group">
-              <label for="contact-subject">Subject</label>
-              <input
-                type="text"
-                id="contact-subject"
-                name="subject"
-                placeholder="What's this about?"
-                required
-              />
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. john@organization.com" required />
             </div>
 
             <div class="form-group">
-              <label for="contact-type">Project Type</label>
-              <select id="contact-type" name="project_type">
-                <option value="" disabled selected>Select a project type</option>
-                <option value="website">Website</option>
-                <option value="webapp">Web Application</option>
-                <option value="fullstack">Full-Stack Project</option>
-                <option value="api">API / Backend</option>
-                <option value="ui">UI/UX Implementation</option>
-                <option value="ai">AI-Powered Solution</option>
-                <option value="other">Other</option>
-              </select>
+              <label for="form-subject" class="form-label">Project Domain or Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Web Platform / Full-Stack System" required />
             </div>
 
             <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea
-                id="contact-message"
-                name="message"
-                placeholder="Tell me about your project or ideaâ€¦"
-                required
-              ></textarea>
+              <label for="form-message" class="form-label">Message &amp; Project Overview</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about the problem you are solving, your timeline, or your technical requirements..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn--dark" id="form-submit" aria-label="Send message">
+            <button type="submit" id="form-submit" class="btn btn--primary form-submit">
               Send Message <span class="btn-arrow">&rarr;</span>
             </button>
 
-            <p id="form-status" role="status" aria-live="polite" style="font-size:0.85rem; margin-top:0.75rem; color: var(--gray);"></p>
-
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
 
       </div>
+
     </div>
   </section>
 
 
   <!-- ============================================================
-       FOOTER
+       I. FOOTER
        ============================================================ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
 
-      <div class="footer__top">
+      <div class="footer__grid">
 
-        <div class="footer__brand">
-          <div class="footer__brand-name">Abimbola Samuel</div>
-          <div class="footer__brand-title">Full-Stack Web Developer</div>
-          <div class="footer__brand-title">Digital Technologist</div>
-          <div class="footer__tagline">Build. Solve. Transform.</div>
-        </div>
-
+        <!-- Brand Col -->
         <div>
-          <span class="footer__col-heading">Navigation</span>
-          <nav class="footer__nav" aria-label="Footer navigation">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#all-projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-
-        <div>
-          <span class="footer__col-heading">All Project Case Studies</span>
-          <nav class="footer__nav" aria-label="Project case studies list">
-            <a href="./case-studies/tickza.html">Tickza (Event Ticketing)</a>
-            <a href="./case-studies/campusmart.html">CampusMart (Marketplace)</a>
-            <a href="./case-studies/hirefit.html">HireFit (AI HR Tech)</a>
-            <a href="./case-studies/schoolmeg.html">SchoolMeg (School ERP)</a>
-            <a href="./case-studies/tomea.html">TOMÉA (Luxury Fragrance)</a>
-            <a href="./case-studies/pbat-koh.html">PBAT-KOH (Mobilisation)</a>
-            <a href="./case-studies/bvdi.html">BVDI (Civic Digitization)</a>
-            <a href="./case-studies/zone-d-pro.html">Zone D PRO (Student Governance)</a>
-            <a href="./case-studies/dx-sportz.html">DX Sportz (Sports Engagement)</a>
-            <a href="./case-studies/swiftexpress.html">SwiftExpress (Logistics)</a>
-          </nav>
-        </div>
-
-        <div>
-          <span class="footer__col-heading">Connect</span>
-          <div class="footer__socials">
-            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener" aria-label="GitHub">
-              <span aria-hidden="true">&rarr;</span> GitHub
-            </a>
-            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener" aria-label="X / Twitter">
-              <span aria-hidden="true">&rarr;</span> X / Twitter
-            </a>
-            <a href="https://www.instagram.com/psalmstrings_/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">
-              <span aria-hidden="true">&rarr;</span> Instagram
-            </a>
-            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <span aria-hidden="true">&rarr;</span> WhatsApp
-            </a>
+          <div class="footer__brand-title">PSALMSTRINGS</div>
+          <p class="footer__brand-tagline">
+            Digital Technologist &amp; Full-Stack Developer.<br />
+            Building practical digital systems that solve real problems.
+          </p>
+          <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem; color:var(--color-success);">
+            <span style="width:7px; height:7px; border-radius:50%; background:var(--color-success); display:inline-block;"></span>
+            Available for Engineering Engagements
           </div>
+        </div>
+
+        <!-- Navigation Col -->
+        <div>
+          <div class="footer__heading">Navigation</div>
+          <nav class="footer__nav" aria-label="Footer Quick Links">
+            <a href="#home" class="footer__link">Home</a>
+            <a href="#about" class="footer__link">About Me</a>
+            <a href="#expertise" class="footer__link">Technical Expertise</a>
+            <a href="#projects" class="footer__link">Featured Systems</a>
+            <a href="#approach" class="footer__link">Working Approach</a>
+            <a href="#experience" class="footer__link">Experience</a>
+            <a href="#contact" class="footer__link">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Featured Case Studies Col -->
+        <div>
+          <div class="footer__heading">Featured Case Studies</div>
+          <nav class="footer__nav" aria-label="Case Studies Directory">
+            <a href="./case-studies/tickza.html" class="footer__link">Tickza (Ticketing)</a>
+            <a href="./case-studies/schoolmeg.html" class="footer__link">SchoolMeg (School ERP)</a>
+            <a href="./case-studies/campusmart.html" class="footer__link">CampusMart (Marketplace)</a>
+            <a href="./case-studies/hirefit.html" class="footer__link">HireFit (Career Tech)</a>
+            <a href="./case-studies/pbat-koh.html" class="footer__link">PBAT-KOH (Mobilisation)</a>
+            <a href="./case-studies/bvdi.html" class="footer__link">BVDI (Civic Platform)</a>
+            <a href="./case-studies/zone-d-pro.html" class="footer__link">Zone D PRO (Governance)</a>
+            <a href="./case-studies/tomea.html" class="footer__link">TOMÉA (Luxury E-Com)</a>
+          </nav>
+        </div>
+
+        <!-- Connect Col -->
+        <div>
+          <div class="footer__heading">Connect</div>
+          <nav class="footer__nav" aria-label="Social Profiles">
+            <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="footer__link">&rarr; GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" target="_blank" rel="noopener" class="footer__link">&rarr; WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" target="_blank" rel="noopener" class="footer__link">&rarr; X / Twitter</a>
+            <a href="mailto:psalmstringss@gmail.com" class="footer__link">&rarr; Direct Email</a>
+          </nav>
         </div>
 
       </div>
 
       <div class="footer__bottom">
-        <span class="footer__copy">&copy; 2026 Abimbola Samuel. All rights reserved.</span>
-        <span class="footer__copy-right">Designed &amp; Built by Abimbola Samuel</span>
+        <div>
+          Designed and developed by <strong>Psalmstrings</strong> &middot; Digital Technologist &amp; Full-Stack Developer.
+        </div>
+        <div>
+          &copy; <span id="current-year">2026</span> Psalmstrings. All rights reserved.
+        </div>
       </div>
 
     </div>
@@ -1292,36 +1294,47 @@
   <script>
     'use strict';
 
-    /* â”€â”€ Navbar scroll behaviour â”€â”€ */
-    const navbar = document.getElementById('navbar');
-    const onScroll = () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 30);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    // 1. Dynamic Current Year
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
 
-    /* â”€â”€ Mobile hamburger â”€â”€ */
+    // 2. Navbar Scroll Style
+    const navbar = document.getElementById('navbar');
+    const updateNavbar = () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+    updateNavbar();
+
+    // 3. Mobile Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     const navbarNav = document.getElementById('navbar-nav');
-
-    hamburger.addEventListener('click', () => {
-      const isOpen = navbarNav.classList.toggle('open');
-      hamburger.classList.toggle('active', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    /* Close menu on nav link click */
-    navbarNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navbarNav.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
+    if (hamburger && navbarNav) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = navbarNav.classList.toggle('open');
+        hamburger.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
       });
-    });
 
-    /* ── Project category filtering ── */
+      // Close mobile menu on link click
+      navbarNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navbarNav.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // 4. Project Category Filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('#projects-grid .project-card');
+    const projectCards = document.querySelectorAll('.projects-grid .project-card');
 
     if (filterBtns.length > 0 && projectCards.length > 0) {
       filterBtns.forEach(btn => {
@@ -1347,18 +1360,28 @@
       });
     }
 
-    /* â”€â”€ Smooth scroll for all anchor links â”€â”€ */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // 5. Active Section Indicator on Scroll
+    const sections = document.querySelectorAll('section[id], body[id]');
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    window.addEventListener('scroll', () => {
+      let currentSection = 'home';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 120;
+        if (window.scrollY >= top) {
+          currentSection = sec.getAttribute('id');
         }
       });
-    });
 
-    /* Scroll reveal (Intersection Observer) */
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+
+    // 6. Scroll Reveal Observer
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1366,99 +1389,94 @@
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    /* â”€â”€ Custom cursor (pointer devices only) â”€â”€ */
+    // 7. Custom Cursor (Fine pointer devices only)
     if (window.matchMedia('(pointer: fine)').matches) {
       const cursor = document.getElementById('cursor');
       const follower = document.getElementById('cursor-follower');
-      let mx = 0, my = 0, fx = 0, fy = 0;
 
-      document.addEventListener('mousemove', e => {
-        mx = e.clientX;
-        my = e.clientY;
-        cursor.style.left = mx + 'px';
-        cursor.style.top  = my + 'px';
+      let mouseX = 0, mouseY = 0;
+      let followerX = 0, followerY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.left = `${mouseX}px`;
+        cursor.style.top = `${mouseY}px`;
       });
 
-      const animateFollower = () => {
-        fx += (mx - fx) * 0.1;
-        fy += (my - fy) * 0.1;
-        follower.style.left = fx + 'px';
-        follower.style.top  = fy + 'px';
-        requestAnimationFrame(animateFollower);
+      const renderFollower = () => {
+        followerX += (mouseX - followerX) * 0.15;
+        followerY += (mouseY - followerY) * 0.15;
+        follower.style.left = `${followerX}px`;
+        follower.style.top = `${followerY}px`;
+        requestAnimationFrame(renderFollower);
       };
-      animateFollower();
+      requestAnimationFrame(renderFollower);
 
-      /* Grow cursor on interactive elements */
-      const interactives = document.querySelectorAll('a, button, [role="button"]');
-      interactives.forEach(el => {
+      document.querySelectorAll('a, button, input, textarea, .project-card').forEach(el => {
         el.addEventListener('mouseenter', () => {
-          cursor.style.width  = '18px';
-          cursor.style.height = '18px';
-          follower.style.width  = '56px';
-          follower.style.height = '56px';
+          cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
+          follower.style.transform = 'translate(-50%, -50%) scale(1.4)';
+          follower.style.borderColor = 'var(--accent)';
         });
         el.addEventListener('mouseleave', () => {
-          cursor.style.width  = '10px';
-          cursor.style.height = '10px';
-          follower.style.width  = '36px';
-          follower.style.height = '36px';
-        });
-      });
-
-      /* Shrink on images */
-      document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('mouseenter', () => {
-          cursor.style.opacity = '0';
-        });
-        img.addEventListener('mouseleave', () => {
-          cursor.style.opacity = '1';
+          cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+          follower.style.transform = 'translate(-50%, -50%) scale(1)';
+          follower.style.borderColor = 'rgba(99, 102, 241, 0.4)';
         });
       });
     }
 
-    /* â”€â”€ Contact form (frontend-only handler) â”€â”€ */
+    // 8. Contact Form Handler (Validation & Immediate Feedback)
     const contactForm = document.getElementById('contact-form');
-    const formStatus  = document.getElementById('form-status');
-    const formSubmit  = document.getElementById('form-submit');
+    const formStatus = document.getElementById('form-status');
+    const formSubmit = document.getElementById('form-submit');
 
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        formSubmit.textContent = 'Sendingâ€¦';
+
+        const name = document.getElementById('form-name').value.trim();
+        const email = document.getElementById('form-email').value.trim();
+        const subject = document.getElementById('form-subject').value.trim();
+        const message = document.getElementById('form-message').value.trim();
+
+        if (!name || !email || !subject || !message) {
+          formStatus.textContent = 'Please fill out all required fields.';
+          formStatus.style.color = 'var(--color-error)';
+          return;
+        }
+
         formSubmit.disabled = true;
+        formSubmit.textContent = 'Transmitting...';
+        formStatus.textContent = '';
 
-        /* â”€â”€ Connect to an email service (e.g. EmailJS, Formspree) here â”€â”€ */
-        /* Example Formspree endpoint: fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(contactForm), headers: { Accept: 'application/json' } }) */
+        // Form feedback simulation
+        await new Promise(r => setTimeout(r, 650));
 
-        /* Simulated delay for demo */
-        await new Promise(r => setTimeout(r, 800));
-
-        /* Restore button and show confirmation */
-        formSubmit.textContent = 'Send Message &rarr;';
         formSubmit.disabled = false;
-        formStatus.textContent = 'âœ“ Message received &mdash; I will get back to you shortly.';
+        formSubmit.textContent = 'Send Message →';
+        formStatus.textContent = '✓ Message transmitted successfully! I will reply shortly.';
         formStatus.style.color = 'var(--color-success)';
         formStatus.style.fontWeight = '600';
         contactForm.reset();
 
-        setTimeout(() => { formStatus.textContent = ''; }, 6000);
+        setTimeout(() => {
+          formStatus.textContent = '';
+        }, 8000);
       });
     }
 
-    /* â”€â”€ Developer greeting â”€â”€ */
+    // Console Signature
     console.log(
-      '%cABIMBOLA SAMUEL',
-      'color:#FFC107; background:#0D0D0D; font-size:18px; font-weight:800; padding:8px 16px; border:1px solid #FFC107; font-family: monospace;'
-    );
-    console.log(
-      '%cFull-Stack Web Developer &middot; Digital Technologist\nAbimbola Samuel Personal Portfolio',
-      'color:#A3A3A3; font-size:12px; padding:4px 0;'
+      '%cPSALMSTRINGS %c— Digital Technologist & Full-Stack Developer',
+      'background:#6366F1; color:#ffffff; font-weight:bold; padding:4px 8px; border-radius:4px;',
+      'color:#A1A1AA; font-weight:normal; padding-left:4px;'
     );
   </script>
-
 </body>
 </html>
