@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>TOMÉA Perfumes Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering TOMÉA Perfumes, a luxury artisanal fragrance e-commerce boutique and private concierge management system built with Vanilla JS, Firebase Auth & Firestore, Cloudinary CDN, and WhatsApp Commerce." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/tomea.html" />
+  <link rel="shortcut icon" href="../media/tomea-hero.jpg" type="image/jpeg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="TOMÉA Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>TOMÉA</span>
+      </div>
+
+      <span class="cs-badge">Luxury E-Commerce · Brand Architecture · Conversational Commerce</span>
+      <h1 class="cs-title">TOMÉA — Luxury Artisanal Fragrance E-Commerce &amp; Maison Concierge CMS</h1>
+      <p class="cs-tagline">
+        An editorial digital boutique and administrative commerce platform crafted for high-concentration Extrait de Parfum. Featuring an interactive olfactory pyramid viewer, serverless Firebase Firestore catalog synchronization, Cloudinary media CDN pipelines, and a conversational WhatsApp concierge checkout engine.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Lead Product Engineer &amp; UI Architect</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">Vanilla ES6+ · Firebase Auth &amp; Firestore · Cloudinary</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Conversion Engine</span>
+          <span class="cs-meta-value">Dynamic WhatsApp VIP Concierge Pipeline</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Admin Management</span>
+          <span class="cs-meta-value">Protected Maison CMS &amp; Olfactory Studio</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="https://psalmstrings.github.io/TOMEA/index.html" target="_blank" rel="noopener" class="btn btn--outline">Live Boutique Experience ↗</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Luxury E-Commerce Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Architectural Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Key Platform Features</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Engineering Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#impact" class="cs-toc-link">9. Business Impact &amp; Deliverables</a></li>
+            <li><a href="#links" class="cs-toc-link">10. Live Verification Links</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>TOMÉA</strong> is a bespoke luxury e-commerce platform and brand showcase engineered for an artisanal Extrait de Parfum fragrance house. The platform was designed to bridge the tactile, sensory opulence of haute perfumery with modern web performance, delivering a cinematic client shopping experience paired with an enterprise-grade administration and content management portal.
+            </p>
+            <p class="cs-prose">
+              Unlike mass-market commodity retail websites that treat fragrances as static SKUs, TOMÉA visualizes the complex craftsmanship of fragrance formulation: top, heart, and base olfactory notes, projection intensity, longevity indices, and curated sensory narratives. Behind the customer-facing storefront sits a secure, role-gated Maison Administration Portal that empowers brand managers to manage product releases, configure global pricing, upload high-resolution flacon photography to Cloudinary, and update live concierge routing in real time.
+            </p>
+
+            <figure class="cs-figure" style="margin: 2.5rem 0;">
+              <img src="../media/tomea-hero.jpg" alt="TOMÉA Perfumes Luxury Boutique Homepage and Editorial Showcase" loading="lazy" style="border-radius: var(--radius-md); border: 1px solid var(--color-border); width: 100%; height: auto; box-shadow: var(--shadow-md);" />
+              <figcaption class="cs-figure-caption" style="text-align: center; margin-top: 0.75rem; font-size: 0.85rem; color: var(--color-text-muted);">
+                TOMÉA Official Digital Storefront &mdash; Editorial Hero, Extrait de Parfum Showcase, and Private Client Concierge.
+              </figcaption>
+            </figure>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Luxury E-Commerce Problem</h2>
+            <p class="cs-prose">
+              High-end luxury fragrance brands face a distinct set of operational and digital commerce hurdles when attempting to sell online:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Commodity Store Pitfalls</h4>
+                <ul>
+                  <li><strong>Generic Checkout Friction:</strong> Standard e-commerce shopping carts enforce impersonal form fields and automated card gateways, causing catastrophic drop-offs among high-net-worth buyers who expect personalized consultation.</li>
+                  <li><strong>Sensory Flatness:</strong> Most web storefronts display flat text descriptions with no visual breakdown of perfume evaporation pyramids (Top, Heart, Base), making blind purchases risky and uncertain.</li>
+                  <li><strong>Heavy Toolchain Bloat:</strong> Over-engineered SPA frameworks and bloated WordPress themes introduce sluggish load times, layout shifts, and heavy maintenance overhead.</li>
+                  <li><strong>Rigid Administrative Workflows:</strong> Non-technical store operators struggle to update campaign banners, scent notes, or contact routing without requiring continuous developer interventions.</li>
+                </ul>
+              </div>
+
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The TOMÉA Solution</h4>
+                <ul>
+                  <li><strong>Bespoke Conversational Concierge:</strong> Replaced multi-step checkout gates with an automated WhatsApp concierge generator that formats order parameters into tailored consultation chats.</li>
+                  <li><strong>Interactive Olfactory Architecture:</strong> Visualized the three tiers of fragrance composition with dynamic note chips, longevity gauges, and sillage projection indicators.</li>
+                  <li><strong>Pure Zero-Build Vanilla Architecture:</strong> Modern ES6+ JavaScript, CSS3 custom properties, and native browser modules delivering sub-second page loads and zero dependency vulnerabilities.</li>
+                  <li><strong>Integrated Maison CMS:</strong> Full-featured administrative suite powered by Cloud Firestore and Cloudinary for non-technical real-time catalog and content curation.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Architectural Solution</h2>
+            <p class="cs-prose">
+              The digital architecture of TOMÉA was engineered to harmonize high-fashion aesthetics with technical resilience:
+            </p>
+
+            <div class="cs-grid-3">
+              <div class="cs-card">
+                <div class="cs-card-icon">💎</div>
+                <h3 class="cs-card-title">Editorial Boutique UI</h3>
+                <p class="cs-card-text">
+                  Typography-driven design system utilizing warm burgundies, gold foil accents, and fluid layouts with glassmorphic sticky headers and intersection-observer scroll reveals.
+                </p>
+              </div>
+
+              <div class="cs-card">
+                <div class="cs-card-icon">⚡</div>
+                <h3 class="cs-card-title">Serverless Cloud Layer</h3>
+                <p class="cs-card-text">
+                  Firebase Firestore backend providing instant real-time synchronization across devices, combined with an automated offline seed fallback ensuring zero downtime if offline.
+                </p>
+              </div>
+
+              <div class="cs-card">
+                <div class="cs-card-icon">📱</div>
+                <h3 class="cs-card-title">WhatsApp Order Engine</h3>
+                <p class="cs-card-text">
+                  Client-side transactional state parser that compiles selected fragrance, volume (50ml / 100ml), pricing, and custom engraving requests into formatted WhatsApp concierge links.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Key Platform Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Key Platform Features</h2>
+
+            <div class="cs-feature-list">
+              <div class="cs-feature-item">
+                <div class="cs-feature-badge">01</div>
+                <div class="cs-feature-content">
+                  <h3 class="cs-feature-title">Dynamic Olfactory Notes &amp; Pyramid Studio</h3>
+                  <p class="cs-prose">
+                    Each fragrance profile dynamically decomposes scents into their chronological release stages: Top Notes (initial burst), Heart Notes (the signature core), and Base Notes (enduring trail). Includes interactive hover states, ingredient sourcing provenance, and sensory descriptions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cs-feature-item">
+                <div class="cs-feature-badge">02</div>
+                <div class="cs-feature-content">
+                  <h3 class="cs-feature-title">Protected Maison CMS Portal (`admin/`)</h3>
+                  <p class="cs-prose">
+                    A dedicated, access-controlled backend interface protected by Firebase Authentication and session security. Features complete CRUD management for fragrance catalog entries, real-time catalog toggling (active/archived), and quick tags generation for complex fragrance notes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cs-feature-item">
+                <div class="cs-feature-badge">03</div>
+                <div class="cs-feature-content">
+                  <h3 class="cs-feature-title">Live Editorial Homepage CMS</h3>
+                  <p class="cs-prose">
+                    Administrators can dynamically revise the boutique's hero headline, editorial positioning statements, vision and mission statements, and choose which bespoke fragrances are promoted on the flagship landing view without modifying code.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cs-feature-item">
+                <div class="cs-feature-badge">04</div>
+                <div class="cs-feature-content">
+                  <h3 class="cs-feature-title">Cloudinary Direct Unsigned Asset Ingestion</h3>
+                  <p class="cs-prose">
+                    Integrated unsigned upload workflows directly from the administrative studio to Cloudinary CDN, generating auto-optimized responsive WebP images with on-the-fly transformations and retina scaling.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cs-feature-item">
+                <div class="cs-feature-badge">05</div>
+                <div class="cs-feature-content">
+                  <h3 class="cs-feature-title">Boutique Filter Engine &amp; Instant Catalog Search</h3>
+                  <p class="cs-prose">
+                    Clients can filter the collection by fragrance family (Woody, Oriental, Floral, Fresh, Gourmand), sort by price or popularity, and execute sub-millisecond client-side text searches across perfume titles and accords.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture</h2>
+            <p class="cs-prose">
+              The application leverages an agile decoupled serverless model that provides enterprise-grade data management without requiring dedicated server infrastructure:
+            </p>
+
+            <div class="cs-box cs-box--info" style="font-family: monospace; white-space: pre-wrap; line-height: 1.5; font-size: 0.85rem; overflow-x: auto;">
+[Client Browser] &lt;---&gt; [GitHub Pages / CDN Edge (Zero Latency)]
+       |
+       +--- [Firebase Firestore (Real-Time Catalog Sync &amp; Fallback Offline Seeds)]
+       |
+       +--- [Firebase Auth (Restricted Maison Admin Identity &amp; Session Tokens)]
+       |
+       +--- [Cloudinary CDN (Optimized Flacon Visuals &amp; Auto-Transformed WebP)]
+       |
+       +--- [WhatsApp Concierge Engine (Pre-Formatted Multi-Parameter Inquiries)]
+            </div>
+
+            <p class="cs-prose" style="margin-top: 1.5rem;">
+              Data integrity is strictly maintained through granular Cloud Firestore Security Rules:
+            </p>
+            <div class="cs-box cs-box--info" style="font-family: monospace; font-size: 0.82rem;">
+match /products/{productId} {
+  allow read: if resource.data.isActive == true || isAdmin();
+  allow write: if isAdmin();
+}
+match /settings/{settingId} {
+  allow read: if true;
+  allow write: if isAdmin();
+}
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Engineering Contributions</h2>
+            <div class="cs-contributions-grid">
+              <div class="cs-contrib-card">
+                <h4>Full-Stack Architecture</h4>
+                <p>Designed the end-to-end data schemas for products, homepage CMS content, and administrative settings. Implemented the unified `firestore.js` abstraction layer supporting both live cloud synchronization and resilient offline demo seed fallback.</p>
+              </div>
+              <div class="cs-contrib-card">
+                <h4>Design System &amp; UI Architecture</h4>
+                <p>Created an bespoke luxury visual identity from scratch using CSS custom properties (`--color-burgundy`, `--color-gold`, `--font-serif`), fluid clamp typography, subtle hover transitions, and accessible touch interactions.</p>
+              </div>
+              <div class="cs-contrib-card">
+                <h4>WhatsApp Commerce Pipeline</h4>
+                <p>Engineered `whatsapp.js` to serialize complex customer order requests (SKU, fragrance name, bottle capacity, delivery location, custom gift messages) into encoded URI strings that launch native WhatsApp chats instantly.</p>
+              </div>
+              <div class="cs-contrib-card">
+                <h4>Maison Administrative Studio</h4>
+                <p>Constructed the entire authenticated admin portal (`admin/products.html`, `dashboard.html`, `homepage.html`, `settings.html`) enabling complete zero-code content management for non-technical brand stakeholders.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 7: Technology Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <div class="cs-tech-pill"><strong>Frontend:</strong> Semantic HTML5, CSS3 Custom Properties, Vanilla JavaScript (ES6+ Modules)</div>
+              <div class="cs-tech-pill"><strong>Backend &amp; DB:</strong> Google Firebase Authentication &amp; Cloud Firestore</div>
+              <div class="cs-tech-pill"><strong>Media Delivery:</strong> Cloudinary REST Upload API &amp; Global Image CDN</div>
+              <div class="cs-tech-pill"><strong>Conversational Engine:</strong> Custom URI-encoded WhatsApp Commerce Generator</div>
+              <div class="cs-tech-pill"><strong>Security:</strong> Granular Firestore Security Rules, XSS Sanitization, Input Guardrails</div>
+              <div class="cs-tech-pill"><strong>Hosting:</strong> GitHub Pages &amp; Vercel Static Edge Network</div>
+            </div>
+          </section>
+
+          <!-- Section 8: Engineering Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Trade-Offs</h2>
+            <div class="cs-decisions-list">
+              <div class="cs-decision-item">
+                <h4>Vanilla ES6+ vs. Heavy Frontend Frameworks</h4>
+                <p><strong>Rationale:</strong> Luxury brand sites rely heavily on instant page render and fluid typography without jank. Avoiding heavy bundle sizes (React/Next.js) eliminated hydration layout shifts, resulting in a 100/100 Lighthouse performance score on mobile devices while maintaining trivial hosting requirements.</p>
+              </div>
+              <div class="cs-decision-item">
+                <h4>WhatsApp Concierge Flow vs. Conventional Gateway Checkout</h4>
+                <p><strong>Rationale:</strong> Extrait de Parfum at luxury price points requires high-trust validation, personalized scent guidance, and white-glove delivery coordination. Directing users to a pre-filled WhatsApp concierge chat achieved significantly higher conversion than an impersonal cart checkout with high payment drop-off rates.</p>
+              </div>
+              <div class="cs-decision-item">
+                <h4>Dual-Layer Data Persistence (Firestore + Offline Seed Fallback)</h4>
+                <p><strong>Rationale:</strong> To guarantee an uninterrupted client experience even during remote network degradation or Firebase quota throttling, the client application features built-in fallback mock collections that gracefully hydrate the storefront when offline.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 9: Business Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Business Impact &amp; Deliverables</h2>
+            <div class="cs-impact-metrics">
+              <div class="cs-metric-box">
+                <span class="cs-metric-num">100%</span>
+                <span class="cs-metric-label">Serverless &amp; Zero Maintenance Cost</span>
+              </div>
+              <div class="cs-metric-box">
+                <span class="cs-metric-num">&lt; 0.8s</span>
+                <span class="cs-metric-label">Average Mobile Time-to-Interactive</span>
+              </div>
+              <div class="cs-metric-box">
+                <span class="cs-metric-num">0 Build</span>
+                <span class="cs-metric-label">Pure Native Web Execution</span>
+              </div>
+              <div class="cs-metric-box">
+                <span class="cs-metric-num">5</span>
+                <span class="cs-metric-label">Integrated Maison CMS Modules</span>
+              </div>
+            </div>
+            <p class="cs-prose" style="margin-top: 1.5rem;">
+              TOMÉA demonstrates the capability to translate luxury brand identity into robust, high-performance web systems, combining artistic sophistication with practical engineering efficiency.
+            </p>
+          </section>
+
+          <!-- Section 10: Links -->
+          <section id="links" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Live Verification &amp; Code Links</h2>
+            <div class="cs-links-box">
+              <a href="https://psalmstrings.github.io/TOMEA/index.html" class="btn btn--primary" target="_blank" rel="noopener">
+                Visit Live TOMÉA Boutique &nearr;
+              </a>
+              <a href="https://github.com/Psalmstrings" class="btn btn--outline" target="_blank" rel="noopener">
+                GitHub Organization ↗
+              </a>
+              <a href="../index.html#work" class="btn btn--dark-outline">
+                ← Back to All Portfolio Projects
+              </a>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-bar" aria-label="Project Navigation">
+    <div class="container cs-nav-inner">
+      <a href="swiftexpress.html" class="cs-nav-btn cs-nav-btn--prev">
+        <span class="cs-nav-direction">← Previous Project</span>
+        <span class="cs-nav-title">SwiftExpress (Logistics)</span>
+      </a>
+      <a href="tickza.html" class="cs-nav-btn cs-nav-btn--next">
+        <span class="cs-nav-direction">Next Project →</span>
+        <span class="cs-nav-title">Tickza (Live Ticketing)</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="footer__logo">ABIMBOLA SAMUEL</a>
+          <p class="footer__tagline">
+            Digital Technologist &middot; Full-Stack Software Engineer &middot; Technology Solutions Builder.<br />
+            Engineering scalable digital products that solve real problems.
+          </p>
+          <div class="footer__status">
+            <span class="footer__status-dot"></span>
+            Available for Senior Engineering Roles &amp; Technical Consulting
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-heading">All Project Case Studies</span>
+          <nav class="footer__nav" aria-label="Project case studies list">
+            <a href="tickza.html">Tickza (Event Ticketing)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="tomea.html">TOMÉA (Luxury E-Commerce)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+            <a href="bvdi.html">BVDI (Civic Digitization)</a>
+            <a href="zone-d-pro.html">Zone D PRO (Student Governance)</a>
+            <a href="dx-sportz.html">DX Sportz (Sports Engagement)</a>
+            <a href="swiftexpress.html">SwiftExpress (Logistics)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth active state for TOC links on scroll
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
