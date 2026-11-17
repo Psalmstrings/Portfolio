@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Office of the Zone D PRO Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering the official digital platform for the Office of the Zone D PRO (National Association of Nigerian Students, South West Zone), featuring a multi-role civic CMS, KYS senator registry, and Cloudinary media." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/zone-d-pro.html" />
+  <link rel="shortcut icon" href="../media/NANSPro.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="Zone D PRO Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>Office of the Zone D PRO</span>
+      </div>
+
+      <span class="cs-badge">Organisational Digital Platform · Civic Tech · Content Systems</span>
+      <h1 class="cs-title">Office of the Zone D PRO — Official Civic Platform &amp; Senator Registry</h1>
+      <p class="cs-tagline">
+        The official institutional platform engineered for the National Association of Nigerian Students (NANS) Zone D (South West) Public Relations Office, unifying news dissemination, verified campus blogger networks, leadership archives, and the Know Your Senator (KYS) student governance directory.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Lead Full-Stack Web Architect</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">MERN (React/Vite + 2 Decoupled Node/Express Backends)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Key Systems</span>
+          <span class="cs-meta-value">Civic News CMS &amp; KYS Senator Registry</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Live Domain</span>
+          <span class="cs-meta-value">officeoftheprozoned.com</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="http://officeoftheprozoned.com/" target="_blank" rel="noopener" class="btn btn--outline">Live Website ↗</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Core Portals &amp; Workflows</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. Dual-Backend Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#impact" class="cs-toc-link">9. Operational Impact</a></li>
+            <li><a href="#links" class="cs-toc-link">10. Live Verification</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              The <strong>Office of the Zone D PRO</strong> serves as the official communication organ of the <strong>National Association of Nigerian Students (NANS) Zone D</strong>, representing tertiary institution students across the six South-Western states of Nigeria (Lagos, Ogun, Oyo, Osun, Ondo, and Ekiti).
+            </p>
+            <p class="cs-prose">
+              To move beyond chaotic social media press releases, unverified broadcast forwards, and fragmented campus student union politics, I engineered a dedicated institutional digital platform at <strong>officeoftheprozoned.com</strong>. The platform acts as a trusted single source of truth for official communiqués, student leadership verification, campus blogger syndication, and civic engagement.
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/NANSPro.png" alt="Office of the Zone D PRO Official Platform Interface" loading="lazy" />
+              <div class="cs-media-caption">Figure 6.1: Official live web platform interface for the Office of the Zone D PRO.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Problem Solved</h2>
+            <p class="cs-prose">
+              Student leadership across South-West Nigeria previously struggled with major communication and governance friction:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Pre-Platform Bottlenecks</h4>
+                <ul>
+                  <li><strong>Misinformation &amp; Fake Communiqués:</strong> Malicious actors routinely circulated forged press releases on WhatsApp, confusing student bodies.</li>
+                  <li><strong>Unverified Student Union Senators:</strong> Difficulty verifying whether self-proclaimed campus delegates were genuine accredited senators representing their institutions.</li>
+                  <li><strong>Uncoordinated Campus Press:</strong> Campus journalists had no verified submission conduit to escalate campus stories to zonal leadership.</li>
+                  <li><strong>Ephemeral Documentation:</strong> Crucial zonal resolutions, historical events, and leadership achievements were lost in chat logs.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The Digital Solution</h4>
+                <ul>
+                  <li><strong>Cryptographically Authenticated Portal:</strong> Official announcements published directly by accredited zonal PRO administrators.</li>
+                  <li><strong>Know Your Senator (KYS) Subsystem:</strong> Dedicated student senator registration, document verification, and status validation engine.</li>
+                  <li><strong>Decentralized Campus Blogger Network:</strong> Role-based accounts for student journalists to draft campus articles for zonal editorial approval.</li>
+                  <li><strong>Cloud-Backed Zonal Archive:</strong> Structured leadership directories, multimedia press galleries, and searchable historical news records.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Solution Developed</h2>
+            <p class="cs-prose">
+              The project is architected as an interconnected MERN ecosystem composed of three discrete software components:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📰</span>
+                <h3 class="cs-feature-title">Official News &amp; Headlines CMS</h3>
+                <p class="cs-feature-desc">Dynamic news engine with slug-based routing, Cloudinary media optimization, category tags, reader view tracking, and reader engagement comments.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🏛️</span>
+                <h3 class="cs-feature-title">Know Your Senator (KYS) Registry</h3>
+                <p class="cs-feature-desc">Student senator verification portal allowing institutional student leaders to submit credentials, check verification status, and maintain authentic representation.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">✍️</span>
+                <h3 class="cs-feature-title">Campus Blogger Management</h3>
+                <p class="cs-feature-desc">Multi-tenant journalism workflow allowing campus correspondents across South-West tertiary institutions to submit articles into an editorial review pipeline.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🛡️</span>
+                <h3 class="cs-feature-title">Zonal Executive Dashboard</h3>
+                <p class="cs-feature-desc">Secure administrative control center managing leadership rosters, press inquiries, audit logs, homepage hero banners, and visitor analytics.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Core Features &amp; User Journeys</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Public Information Hub:</strong> High-speed responsive homepage with real-time news tickers, featured zonal headlines, leadership profiles, and downloadable official documents.</li>
+                <li><strong>Dual-Backend Service Decoupling:</strong> The content delivery system (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">Blog Backend</code>) and civic registry (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">KYS Backend</code>) are architected as decoupled microservices for security and fault isolation.</li>
+                <li><strong>Cloudinary Multimedia Pipeline:</strong> Automatic image resizing, optimization, and responsive delivery for news hero images and executive portraits.</li>
+                <li><strong>Inquiry &amp; Press Management:</strong> Direct public contact form funneling inquiries into the administrative dashboard with email alert triggers.</li>
+                <li><strong>Role-Based Route Guards:</strong> Client and server-enforced authorization separating Super Admins, Blog Admins, and Student Bloggers.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">Dual-Backend Architecture</h2>
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">Zone D PRO Decoupled Topology</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">Multi-Backend MERN</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Unified Client</span>
+                  <div class="cs-tier-desc">React 19 SPA built with Vite, React Router, Sonner toast notifications, and custom CSS styling. Manages authentication contexts across blog and civic verification portals.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Blog Backend</span>
+                  <div class="cs-tier-desc">Express API handling News, Blogger profiles, Comments, Events, Leadership archives, Homepage configurations, and Cloudinary media streams.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">KYS Backend</span>
+                  <div class="cs-tier-desc">Dedicated civic verification API handling student senator credentials, admission checking, duplicate prevention, and verification status queries.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">MongoDB Database</span>
+                  <div class="cs-tier-desc">MongoDB collections: <code style="color:#FFC107;">News</code>, <code style="color:#FFC107;">Blogger</code>, <code style="color:#FFC107;">Leadership</code>, <code style="color:#FFC107;">Student</code>, <code style="color:#FFC107;">Admin</code>, <code style="color:#FFC107;">AuditLog</code>, <code style="color:#FFC107;">Inquiry</code>.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Full-Stack Architecture:</strong> Engineered both backend services and the unified React frontend application.</li>
+                <li><strong>Editorial CMS Engine:</strong> Built the multi-role blogging and article review pipeline with rich text support and Cloudinary media uploads.</li>
+                <li><strong>Civic Verification System:</strong> Implemented the KYS workflow enabling institutional verification for student union senators.</li>
+                <li><strong>Production Deployment &amp; Domain Setup:</strong> Configured DNS, SSL, and Vercel hosting for the official live domain at <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">officeoftheprozoned.com</code>.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">React.js (Vite)</span>
+              <span class="cs-tech-pill">Node.js</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Cloudinary API</span>
+              <span class="cs-tech-pill">JWT &amp; Bcryptjs</span>
+              <span class="cs-tech-pill">Sonner Toasts</span>
+              <span class="cs-tech-pill">Vercel Deployment</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Security Measures</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. Decoupling KYS Verification from Blog Content</span>
+                <span class="cs-decision-badge">Architectural Isolation</span>
+              </div>
+              <p class="cs-decision-text">
+                Civic verification data contains sensitive student records and identification numbers, whereas the news blog handles high-traffic public reads. By isolating the two into distinct backend modules (<code style="color:#FFC107;">Blog Backend</code> and <code style="color:#FFC107;">KYS Backend</code>), traffic spikes on breaking news cannot degrade the civic verification service, and sensitive student records remain isolated behind strict network guards.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. Slugs &amp; SEO Optimization for Public Statements</span>
+                <span class="cs-decision-badge">Public Communication</span>
+              </div>
+              <p class="cs-decision-text">
+                To guarantee that official communiqués index rapidly on search engines and share cleanly across WhatsApp and Twitter, news articles use unique, sanitized URL slugs with OpenGraph social metadata tags populated dynamically at request time.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Operational Impact</h2>
+            <p class="cs-prose">
+              The platform elevated the Office of the Zone D PRO from an ad-hoc social media presence to an accredited, institutional digital authority. It eliminated forged communiqués, created a credible historical record of South-West student affairs, and provided campus journalists with a dignified, accredited channel to report university news.
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">6</div>
+                <div class="cs-metric-label">South-West States Served</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">3</div>
+                <div class="cs-metric-label">Integrated Software Modules</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Accredited Single Source of Truth</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">24/7</div>
+                <div class="cs-metric-label">Public News Availability</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 10: Links -->
+          <section id="links" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Project Links &amp; Live Verification</h2>
+            <div class="cs-meta-grid" style="margin-top: 1.5rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Live Production Domain</span>
+                <span class="cs-meta-value"><a href="http://officeoftheprozoned.com/" target="_blank" rel="noopener" style="color:#FFC107;">officeoftheprozoned.com ↗</a></span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Workspace Codebases</span>
+                <span class="cs-meta-value"><code style="color:#FFC107;">ZONE-D PRO/KYS</code>, <code style="color:#FFC107;">Blog Backend</code> &amp; <code style="color:#FFC107;">KYS Backend</code></span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="bvdi.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">BVDI Badagry Voters Digitization</span>
+        </a>
+        <a href="dx-sportz.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">DX Sportz &amp; DX Academy</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

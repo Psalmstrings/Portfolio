@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>PBAT-KOH Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering PBAT-KOH (Renewed Hope Ambassadors Lagos Students Wing), a large-scale tertiary mobilization and membership management platform with campus captain referral attribution." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/pbat-koh.html" />
+  <link rel="shortcut icon" href="../media/Screenshot (245).png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="PBAT-KOH Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>PBAT-KOH</span>
+      </div>
+
+      <span class="cs-badge">Organisational Technology · Mobilisation · Membership Systems</span>
+      <h1 class="cs-title">PBAT-KOH — Tertiary Mobilisation &amp; Membership Management Platform</h1>
+      <p class="cs-tagline">
+        A centralized digital mobilization and membership tracking infrastructure designed to coordinate student leaders, campus captains, coupon referral attribution, and executive analytics across 14 Lagos tertiary institutions.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Lead Full-Stack Engineer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">BHKYS Client + BAT-KOH Express Backend</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Campus Network</span>
+          <span class="cs-meta-value">14 Tertiary Institutions across Lagos</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Administrative Scope</span>
+          <span class="cs-meta-value">20 LGAs · Captain Attribution Codes · Excel Export</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="https://batkohsa.org/" target="_blank" rel="noopener" class="btn btn--outline">Live Website ↗</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Core Portals &amp; Workflows</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#impact" class="cs-toc-link">9. Operational Impact</a></li>
+            <li><a href="#links" class="cs-toc-link">10. Live Links &amp; Evidence</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>PBAT-KOH</strong> (operating publicly as Renewed Hope Ambassadors Lagos Students Wing at <strong>batkohsa.org</strong>) is an enterprise-scale grassroots mobilization and membership management platform engineered to streamline campus coordination across Lagos State tertiary institutions.
+            </p>
+            <p class="cs-prose">
+              The platform connects state coordinators, campus captains, student volunteers, and executive leadership into a single verifiable digital ecosystem. It replaces traditional paper forms and uncontrolled WhatsApp registrations with a multi-portal architecture featuring unique captain referral coupon codes, institutional partitioning, and comprehensive administrative reporting.
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/Screenshot (245).png" alt="PBAT-KOH Official Web Platform Interface" loading="lazy" />
+              <div class="cs-media-caption">Figure 4.1: Live portal interface for PBAT-KOH student registration and campus mobilization.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Real-World Challenge</h2>
+            <p class="cs-prose">
+              Mobilizing thousands of student members across 14 autonomous higher education campuses presents massive logistical and data integrity obstacles:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Mobilization Bottlenecks</h4>
+                <ul>
+                  <li><strong>Zero Attribution:</strong> Inability to know which campus captain or coordinator recruited which member, causing friction and zero performance accountability.</li>
+                  <li><strong>Duplicate &amp; Ghost Records:</strong> Paper forms and Google Sheets inevitably accumulate duplicated names, invalid phone numbers, and fabricated identities.</li>
+                  <li><strong>Disconnected Campus Silos:</strong> Coordinators at UNILAG, LASU, and YABATECH had no shared platform to manage their respective campus captains.</li>
+                  <li><strong>Slow Executive Reporting:</strong> Compiling state-wide mobilization numbers required days of manual spreadsheet reconciliation.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The Digital Architecture</h4>
+                <ul>
+                  <li><strong>Unique Referral Coupon Codes:</strong> Every campus captain receives an algorithmic coupon code automatically attributing newly registered members to their account.</li>
+                  <li><strong>Duplicate Detection &amp; Validation:</strong> Automated checks on email, phone, and voter identification number (VIN) format before database insertion.</li>
+                  <li><strong>Hierarchical Role-Based Portals:</strong> Segmented workspaces for Public Registrants, Campus Captains, Campus Coordinators, and State Directors.</li>
+                  <li><strong>Real-Time Analytics &amp; Excel Exports:</strong> Executive dashboards with instant filtering across LGA, institution, captain, and registration dates.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Solution Developed</h2>
+            <p class="cs-prose">
+              I designed and built the complete PBAT-KOH platform as a decoupled client-server architecture consisting of the <strong>BHKYS</strong> React client application and the <strong>BAT-KOH Server</strong> Express/Node.js backend.
+            </p>
+            <p class="cs-prose">
+              The platform implements four distinct operational portals:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📝</span>
+                <h3 class="cs-feature-title">Public Registration Portal</h3>
+                <p class="cs-feature-desc">Accessible membership registration capturing personal data, 20 Lagos LGAs, institution selection, student/staff category, VIN format validation, and captain coupon attribution.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🎖️</span>
+                <h3 class="cs-feature-title">Campus Captains Portal</h3>
+                <p class="cs-feature-desc">Personal captain dashboard displaying unique recruitment codes, real-time rosters of attributed members, and direct WhatsApp / Call shortcuts for rapid outreach.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🏛️</span>
+                <h3 class="cs-feature-title">Campus Coordinator Portal</h3>
+                <p class="cs-feature-desc">Institution-level visibility allowing coordinators to supervise and compare the recruitment velocity of captains operating within their specific campus.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📈</span>
+                <h3 class="cs-feature-title">Executive Admin Portal</h3>
+                <p class="cs-feature-desc">State-wide analytics dashboard, captain account provisioners, institutional filter toggles, audit views, and one-click formatted Excel data exports.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Supported Tertiary Institutions &amp; Data Models</h2>
+            <div class="cs-prose">
+              <p>
+                The platform hardens institutional relationships by strictly typing participating institutions into the database enum:
+              </p>
+              <ul>
+                <li><strong>UNILAG:</strong> University of Lagos</li>
+                <li><strong>YABATECH:</strong> Yaba College of Technology</li>
+                <li><strong>LASU:</strong> Lagos State University</li>
+                <li><strong>LASUSTECH:</strong> Lagos State University of Science and Technology</li>
+                <li><strong>LASUED:</strong> Lagos State University of Education</li>
+                <li><strong>FCE:</strong> Federal College of Education (Tech) Akoka</li>
+                <li><strong>OCEANOGRAPHY:</strong> Nigerian Institute for Oceanography and Marine Research</li>
+                <li><strong>FCFMT:</strong> Federal College of Fisheries and Marine Technology</li>
+                <li><strong>SACOED, LASCON, LASCOETH, LASCOHET, COOP-COLLEGE, LASCOCO</strong></li>
+              </ul>
+              <p>
+                <strong>Attribution Workflow:</strong> When a campus captain registers, the system generates a unique referral string (e.g. <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">CAP-UNILAG-102</code>). When prospective members sign up via the public portal, entering this coupon attaches the captain's ObjectId to the member's record as <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">referredBy</code>, updating the captain's live attribution count in real time.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture</h2>
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">PBAT-KOH Technical Topology</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">Render + Vercel + Atlas</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">BHKYS Client</span>
+                  <div class="cs-tier-desc">Component-driven React SPA hosted on Vercel. Form validation with regex-based Nigerian phone and VIN structure checks. Instant referral code verification API calls.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Node / Express</span>
+                  <div class="cs-tier-desc">REST API deployed on Render with JWT authentication, institutional role-based access control (RBAC), and ExcelJS streaming export endpoints.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">MongoDB Atlas</span>
+                  <div class="cs-flow-tier-desc" style="color:#A3A3A3;">High-performance document store with compound indices on <code style="color:#FFC107;">{ institution: 1, lgaOfRegistration: 1, couponCode: 1 }</code> ensuring instantaneous aggregation queries across thousands of records.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Backend &amp; API Development:</strong> Built the entire BAT-KOH Express server, routing, controllers, and middleware from scratch.</li>
+                <li><strong>Referral Attribution Engine:</strong> Architected the coupon generation and relationship-linking system that binds students, captains, and campus coordinators.</li>
+                <li><strong>Administrative Data Export:</strong> Implemented server-side Excel generation allowing administrators to download filtered data sets categorized by LGA or campus.</li>
+                <li><strong>Frontend Architecture:</strong> Developed the BHKYS React application with role-protected dashboards, mobile-optimized registration flows, and real-time captain telemetry.</li>
+                <li><strong>Cloud Deployment:</strong> Configured production continuous deployment pipelines on Render (API) and Vercel (Client) with MongoDB Atlas clustering.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">React.js</span>
+              <span class="cs-tech-pill">Node.js</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Mongoose ORM</span>
+              <span class="cs-tech-pill">JWT Authentication</span>
+              <span class="cs-tech-pill">ExcelJS</span>
+              <span class="cs-tech-pill">Render Cloud</span>
+              <span class="cs-tech-pill">Vercel</span>
+              <span class="cs-tech-pill">CSS3 &amp; Responsive UI</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Integrity Safeguards</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. VIN Format Validation vs. External KYC</span>
+                <span class="cs-decision-badge">Architectural Honesty</span>
+              </div>
+              <p class="cs-decision-text">
+                Rather than claiming direct, live electoral commission database integration where none existed, I engineered strict alphanumeric format and length validation for Voter Identification Numbers (VIN) to prevent typos and invalid structures while maintaining data privacy and honest documentation.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. Compound Indexing for High-Velocity Filtering</span>
+                <span class="cs-decision-badge">Database Performance</span>
+              </div>
+              <p class="cs-decision-text">
+                State leadership frequently requests multi-dimensional filters (e.g. "Show all Student members in Alimosho LGA under LASU registered by Captain X"). By creating compound MongoDB indices on <code style="color:#FFC107;">institution</code>, <code style="color:#FFC107;">lgaOfRegistration</code>, and <code style="color:#FFC107;">couponCode</code>, aggregation queries execute in sub-15ms.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Operational Impact &amp; Value</h2>
+            <p class="cs-prose">
+              PBAT-KOH transformed a traditionally opaque, manual mobilization process into a fully traceable, centrally monitored digital operation. By establishing clear attribution, campus captains were motivated by transparent performance metrics, coordinators could pinpoint low-activity institutions, and executive leadership gained real-time insight into mobilization progress across all 20 Local Government Areas of Lagos State.
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">14</div>
+                <div class="cs-metric-label">Lagos Institutions Supported</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">20</div>
+                <div class="cs-metric-label">Local Government Areas</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">4</div>
+                <div class="cs-metric-label">Hierarchical User Portals</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Digital Attribution Traceability</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 10: Links -->
+          <section id="links" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Project Links &amp; Live Deployment</h2>
+            <div class="cs-prose">
+              <p>
+                The platform is publicly deployed and operational:
+              </p>
+            </div>
+
+            <div class="cs-meta-grid" style="margin-top: 1.5rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Live Production URL</span>
+                <span class="cs-meta-value"><a href="https://batkohsa.org/" target="_blank" rel="noopener" style="color:#FFC107;">batkohsa.org ↗</a></span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Repositories</span>
+                <span class="cs-meta-value"><code style="color:#FFC107;">BAT-KOH Server</code> (Backend) &amp; <code style="color:#FFC107;">BHKYS</code> (Client)</span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="schoolmeg.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">SchoolMeg School ERP System</span>
+        </a>
+        <a href="bvdi.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">BVDI Badagry Voters Digitization</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

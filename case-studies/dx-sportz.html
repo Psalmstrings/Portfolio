@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>DX Sportz Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering DX Sportz and DX Academy, a unified sports media, NPFL live match center, and sports education e-learning ecosystem with automated certificate verification." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/dx-sportz.html" />
+  <link rel="shortcut icon" href="../media/Screenshot (246).png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="DX Sportz Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>DX Sportz</span>
+      </div>
+
+      <span class="cs-badge">Sports Technology · Media Platforms · E-Learning Ecosystem</span>
+      <h1 class="cs-title">DX Sportz — Sports Media Hub &amp; DX Academy E-Learning Platform</h1>
+      <p class="cs-tagline">
+        A full-stack sports technology platform uniting Nigerian and international football news, live match centers, league standings, and an integrated sports education academy featuring automated PDF certificate issuance and cryptographic online verification.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Lead Full-Stack Sports Tech Engineer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">MERN (React/Vite + Dual Node/Express Backends)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Sports Data Engine</span>
+          <span class="cs-meta-value">NPFL &amp; Global Match Center · Live Standings</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Academy Feature</span>
+          <span class="cs-meta-value">PDF Certificate Generator &amp; Online Verification</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="https://dx-sport.vercel.app/" target="_blank" rel="noopener" class="btn btn--outline">Live Website ↗</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Core Features &amp; Modules</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#impact" class="cs-toc-link">9. Operational Impact</a></li>
+            <li><a href="#links" class="cs-toc-link">10. Live Verification</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>DX Sportz</strong> is a sports technology and digital media platform engineered to give sports enthusiasts, athletes, and students a centralized digital ecosystem for following Nigerian and international football, tracking league competitions, and participating in sports vocational development through <strong>DX Academy</strong>.
+            </p>
+            <p class="cs-prose">
+              Unlike generic sports blogs that merely re-publish press releases, DX Sportz combines structured sports database models (fixtures, results, league tables, and team standings) with a live ticker, multimedia gallery, and a full-fledged sports vocational learning management system with cryptographic credential verification.
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/Screenshot (246).png" alt="DX Sport Platform Interface Overview" loading="lazy" />
+              <div class="cs-media-caption">Figure 7.1: Live portal interface for DX Sport news feed, match center, and sports scores.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Problem Solved</h2>
+            <p class="cs-prose">
+              The Nigerian sports landscape suffers from a lack of dedicated, digital-first infrastructure:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Sports Ecosystem Challenges</h4>
+                <ul>
+                  <li><strong>Poor Local Coverage:</strong> Domestic competitions like the Nigeria Premier Football League (NPFL) are often overshadowed by European leagues on international sports websites.</li>
+                  <li><strong>Disconnected Match Data:</strong> Fans have to hunt across social media for domestic kickoff times, scores, and updated league tables.</li>
+                  <li><strong>Lack of Formal Sports Education:</strong> Aspiring grassroots coaches, scouts, and sports administrators have limited access to accredited, verified digital training.</li>
+                  <li><strong>Forged Coaching Credentials:</strong> Traditional sports certificates are printed on paper with zero online verification mechanisms.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The DX Sportz &amp; Academy Architecture</h4>
+                <ul>
+                  <li><strong>Integrated Match Center:</strong> Centralized fixtures, live scores, and tables giving prominence to both domestic NPFL and global tournaments.</li>
+                  <li><strong>Dynamic Sports Content CMS:</strong> Real-time score ticker, hero sliders, post detail modals, and categorized multimedia galleries.</li>
+                  <li><strong>DX Academy LMS:</strong> Full e-learning backend with modular video lessons, student progress tracking, and structured curricula.</li>
+                  <li><strong>Cryptographic Certificate Verification:</strong> Automated PDF certificate rendering with unique serial codes verified at <code style="background:#e2e8f0; padding:2px 4px; border-radius:3px;">/verify-certificate</code>.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Solution Developed</h2>
+            <p class="cs-prose">
+              I built DX Sportz as a unified digital ecosystem powered by a single modern React client that intelligently routes between the primary sports media platform and the educational academy:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">⚽</span>
+                <h3 class="cs-feature-title">Live Match Center &amp; Tables</h3>
+                <p class="cs-feature-desc">Dynamic competition browser with league standings, match status flags (Upcoming, Live, Finished), goalscorers, and scorelines.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🗞️</span>
+                <h3 class="cs-feature-title">Sports Journalism CMS</h3>
+                <p class="cs-feature-desc">Editorial news feed with category filtering, Cloudinary image hosting, interactive comments, and an animated breaking news ticker.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🎓</span>
+                <h3 class="cs-feature-title">DX Academy E-Learning</h3>
+                <p class="cs-feature-desc">Vocational training portal with student enrollments, module progression state machines, and interactive lesson video players.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📜</span>
+                <h3 class="cs-feature-title">Automated PDF Certification</h3>
+                <p class="cs-feature-desc">Server-side PDF generation generating official graduation certificates with public serial numbers for employer verification.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Core Modules &amp; Subsystems</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Unified Frontend Router:</strong> Dynamically switches layout contexts between the public sports portal and <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">AcademyRouter</code> based on URL paths (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">/academy</code> and <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">/verify-certificate</code>).</li>
+                <li><strong>Competition &amp; Match Engine:</strong> Database schemas supporting multi-competition structures (NPFL, FA Cup, Champions League) with calculated goal differences and points.</li>
+                <li><strong>Sports Administrative Portal:</strong> Match score updater, fixture scheduler, league table recalculation trigger, and article publishing interface.</li>
+                <li><strong>Student Progression Tracker:</strong> Tracks lesson completions per module, unlocking completion certificates only when 100% of curriculum requirements are satisfied.</li>
+                <li><strong>Certificate Verification Subsystem:</strong> Public endpoint (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">/verify-certificate/:certId</code>) allowing sports clubs to authenticate coach credentials instantly.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture</h2>
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">DX Sportz &amp; Academy Architecture</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">MERN Architecture</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Unified Client</span>
+                  <div class="cs-tier-desc">React 19 SPA built with Vite, Tailwind CSS, Lucide icons, responsive score ticker, and modal state management.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Sports Media API</span>
+                  <div class="cs-tier-desc">Node.js/Express service handling news, live match events, league tables, and Cloudinary media delivery.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Academy API</span>
+                  <div class="cs-tier-desc">Dedicated Express microservice handling courses, modules, lessons, enrollments, student progress, and PDF certificate creation via <code style="color:#FFC107;">certificatePdfService.js</code>.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">MongoDB Database</span>
+                  <div class="cs-tier-desc">MongoDB collections: <code style="color:#FFC107;">Match</code>, <code style="color:#FFC107;">Standing</code>, <code style="color:#FFC107;">Post</code>, <code style="color:#FFC107;">Program</code>, <code style="color:#FFC107;">Enrollment</code>, <code style="color:#FFC107;">Certificate</code>, <code style="color:#FFC107;">User</code>.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Full-Stack Architecture:</strong> Engineered the dual-backend architecture and the unified single-page React client.</li>
+                <li><strong>Sports Data Modeling:</strong> Designed the database schemas for matches, standings, and automated point table updates.</li>
+                <li><strong>Academy E-Learning Platform:</strong> Built the entire course progression engine and automated PDF certificate generation pipeline.</li>
+                <li><strong>Public Verification Engine:</strong> Created the cryptographic certificate verification route ensuring authenticity of sports coaching diplomas.</li>
+                <li><strong>Production Deployment:</strong> Deployed the client to Vercel and configured REST API endpoints.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">React.js</span>
+              <span class="cs-tech-pill">Node.js</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Vite</span>
+              <span class="cs-tech-pill">PDFKit / PDF Generation</span>
+              <span class="cs-tech-pill">Cloudinary API</span>
+              <span class="cs-tech-pill">JWT &amp; Bcryptjs</span>
+              <span class="cs-tech-pill">Tailwind CSS</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. Unified Routing for Media and Academy</span>
+                <span class="cs-decision-badge">Architectural Choice</span>
+              </div>
+              <p class="cs-decision-text">
+                Rather than deploying two completely disconnected websites with separate domain configurations and user sessions, I designed a URL path-aware root component (<code style="color:#FFC107;">getInitialCategory</code>) that seamlessly renders either the sports media dashboard or mounts the full <code style="color:#FFC107;">AcademyRouter</code> subsystem while maintaining shared branding and global authentication state.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. Programmatic PDF Certificate Generation</span>
+                <span class="cs-decision-badge">Automation Engine</span>
+              </div>
+              <p class="cs-decision-text">
+                Rather than having administrators manually design and email graduation certificates, I engineered a server-side PDF generator that dynamically injects student names, course titles, completion dates, and non-colliding serial numbers into high-resolution certificate templates upon final quiz submission.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Operational Impact</h2>
+            <p class="cs-prose">
+              DX Sportz demonstrates how digital technology can professionalize sports ecosystems. By giving equal technical prominence to Nigerian domestic football and providing a credible, verified digital academy for sports education, the platform empowers fans, athletes, and coaches alike.
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">2-in-1</div>
+                <div class="cs-metric-label">Unified Media &amp; LMS Ecosystem</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">Live</div>
+                <div class="cs-metric-label">Match Center &amp; Scores</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Digital Certificate Verification</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">Multi</div>
+                <div class="cs-metric-label">Competition Support</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 10: Links -->
+          <section id="links" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Live Verification &amp; Project Links</h2>
+            <div class="cs-meta-grid" style="margin-top: 1.5rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Live Deployment</span>
+                <span class="cs-meta-value"><a href="https://dx-sport.vercel.app/" target="_blank" rel="noopener" style="color:#FFC107;">dx-sport.vercel.app ↗</a></span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Workspace Codebases</span>
+                <span class="cs-meta-value"><code style="color:#FFC107;">DX Sport/frontend</code>, <code style="color:#FFC107;">backendd</code> &amp; <code style="color:#FFC107;">e-learning-backend</code></span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="zone-d-pro.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">Office of the Zone D PRO</span>
+        </a>
+        <a href="swiftexpress.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">SwiftExpress Logistics Tracking</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

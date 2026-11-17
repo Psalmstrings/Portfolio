@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>CampusMart Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering CampusMart, a production-grade peer-to-peer student marketplace for Nigerian universities with 104 automated test assertions, ReDoS-safe search, and WhatsApp seller handoff." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/campusmart.html" />
+  <link rel="shortcut icon" href="../media/campusmart-logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="CampusMart Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>CampusMart</span>
+      </div>
+
+      <span class="cs-badge">EdTech Ecosystem · E-Commerce · Student Marketplace</span>
+      <h1 class="cs-title">CampusMart — Mobile-First Peer-to-Peer Campus Commerce Platform</h1>
+      <p class="cs-tagline">
+        A dedicated digital marketplace connecting students across UNILAG, YABATECH, and LASU to buy, sell, discover deals, and trade campus services within verified university communities. Validated with 104 automated test assertions.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Lead Full-Stack Developer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">MERN (React 19 + Node.js/Express + MongoDB)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Target Institutions</span>
+          <span class="cs-meta-value">UNILAG · YABATECH · LASU</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Automated QA</span>
+          <span class="cs-meta-value">104 Passing Assertions (22 Suites)</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="#verification" class="btn btn--outline">104 Test Suite Report</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Core Features</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#verification" class="cs-toc-link">9. Testing &amp; Security Audit</a></li>
+            <li><a href="#impact" class="cs-toc-link">10. Operational Value</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>CampusMart</strong> is a hyper-localized, mobile-first marketplace built to organize student trade within Nigerian higher education institutions. The system enables students to buy and sell textbooks, electronics, dorm essentials, fashion items, and campus services safely inside their own university ecosystem.
+            </p>
+            <p class="cs-prose">
+              Starting with three premier institutions in Lagos State—<strong>University of Lagos (UNILAG)</strong> in Akoka, <strong>Yaba College of Technology (YABATECH)</strong> in Yaba, and <strong>Lagos State University (LASU)</strong> in Ojo—CampusMart replaces ephemeral social media chats with structured product indexing, campus hostel filtering, and transparent seller accountability.
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/campusmart-hero.png" alt="CampusMart Platform Interface Overview" loading="lazy" style="max-height: 420px; object-fit: contain; margin: 0 auto; background: #fff;" />
+              <div class="cs-media-caption">Figure 2.1: CampusMart marketplace discovery hero and product browsing interface.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Problem Solved</h2>
+            <p class="cs-prose">
+              Commerce in Nigerian universities is massive but severely fragmented. Students rely on informal WhatsApp groups, temporary status updates, and scattered Telegram channels:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Fragmentation Challenges</h4>
+                <ul>
+                  <li><strong>Ephemeral Content:</strong> WhatsApp group messages and status posts disappear within 24 hours, burying products beneath unrelated group chatter.</li>
+                  <li><strong>Zero Search Capability:</strong> A student looking for a specific engineering textbook or mini-fridge cannot search or filter by hostel location or price.</li>
+                  <li><strong>Campus Scam Vulnerabilities:</strong> Anonymous sellers without institutional attribution exploit informal groups with fake deposit requests.</li>
+                  <li><strong>Poor Seller Analytics:</strong> Student entrepreneurs have no visibility into how many peers viewed their products or initiated buying inquiries.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The CampusMart Solution</h4>
+                <ul>
+                  <li><strong>Structured Catalog &amp; Search:</strong> Persistent searchable listings with 14 categories, condition filters, and campus-specific location tags.</li>
+                  <li><strong>Verified Student Profiles:</strong> Department, academic level, and campus attribution attached to every seller profile.</li>
+                  <li><strong>Direct WhatsApp Handoff:</strong> One-click click-to-chat pre-filling listing titles and recording buyer engagement metrics.</li>
+                  <li><strong>Administrative Moderation:</strong> Moderation queue where all newly submitted listings enter a pending status to prevent spam and scams.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Solution Developed</h2>
+            <p class="cs-prose">
+              CampusMart provides a cohesive, end-to-end commerce experience designed around student browsing habits on budget smartphones:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🔍</span>
+                <h3 class="cs-feature-title">Discovery &amp; Dynamic Search</h3>
+                <p class="cs-feature-desc">Live search with keyword regex escaping (preventing ReDoS), multi-campus toggling, price range slider, and bottom-sheet mobile filter drawer.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">💬</span>
+                <h3 class="cs-feature-title">Smart WhatsApp Integration</h3>
+                <p class="cs-feature-desc">Deep link button pre-populating inquiry messages directly into the seller's WhatsApp while incrementing platform engagement telemetry.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📦</span>
+                <h3 class="cs-feature-title">Student Seller Dashboard</h3>
+                <p class="cs-feature-desc">Inventory management for creating, editing, and marking items as sold, alongside real metrics on views and buyer interaction clicks.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🛡️</span>
+                <h3 class="cs-feature-title">Admin Moderation Console</h3>
+                <p class="cs-feature-desc">Pending review approval workflows, suspicious listing reports, user suspension tools, and real-time campus statistics.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Core Implemented Features</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Dynamic Campus Architecture:</strong> Built to seamlessly expand beyond UNILAG, YABATECH, and LASU to any Nigerian institution (e.g., OAU, UI, FUTA, LASUED) via database configuration without code changes.</li>
+                <li><strong>Anti-ReDoS Safe Search:</strong> Sanitized regex utility escaping special characters in search queries to prevent catastrophic regex backtracking attacks.</li>
+                <li><strong>Interactive Image Uploader:</strong> Multi-image client previews with instant removal and Cloudinary cloud CDN integration.</li>
+                <li><strong>Favorites &amp; Wishlist Management:</strong> Persistent user favorites saved to MongoDB with instantaneous optimistic UI toggling.</li>
+                <li><strong>Automated Telemetry:</strong> Automatic view counter increments and click-tracking endpoints (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">whatsappClicks</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">phoneClicks</code>).</li>
+                <li><strong>Insecure Direct Object Reference (IDOR) Protection:</strong> Strict server-side ownership verification ensuring sellers can only modify or delete their own listings.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture &amp; Data Models</h2>
+            <p class="cs-prose">
+              CampusMart is engineered with a clean modular separation between frontend presentation, API controllers, and database models:
+            </p>
+
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">CampusMart Full-Stack Topology</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">MERN Architecture</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Frontend UI</span>
+                  <div class="cs-tier-desc">React 19, React Router v7, Tailwind CSS v4, Lucide Icons, Axios instance with automatic JWT Authorization header injection. Mobile-first two-column card grid.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Backend API</span>
+                  <div class="cs-tier-desc">Node.js / Express.js REST API with Helmet security headers, CORS origin whitelist, Multer file upload stream, and custom error handling middleware.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Database Layer</span>
+                  <div class="cs-tier-desc">MongoDB with Mongoose. Primary schemas: <code style="color:#FFC107;">User</code> (institutional email, department, level), <code style="color:#FFC107;">Listing</code> (campus, category, price, images, moderation status), <code style="color:#FFC107;">Campus</code>, <code style="color:#FFC107;">Category</code>, <code style="color:#FFC107;">Report</code>.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Media &amp; CDN</span>
+                  <div class="cs-tier-desc">Cloudinary cloud image storage with local fallback buffer handling and automated image optimization.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>End-to-End System Design:</strong> Architected both the client and server applications from scratch, structuring models, routes, and controllers.</li>
+                <li><strong>Mobile-First UI/UX:</strong> Designed an intuitive, touch-friendly interface featuring bottom sheets, sticky filters, responsive image carousels, and one-tap WhatsApp inquiry triggers.</li>
+                <li><strong>Backend Security &amp; Authorization:</strong> Implemented JWT authentication, password reset token lifecycles, and IDOR prevention guards on all mutation endpoints.</li>
+                <li><strong>Search &amp; Query Optimization:</strong> Engineered MongoDB indexing across <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">campus</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">category</code>, and <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">status</code>, enabling sub-20ms multi-parameter queries.</li>
+                <li><strong>Automated Test Automation:</strong> Authored and verified the 104-assertion automated test suite executing across 22 feature suites using Node.js and MongoMemoryServer.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">React 19</span>
+              <span class="cs-tech-pill">Node.js (v22)</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Mongoose ORM</span>
+              <span class="cs-tech-pill">Tailwind CSS v4</span>
+              <span class="cs-tech-pill">React Router v7</span>
+              <span class="cs-tech-pill">Lucide React</span>
+              <span class="cs-tech-pill">Cloudinary API</span>
+              <span class="cs-tech-pill">Bcryptjs &amp; JWT</span>
+              <span class="cs-tech-pill">Multer</span>
+              <span class="cs-tech-pill">Axios</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Security Measures</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. ReDoS Mitigation in Campus Search</span>
+                <span class="cs-decision-badge">Security Implementation</span>
+              </div>
+              <p class="cs-decision-text">
+                User input in search fields can be weaponized with catastrophic regular expressions (e.g. nested quantifiers like <code style="color:#FFC107;">(a+)+$</code>) causing server event-loop stalls. I implemented a strict character escaping helper before passing search terms into MongoDB <code style="color:#FFC107;">$regex</code> filters, ensuring guaranteed linear execution time.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. WhatsApp Handoff over In-App Messaging</span>
+                <span class="cs-decision-badge">Product Strategy</span>
+              </div>
+              <p class="cs-decision-text">
+                Building an in-app chat system creates delivery delays, push-notification reliability issues, and battery drain on low-end Android phones. By delegating conversations directly to WhatsApp via pre-filled URLs while tracking clicks server-side, student buyers and sellers converse on the app they already check constantly, drastically increasing transaction close rates.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">3. Forced Admin Password Rotation</span>
+                <span class="cs-decision-badge">Access Hardening</span>
+              </div>
+              <p class="cs-decision-text">
+                To eliminate default credential exploitation on initial deployment, the administrative authentication pipeline flags accounts with default credentials, blocking administrative queries until the root password is cryptographically updated.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Verification -->
+          <section id="verification" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Testing &amp; Quality Assurance</h2>
+            <p class="cs-prose">
+              CampusMart features an automated second-pass testing report containing <strong>104 passed assertions</strong> across 22 distinct feature domains with a 100% success rate:
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">104</div>
+                <div class="cs-metric-label">Automated Assertions</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">22</div>
+                <div class="cs-metric-label">Feature Suites</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Verification Pass Rate</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">3</div>
+                <div class="cs-metric-label">Seeded Premier Campuses</div>
+              </div>
+            </div>
+
+            <div class="cs-prose">
+              <strong>Key Test Categories Verified:</strong>
+              <ul>
+                <li><strong>System Health &amp; Security Headers:</strong> HTTP 200 checks, X-Content-Type-Options: nosniff, and X-Frame-Options: DENY.</li>
+                <li><strong>Student Identity &amp; Email Verification:</strong> Token generation, 403 blocks on unverified accounts, anti-replay guards, and duplicate prevention.</li>
+                <li><strong>Discovery, Filtering &amp; Search:</strong> Multitasking filter pipelines across campus, categories, min/max price boundaries, and ReDoS injection immunity.</li>
+                <li><strong>IDOR Security on Listings:</strong> Validated that unauthorized users receive HTTP 403 when attempting to edit or delete another student's listing.</li>
+                <li><strong>WhatsApp Handoff Telemetry:</strong> Accurate atomic increments on seller engagement metrics.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 10: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Operational Value &amp; Deliverables</h2>
+            <p class="cs-prose">
+              CampusMart transforms fragmented campus commerce into a secure, structured digital economy. By removing barriers between student sellers and buyers, the platform empowers student micro-entrepreneurs, makes essential educational materials affordable, and provides campus communities with a safe trading marketplace.
+            </p>
+
+            <div class="cs-meta-grid" style="margin-top: 2rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Workspace Code</span>
+                <span class="cs-meta-value">Clean full-stack codebase in <code style="color:#FFC107;">client/</code> &amp; <code style="color:#FFC107;">server/</code></span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Audit Documentation</span>
+                <span class="cs-meta-value"><code style="color:#FFC107;">CAMPUSMART_SECOND_PASS_TEST_REPORT.md</code></span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="pbat-koh.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">PBAT-KOH Mobilisation Platform</span>
+        </a>
+        <a href="tickza.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">Tickza Event Ticketing Infrastructure</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

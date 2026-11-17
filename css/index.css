@@ -1219,9 +1219,86 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+/* Project Category Filter Bar */
+.projects-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.15rem;
+  background: var(--color-white);
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  background: var(--color-light-surface);
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.filter-btn.active {
+  background: var(--color-black);
+  color: var(--color-primary);
+  border-color: var(--color-black);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-card.is-hidden {
+  display: none !important;
+}
+
+.project-card__badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background-color: var(--color-light-gray);
+  color: var(--color-dark-gray);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.project-card__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.95rem;
+  background-color: var(--color-black);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.project-card__cta-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  transform: translateY(-1px);
 }
 
 /* Editorial mixed grid */

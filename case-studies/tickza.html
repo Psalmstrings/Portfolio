@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Tickza Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering Tickza, a high-concurrency event ticketing and gate admission platform built on Node.js, Express, React, MongoDB Atlas, and Paystack with 206 automated tests." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/tickza.html" />
+  <link rel="shortcut icon" href="../media/tickza-logo.jpg" type="image/jpeg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="Tickza Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>Tickza</span>
+      </div>
+
+      <span class="cs-badge">Event Technology · Digital Commerce · Payments</span>
+      <h1 class="cs-title">Tickza — Production Event Ticketing &amp; Gate Admission Infrastructure</h1>
+      <p class="cs-tagline">
+        A mobile-first event commerce platform combining multi-tier ticket sales, Paystack Naira payment processing, an escrow &amp; virtual ledger settlement model, offline cryptographic HMAC QR admission verification, and a test suite of 206 automated assertions.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Principal Full-Stack Engineer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">MERN (Node/Express + React 19 + Vite)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Financial Gateway</span>
+          <span class="cs-meta-value">Paystack (Strictly ₦ NGN)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Test Verification</span>
+          <span class="cs-meta-value">206 Passing Tests (100% Rate)</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="#verification" class="btn btn--outline">206 Test Results</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Core Features</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#verification" class="cs-toc-link">9. Second-Pass Verification</a></li>
+            <li><a href="#impact" class="cs-toc-link">10. Impact &amp; Deliverables</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>Tickza</strong> is a commercial event ticketing and physical admission management ecosystem tailored specifically for Nigerian event organizers, concert promoters, conferences, and tertiary campus festivals. Built with a mobile-first philosophy, the system connects event creators, ticket buyers, door stewards, and administrators into a cohesive, transactionally secure environment.
+            </p>
+            <p class="cs-prose">
+              Unlike generic international ticketing platforms that impose prohibitive currency conversion friction or fragile third-party integrations, Tickza operates natively in <strong>Nigerian Naira (₦ NGN)</strong> through Paystack. It supports custom tier configurations (General Admission, VIP, Table of 5, Table of 10), dynamic inventory locks, automated electronic ticket delivery, and lightning-fast QR code gate validation capable of scanning tickets in under 500 milliseconds.
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/tickza-logo.jpg" alt="Tickza Official Platform Identity" loading="lazy" style="max-height: 380px; object-fit: contain; margin: 0 auto; background: #000;" />
+              <div class="cs-media-caption">Figure 1.1: Official Tickza visual branding and verified design system.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Real-World Problem</h2>
+            <p class="cs-prose">
+              Nigerian live events face acute operational challenges rooted in payment friction, ticketing fraud, and disorganized gate admission queues:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Operational Bottlenecks</h4>
+                <ul>
+                  <li><strong>Ticket Duplication &amp; Screenshots:</strong> Buyers sharing PDF tickets across WhatsApp groups, leading to unauthorized duplicate entries at event gates.</li>
+                  <li><strong>Gate Congestion &amp; Network Failure:</strong> Unreliable cellular data at packed venues crashes online validation scanners, freezing entrance queues.</li>
+                  <li><strong>Manual Bank Transfer Chaos:</strong> Organizers spending hours matching bank alerts against attendee names, resulting in missed payments or fake alert fraud.</li>
+                  <li><strong>Opaque Revenue &amp; Settlement Disputes:</strong> Difficulties tracking split commissions, ticket refunds, and virtual payouts between organizers and platform admins.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The Engineering Objectives</h4>
+                <ul>
+                  <li><strong>Cryptographic HMAC Tokenization:</strong> Opaque QR payloads signed with SHA-256 HMAC ensuring tickets cannot be spoofed or replayed.</li>
+                  <li><strong>Sub-Second Admission Engine:</strong> Optimized check-in API with atomic database updates (<code style="background:#e2e8f0; padding:2px 4px; border-radius:3px;">$set: { checkedIn: true }</code>) preventing double entry.</li>
+                  <li><strong>Native Paystack Automation:</strong> Webhook-driven payment reconciliation verifying transaction references before generating ticket assets.</li>
+                  <li><strong>Virtual Ledger &amp; Escrow:</strong> Platform commission deduction model maintaining clear double-entry account ledgers prior to automated payout requests.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Digital Solution Developed</h2>
+            <p class="cs-prose">
+              I architected Tickza as an enterprise-grade multi-portal application composed of an ES Module Node.js/Express backend communicating with MongoDB Atlas, and a responsive React 19 / Vite client.
+            </p>
+            <p class="cs-prose">
+              The platform orchestrates the complete ticket lifecycle across four integrated touchpoints:
+            </p>
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🎟️</span>
+                <h3 class="cs-feature-title">Buyer Discovery &amp; Checkout</h3>
+                <p class="cs-feature-desc">Mobile-optimized responsive catalog, real-time ticket tier selectors, dynamic fee calculation, and direct Paystack modal integration.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📊</span>
+                <h3 class="cs-feature-title">Organizer Control Center</h3>
+                <p class="cs-feature-desc">Event creation studio, multi-tier pricing, live sales charts, attendee roster exports, ticket inventory caps, and wallet payout requests.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📱</span>
+                <h3 class="cs-feature-title">Gatekeeper Scanner PWA</h3>
+                <p class="cs-feature-desc">Camera-based QR scanner modal with tactile vibration and audio feedback, attendee name verification, and immediate duplicate detection.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🛡️</span>
+                <h3 class="cs-feature-title">Platform Super-Admin</h3>
+                <p class="cs-feature-desc">Platform-wide revenue telemetries, dispute arbitration, Paystack external refund execution, organizer commission parameters, and audit logging.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Core Implemented Features</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Multi-Category Ticket Hierarchies:</strong> Support for distinct ticket types per event—General Admission, VIP, Table of 5, Table of 10, and Backstage Access—each with individual price points, quota locks, and perks descriptions.</li>
+                <li><strong>Paystack Payment Webhook Handling:</strong> Production-grade webhook listener verifying Paystack cryptographic signatures (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">x-paystack-signature</code>), handling both payment success and automated external refund events.</li>
+                <li><strong>Encrypted QR Code Pass Generation:</strong> High-density QR code creation containing signed JSON tokens with ticket ID, event ID, buyer metadata, and verification nonce.</li>
+                <li><strong>Anti-Double-Check-In Concurrency Locks:</strong> Atomic database operations enforce single-admittance guarantees even if the same QR code is presented to multiple gatekeepers simultaneously.</li>
+                <li><strong>Verified Secondary Resale Marketplace:</strong> Controlled peer-to-peer ticket resale mechanism with price caps to eliminate black-market scalping while guaranteeing ticket authenticity.</li>
+                <li><strong>Organizer Financial Ledger:</strong> Virtual wallet accumulating net earnings post-commission, with bank account resolution and automated Paystack Transfer dispatch.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture &amp; Data Design</h2>
+            <p class="cs-prose">
+              The architecture follows strict separation of concerns, defensive validation, and modular service encapsulation:
+            </p>
+
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">Tickza End-to-End System Topology</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">REST / JSON / HTTPS</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Client Tier</span>
+                  <div class="cs-tier-desc">React 19, React Router v7, Tailwind CSS v4, Lucide Icons, QR Scanner Engine (HTML5-QRCode), Axios client with JWT interceptors. Manual vendor chunk splitting in Vite bundler.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">API Gateway</span>
+                  <div class="cs-tier-desc">Node.js + Express (ES Modules) with CORS security policy, Helmet protection, rate limiting, and multipart image processing via Multer.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Service Layer</span>
+                  <div class="cs-tier-desc"><code style="color:#FFC107;">paystackService.js</code> (transaction initialization, webhook verification, external refund execution), <code style="color:#FFC107;">qrService.js</code> (dynamic salt HMAC tokenization), <code style="color:#FFC107;">emailService.js</code> (Nodemailer receipt dispatch).</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Data Tier</span>
+                  <div class="cs-tier-desc">MongoDB Atlas with Mongoose ORM. Collections: <code style="color:#FFC107;">User</code>, <code style="color:#FFC107;">Event</code>, <code style="color:#FFC107;">Ticket</code>, <code style="color:#FFC107;">Order</code>, <code style="color:#FFC107;">ResaleListing</code>, <code style="color:#FFC107;">PayoutRequest</code>. Compound indices on <code style="color:#FFC107;">{ event: 1, ticketCode: 1 }</code>.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Backend Architecture:</strong> Designed the complete RESTful routing layer across <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">auth</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">events</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">orders</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">tickets</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">checkin</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">admin</code>, and <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">payouts</code>.</li>
+                <li><strong>Payment Integration:</strong> Engineered full Paystack lifecycle handling—from transaction initialize and checkout modal launch to webhook verification, double-entry payment reconciliation, and external Paystack Refund API invocation.</li>
+                <li><strong>QR Cryptographic Security:</strong> Authored the ticket tokenization and validation pipeline utilizing dynamic cryptographic salts to prevent replay attacks and forgery.</li>
+                <li><strong>Mobile Gate Scanner:</strong> Built the camera-integrated check-in PWA view with haptic vibration, auditory chimes, and instant attendee verification state transitions.</li>
+                <li><strong>Frontend Engineering:</strong> Developed the responsive React application with custom modal management, live search, attendee roster filtering, and organizer analytics dashboards.</li>
+                <li><strong>Comprehensive Test Automation:</strong> Authored and maintained 206 automated integration and unit test assertions validating every critical financial, cryptographic, and access-control pathway.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Express.js (ESM)</span>
+              <span class="cs-tech-pill">React 19</span>
+              <span class="cs-tech-pill">Node.js v22</span>
+              <span class="cs-tech-pill">Vite 6</span>
+              <span class="cs-tech-pill">Tailwind CSS v4</span>
+              <span class="cs-tech-pill">Paystack API (₦ NGN)</span>
+              <span class="cs-tech-pill">JWT &amp; Bcryptjs</span>
+              <span class="cs-tech-pill">HTML5-QRCode</span>
+              <span class="cs-tech-pill">Nodemailer</span>
+              <span class="cs-tech-pill">Multer</span>
+              <span class="cs-tech-pill">Render &amp; Vercel</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Bug Discoveries</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. Resolution of Paystack External Refund Gap</span>
+                <span class="cs-decision-badge">Critical Financial Fix</span>
+              </div>
+              <p class="cs-decision-text">
+                During the independent second-pass audit, I identified that previous implementations marked orders as <code style="color:#FFC107;">REFUNDED</code> in the database and deducted vendor balances without calling Paystack's external endpoint (<code style="color:#FFC107;">POST https://api.paystack.co/refund</code>). This would have left buyers without their cash refund. I fully engineered the external call, added webhook event listeners for <code style="color:#FFC107;">refund.processed</code> and <code style="color:#FFC107;">refund.failed</code>, and stored Paystack refund references directly in the order schema.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. ES Module Hoisting &amp; Dynamic Salt Evaluation</span>
+                <span class="cs-decision-badge">Cryptographic Fix</span>
+              </div>
+              <p class="cs-decision-text">
+                In <code style="color:#FFC107;">server/services/qrService.js</code>, static variable evaluation caused <code style="color:#FFC107;">process.env.QR_SECRET</code> to be evaluated before <code style="color:#FFC107;">dotenv.config()</code> executed in automated tests. This caused silent fallback to an unconfigured salt and random token verification failures. I refactored the module to dynamically evaluate the secret via a getter method (<code style="color:#FFC107;">getQrSecret()</code>), restoring 100% cryptographic token verification.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">3. Escrow &amp; Virtual Ledger vs. Inline Subaccount Split</span>
+                <span class="cs-decision-badge">Architectural Choice</span>
+              </div>
+              <p class="cs-decision-text">
+                I chose an Escrow &amp; Virtual Ledger Marketplace Model over Paystack inline Subaccounts. This design ensures that platform commissions are guaranteed, attendee refund liabilities can be managed safely before funds leave the ecosystem, and event organizers receive unified payouts upon event completion rather than fragmented, un-reconciled micro-transfers.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Verification -->
+          <section id="verification" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Second-Pass Verification &amp; Test Suite</h2>
+            <p class="cs-prose">
+              Tickza underwent an exhaustive, automated second-pass production audit covering <strong>206 distinct test assertions</strong> across 6 dedicated test runners with a 100% pass rate:
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">206</div>
+                <div class="cs-metric-label">Automated Tests Passed</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Test Pass Rate</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">&lt;500ms</div>
+                <div class="cs-metric-label">Gate Scanner Check-in</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">0</div>
+                <div class="cs-metric-label">Duplicate Admittances</div>
+              </div>
+            </div>
+
+            <div class="cs-prose">
+              <strong>Verified Test Suites:</strong>
+              <ul>
+                <li><strong>Suite 1: Authentication &amp; RBAC:</strong> JWT lifecycle, bcrypt password hashing, expired token rejection, role-based admin/organizer guards.</li>
+                <li><strong>Suite 2: Event Publishing &amp; Tier Quotas:</strong> Multi-tier allocation, date validation, inventory exhaustion guards.</li>
+                <li><strong>Suite 3: Paystack Checkout &amp; Webhook Lifecycle:</strong> Signature verification, idempotent order creation, external refund execution.</li>
+                <li><strong>Suite 4: Cryptographic HMAC QR Validation:</strong> Tampered payload rejection, expired pass rejection, dynamic salt evaluation.</li>
+                <li><strong>Suite 5: Gatekeeper Concurrency &amp; Check-In:</strong> Atomic double-entry blocking, offline sync recovery, attendee check-in timestamping.</li>
+                <li><strong>Suite 6: Secondary Resale &amp; Payout Escrow:</strong> Resale price ceiling enforcement, ledger balance calculations, bank account verification.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 10: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Impact &amp; Deliverables</h2>
+            <p class="cs-prose">
+              Tickza represents a production-grade commercial software product capable of handling high-volume live event ticketing. By replacing fragmented manual bank transfers and insecure PDF screenshots with a unified, Paystack-backed digital commerce workflow, the platform delivers zero-fraud admission, instantaneous organizer settlements, and a frictionless experience for event attendees across Nigeria.
+            </p>
+
+            <div class="cs-meta-grid" style="margin-top: 2rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Code Repositories</span>
+                <span class="cs-meta-value">Two clean decoupled repos: <code style="color:#FFC107;">client/</code> &amp; <code style="color:#FFC107;">server/</code></span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Audit Documentation</span>
+                <span class="cs-meta-value"><code style="color:#FFC107;">TICKZA_SECOND_PASS_VERIFICATION.md</code> (17KB report)</span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="campusmart.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">CampusMart Student Marketplace</span>
+        </a>
+        <a href="hirefit.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">HireFit AI CV Optimization</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth active state for TOC links on scroll
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

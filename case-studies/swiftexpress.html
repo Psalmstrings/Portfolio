@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SwiftExpress Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering SwiftExpress, a full-stack logistics and shipment tracking platform featuring real-time checkpoint timelines, role-based staff dispatch, and transparent consignment management." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/swiftexpress.html" />
+  <link rel="shortcut icon" href="../media/SwiftExpress.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="SwiftExpress Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>SwiftExpress</span>
+      </div>
+
+      <span class="cs-badge">Logistics Technology · Delivery Management · Tracking Systems</span>
+      <h1 class="cs-title">SwiftExpress — Logistics &amp; Consignment Tracking Infrastructure</h1>
+      <p class="cs-tagline">
+        A full-stack logistics management platform delivering complete consignment visibility through public tracking lookups, sub-document timeline event checkpoints, role-based staff dispatch portals, and centralized operational command.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Lead Full-Stack Logistics Architect</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">MERN (React/Vite + Express/Node.js + MongoDB)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Lifecycle Tracking</span>
+          <span class="cs-meta-value">13 Distinct Consignment Status Stages</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">User Portals</span>
+          <span class="cs-meta-value">Public Tracker · Operations Staff · Super Admin</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="#features" class="btn btn--outline">Tracking Lifecycle</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Tracking Lifecycle &amp; Features</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#impact" class="cs-toc-link">9. Operational Impact</a></li>
+            <li><a href="#links" class="cs-toc-link">10. Project Links</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>SwiftExpress</strong> is a logistics and package delivery tracking system built to eliminate visibility gaps between freight operators, parcel handlers, and end recipients. The platform replaces informal phone and message inquiries with a transparent, self-service tracking interface backed by an audited administrative and dispatch operations portal.
+            </p>
+            <p class="cs-prose">
+              The application manages consignments from initial intake through final doorstep handover, providing recipients with timestamped event histories, current hub locations, sender/recipient records, and estimated arrival windows.
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/SwiftExpress.png" alt="SwiftExpress Platform Visual Interface" loading="lazy" />
+              <div class="cs-media-caption">Figure 8.1: Live portal interface for SwiftExpress package tracking and consignment administration.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Real-World Problem</h2>
+            <p class="cs-prose">
+              Independent logistics providers and courier services frequently experience severe operational blind spots:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Courier Bottlenecks</h4>
+                <ul>
+                  <li><strong>Support Channel Inundation:</strong> Customers calling or messaging multiple times a day asking "Where is my parcel right now?".</li>
+                  <li><strong>Unstructured Checkpoints:</strong> Dispatch handlers noting package transit updates in paper ledgers with no shared digital audit trail.</li>
+                  <li><strong>Lost Consignment Context:</strong> Inability to see who handled or updated a package when delays or routing errors occur.</li>
+                  <li><strong>Manual Status Errors:</strong> Customers receiving inaccurate status updates due to desynchronized local dispatch records.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The SwiftExpress Engineering Solution</h4>
+                <ul>
+                  <li><strong>Instant Self-Service Tracking:</strong> Customers enter their unique tracking code on the home screen to access an interactive visual timeline.</li>
+                  <li><strong>Structured Sub-Document Timelines:</strong> Every checkpoint records a descriptive message, facility location, timestamp, and status snapshot.</li>
+                  <li><strong>Staff Accountability Tagging:</strong> Updates are immutably tied to the authenticated staff member's ID and role.</li>
+                  <li><strong>13-Stage Finite State Machine:</strong> Standardized status states from "Shipment Created" to "Delivered" or "Customs Clearance".</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Solution Developed</h2>
+            <p class="cs-prose">
+              SwiftExpress is architected across three core functional touchpoints:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🔍</span>
+                <h3 class="cs-feature-title">Customer Tracking Interface</h3>
+                <p class="cs-feature-desc">Accessible tracking bar leading to <code style="font-size:0.85rem;">/track/:trackingId</code>, rendering origin, destination, current transit point, expected delivery date, and a chronological milestone timeline.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🚚</span>
+                <h3 class="cs-feature-title">Operations Staff Portal</h3>
+                <p class="cs-feature-desc">Dedicated field dashboard (<code style="font-size:0.85rem;">/staff</code>) enabling handlers to register new parcels, update current locations, and append checkpoint events.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🛡️</span>
+                <h3 class="cs-feature-title">Super Admin Command Center</h3>
+                <p class="cs-feature-desc">Central oversight console (<code style="font-size:0.85rem;">/admin</code>) managing staff credentials, consignment deletion/archiving, audit logs, and global operational metrics.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📦</span>
+                <h3 class="cs-feature-title">Consignment Metadata Store</h3>
+                <p class="cs-feature-desc">Structured fields capturing package descriptions, sender/recipient names, origin/destination hubs, and expected delivery dates.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Tracking Lifecycle &amp; Schema Design</h2>
+            <div class="cs-prose">
+              <p>
+                The backend strictly enforces 13 standardized consignment lifecycle statuses:
+              </p>
+              <ul>
+                <li><strong>Pending:</strong> Intake logged, pending initial warehouse processing.</li>
+                <li><strong>Shipment Created:</strong> Waybill generated and assigned to tracking ID.</li>
+                <li><strong>Processing:</strong> Sorting and packaging at regional fulfillment center.</li>
+                <li><strong>Picked Up:</strong> Consignment collected by linehaul freight carrier.</li>
+                <li><strong>In Transit:</strong> Traveling between distribution centers or logistics hubs.</li>
+                <li><strong>Arrived at Sorting Facility:</strong> Scanned into destination city hub.</li>
+                <li><strong>Customs Clearance:</strong> Border inspection or regulatory clearance check.</li>
+                <li><strong>Out for Delivery:</strong> Loaded onto last-mile courier dispatch vehicle.</li>
+                <li><strong>Delivery Attempted:</strong> Recipient unavailable; scheduled for re-attempt.</li>
+                <li><strong>Delayed:</strong> Weather or routing contingency flagged.</li>
+                <li><strong>Delivered:</strong> Completed doorstep handover to verified recipient.</li>
+                <li><strong>Returned:</strong> Returned to sender following failed re-attempts.</li>
+                <li><strong>Cancelled:</strong> Order voided before freight dispatch.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture</h2>
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">SwiftExpress Full-Stack Architecture</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">React + Express + MongoDB</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Client Layer</span>
+                  <div class="cs-tier-desc">Vite React SPA with React Router, protected route guards (<code style="color:#FFC107;">AdminRoute</code>, <code style="color:#FFC107;">StaffRoute</code>), and animated milestone progress bars.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">API Gateway</span>
+                  <div class="cs-tier-desc">Express REST API handling <code style="color:#FFC107;">/api/tracking</code> and <code style="color:#FFC107;">/api/admin</code> with JWT authentication, role guards, and CORS configuration.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Database Layer</span>
+                  <div class="cs-tier-desc">MongoDB collections: <code style="color:#FFC107;">Tracking</code> (embedded timeline sub-documents with clean JSON transformation), and <code style="color:#FFC107;">Admin</code> (staff accounts, hashed passwords, roles). Unique index on <code style="color:#FFC107;">trackingId</code>.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Data Modeling:</strong> Designed the Mongoose tracking schema with embedded sub-documents for event histories and JSON transforms that sanitize internal fields.</li>
+                <li><strong>RESTful API Architecture:</strong> Engineered controllers for creating consignments, appending checkpoints, and enforcing unique tracking IDs.</li>
+                <li><strong>Role-Based Security:</strong> Implemented JWT middleware and client-side route guards separating Staff operations from Super-Admin functions.</li>
+                <li><strong>Frontend Development:</strong> Built the public lookup interface and administrative dispatch consoles in React with clean CSS styling.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">React.js (Vite)</span>
+              <span class="cs-tech-pill">Node.js</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Mongoose ORM</span>
+              <span class="cs-tech-pill">JWT &amp; Bcryptjs</span>
+              <span class="cs-tech-pill">REST API</span>
+              <span class="cs-tech-pill">Vercel &amp; Render</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. Embedded Sub-Document Timelines vs. Relational Tables</span>
+                <span class="cs-decision-badge">Document Data Modeling</span>
+              </div>
+              <p class="cs-decision-text">
+                Rather than creating a separate SQL-style table for checkpoints requiring expensive joins on every public tracking query, I designed the timeline as an embedded Mongoose sub-document array directly inside the tracking record. This allows customer queries to fetch the complete tracking history in a single atomic database read under 10ms.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. Sanitized Public Output via toJSON Transforms</span>
+                <span class="cs-decision-badge">API Security</span>
+              </div>
+              <p class="cs-decision-text">
+                To prevent internal database keys and version counters from leaking to public users, the schema configures custom <code style="color:#FFC107;">toJSON</code> transforms that automatically strip <code style="color:#FFC107;">_id</code> and <code style="color:#FFC107;">__v</code> before serialization.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Operational Impact</h2>
+            <p class="cs-prose">
+              SwiftExpress transforms logistics operations by drastically cutting customer support inquiries. By providing recipients with immediate, self-service tracking visibility and equipping dispatch staff with an intuitive update interface, the platform ensures accountability, reduces lost parcel disputes, and streamlines last-mile operations.
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">13</div>
+                <div class="cs-metric-label">Lifecycle Status States</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">&lt;15ms</div>
+                <div class="cs-metric-label">Tracking Query Velocity</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">3</div>
+                <div class="cs-metric-label">Integrated Portals</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Checkpoint Auditability</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 10: Links -->
+          <section id="links" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Project Deliverables</h2>
+            <div class="cs-meta-grid" style="margin-top: 1.5rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Code Repositories</span>
+                <span class="cs-meta-value"><code style="color:#FFC107;">UPS Backend</code> &amp; <code style="color:#FFC107;">UPS Frontend/Xarrei</code></span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Deployment Architecture</span>
+                <span class="cs-meta-value">Vercel (React Frontend) &amp; Node Cloud Backend</span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="dx-sportz.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">DX Sportz &amp; DX Academy</span>
+        </a>
+        <a href="tickza.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">Tickza Event Ticketing Infrastructure</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

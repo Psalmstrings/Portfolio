@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BVDI Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering BVDI (Badagry Voters Digitization Initiative), a secure consented voter database, recruiter attribution network, and audit-logged civic management system." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/bvdi.html" />
+  <link rel="shortcut icon" href="../media/bvdi-logo.jpeg" type="image/jpeg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="BVDI Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>BVDI</span>
+      </div>
+
+      <span class="cs-badge">Digital Transformation · Civic Technology · Data Systems</span>
+      <h1 class="cs-title">BVDI — Badagry Voters Digitization Initiative</h1>
+      <p class="cs-tagline">
+        A secure, accurate, and digitally connected civic information system engineering consented voter data management, recruiter code attribution, VIN privacy masking, and immutable audit logging across all 10 official wards of Badagry Local Government.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Lead Full-Stack Solutions Architect</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">MERN (Vite + React / Node.js + Express)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Geographic Scope</span>
+          <span class="cs-meta-value">10 Badagry Wards (Jegba to Topo-Idale)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Privacy Standard</span>
+          <span class="cs-meta-value">Cryptographic VIN Masking &amp; Explicit Consent</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="#decisions" class="btn btn--outline">Security &amp; Privacy Design</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Ward Coverage &amp; Modules</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#impact" class="cs-toc-link">9. Operational Impact</a></li>
+            <li><a href="#links" class="cs-toc-link">10. Deliverables</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              The <strong>Badagry Voters Digitization Initiative (BVDI)</strong> is a civic technology transformation project commissioned to establish an accurate, secure, and digitally structured voter engagement database across the <strong>Badagry Local Government Area</strong> in Lagos State, Nigeria.
+            </p>
+            <p class="cs-prose">
+              Before this initiative, grassroots mobilization and civic engagement relied on fragmented, handwritten paper lists, uncontrolled phone rosters, and unverifiable claims of local community outreach. BVDI transformed this landscape into an audited, centralized digital platform operating across two dedicated workspaces: a high-speed mobile Recruiter Portal for field agents and a supervisory Administrative Command Center with real-time ward telemetry.
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/bvdi-logo.jpeg" alt="Badagry Voters Digitization Initiative Official Identity" loading="lazy" style="max-height: 380px; object-fit: contain; margin: 0 auto; background: #fff;" />
+              <div class="cs-media-caption">Figure 5.1: BVDI official brand identity and visual emblem.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Problem Solved</h2>
+            <p class="cs-prose">
+              Grassroots community coordination in Badagry suffered from acute data fragmentation:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Pre-Digital Pain Points</h4>
+                <ul>
+                  <li><strong>Manual Paper Records:</strong> Field recruiters recorded voter details in paper notebooks that were easily damaged, lost, or illegible.</li>
+                  <li><strong>Duplicate &amp; Fraudulent Entries:</strong> Recruiters had financial incentives to report high numbers, resulting in repeated names and fictitious voter identification numbers (VINs).</li>
+                  <li><strong>Zero Data Privacy:</strong> Unprotected physical papers exposed sensitive voter personal data, addresses, and phone numbers to unauthorized eyes.</li>
+                  <li><strong>Lack of Spatial Clarity:</strong> Administrators had no real-time breakdown of voter coverage across individual wards and polling units.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The BVDI Digital Architecture</h4>
+                <ul>
+                  <li><strong>Unique VIN Deduplication:</strong> Unique database constraints enforce that no Voter Identification Number can ever be registered more than once.</li>
+                  <li><strong>Recruiter Attribution &amp; Audit Logs:</strong> Every submission is immutably tagged with the recruiter's unique code and logged in an immutable <code style="background:#e2e8f0; padding:2px 4px; border-radius:3px;">AuditLog</code> collection.</li>
+                  <li><strong>Cryptographic Data Masking:</strong> Sensitive VIN numbers are masked (<code style="background:#e2e8f0; padding:2px 4px; border-radius:3px;">************1234</code>) in standard recruiter views to preserve privacy.</li>
+                  <li><strong>Ward-Level Granular Analytics:</strong> Real-time visualizations aggregating registrations across all 10 Badagry wards.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Solution Developed</h2>
+            <p class="cs-prose">
+              I architected BVDI as an accessible, highly secure full-stack system built to function reliably on mobile browsers in low-bandwidth rural environments:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📲</span>
+                <h3 class="cs-feature-title">Mobile Recruiter Portal</h3>
+                <p class="cs-feature-desc">Lightweight registration interface optimized for Android smartphones, featuring rapid ward dropdowns, polling unit inputs, and mandatory voter consent checkboxes.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🔒</span>
+                <h3 class="cs-feature-title">Mandatory Consent Engine</h3>
+                <p class="cs-feature-desc">Server-enforced validation ensuring that registrations without explicit voter authorization (<code style="font-size:0.85rem;">consent === true</code>) are rejected immediately.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🛡️</span>
+                <h3 class="cs-feature-title">Immutable Audit Trail</h3>
+                <p class="cs-feature-desc">Every create, update, export, and login event is captured in an audit ledger recording recruiter ID, action timestamp, and network IP address.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📊</span>
+                <h3 class="cs-feature-title">Admin Command Dashboard</h3>
+                <p class="cs-feature-desc">Real-time demographic analytics (age, occupation, ward distributions), recruiter leaderboard monitoring, and filtered CSV exports.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Ward Coverage &amp; Core Schema Design</h2>
+            <div class="cs-prose">
+              <p>
+                The backend strictly enforces the official 10 INEC-designated wards of Badagry Local Government through typed Mongoose schema validation:
+              </p>
+              <ul>
+                <li><strong>Ward A:</strong> Jegba</li>
+                <li><strong>Ward B:</strong> Posukoh</li>
+                <li><strong>Ward C:</strong> Awanjigoh</li>
+                <li><strong>Ward D:</strong> Aovikoh</li>
+                <li><strong>Ward E:</strong> Ajara Vetho</li>
+                <li><strong>Ward F:</strong> Ajara Topa</li>
+                <li><strong>Ward G:</strong> Ajido</li>
+                <li><strong>Ward H:</strong> Iyafin</li>
+                <li><strong>Ward I:</strong> Ikoga</li>
+                <li><strong>Ward J:</strong> Topo-Idale</li>
+              </ul>
+              <p>
+                <strong>Voter Schema Highlights:</strong> Includes minimum age validation (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">min: [18, 'Voter must be at least 18 years old']</code>), uppercase VIN normalization with uniqueness constraints, recruiter attribution tagging, and compound database indices on <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">recruiterCode</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">ward</code>, and <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">phoneNumber</code>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture</h2>
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">BVDI Secure Architecture</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">Vite + Node + MongoDB</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Client Layer</span>
+                  <div class="cs-tier-desc">Vite 6 React frontend with Plus Jakarta Sans typography, local storage token management (<code style="color:#FFC107;">bvdi_token</code>), and mobile responsive forms.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Security Gateway</span>
+                  <div class="cs-tier-desc">Express auth middleware verifying JWT bearer tokens, enforcing role boundaries (<code style="color:#FFC107;">admin</code> vs. <code style="color:#FFC107;">recruiter</code>), and sanitizing input payloads.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Database Layer</span>
+                  <div class="cs-tier-desc">MongoDB collections: <code style="color:#FFC107;">Voter</code>, <code style="color:#FFC107;">User</code>, <code style="color:#FFC107;">AuditLog</code>. Automated server-side masking via schema virtuals and methods.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Backend &amp; API Design:</strong> Engineered the Express server, controllers, and MongoDB models with strict validation and indexing.</li>
+                <li><strong>Data Privacy Engineering:</strong> Authored the <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">getMaskedVIN()</code> method and role-based data visibility controllers to protect sensitive citizen data.</li>
+                <li><strong>Audit &amp; Security Logging:</strong> Built the background audit logging service recording all database access and mutation events.</li>
+                <li><strong>Mobile Frontend UI:</strong> Developed the Vite React interface specifically designed for rapid data entry under field conditions.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">React.js (Vite)</span>
+              <span class="cs-tech-pill">Node.js</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Mongoose ORM</span>
+              <span class="cs-tech-pill">JWT &amp; Bcryptjs</span>
+              <span class="cs-tech-pill">Audit Trail Engine</span>
+              <span class="cs-tech-pill">Plus Jakarta Sans</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Data Ethics</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. Explicit Consent as a Hard Database Constraint</span>
+                <span class="cs-decision-badge">Privacy Compliance</span>
+              </div>
+              <p class="cs-decision-text">
+                Rather than treating voter consent as a soft frontend checkbox, I embedded it directly into the Mongoose schema validator: <code style="color:#FFC107;">validate: { validator: (v) =&gt; v === true, message: 'Explicit consent is mandatory' }</code>. Even if a rogue client bypassed the UI, the database outright rejects unconsented data.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. Recruiter Code Attribution &amp; Zero Duplicate Policy</span>
+                <span class="cs-decision-badge">Anti-Fraud Engine</span>
+              </div>
+              <p class="cs-decision-text">
+                Field recruiters are assigned permanent uppercase codes (e.g. <code style="color:#FFC107;">REC-BAD-04</code>). When registering voters, the VIN is normalized and evaluated against unique sparse indices, completely eliminating duplicate registration fraud across recruiters.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Operational Impact</h2>
+            <p class="cs-prose">
+              BVDI gave community coordinators across Badagry unprecedented visibility into grassroots civic participation. By replacing perishable paper logs with an immutable, privacy-compliant digital repository, the initiative eliminated duplicate entries, empowered field recruiters with modern digital tools, and created a trustworthy, consented voter information asset.
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">10</div>
+                <div class="cs-metric-label">Badagry Wards Covered</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Consent-Verified Entries</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">0</div>
+                <div class="cs-metric-label">Duplicate VIN Ingestion</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">Audit</div>
+                <div class="cs-metric-label">Complete Activity Logs</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 10: Links -->
+          <section id="links" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Project Deliverables</h2>
+            <div class="cs-meta-grid" style="margin-top: 1.5rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Code Repositories</span>
+                <span class="cs-meta-value">Independent <code style="color:#FFC107;">frontend/</code> and <code style="color:#FFC107;">backend/</code> architectures</span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Deployment Standard</span>
+                <span class="cs-meta-value">Vercel (Client SPA) &amp; Render Cloud API</span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="pbat-koh.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">PBAT-KOH Mobilisation Platform</span>
+        </a>
+        <a href="zone-d-pro.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">Office of the Zone D PRO</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

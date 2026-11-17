@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SchoolMeg Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering SchoolMeg, a multi-tenant school management system with CR80 ID card generation, cryptographic QR gate attendance, Nigerian academic grading, and integer-kobo accounting." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/schoolmeg.html" />
+  <link rel="shortcut icon" href="../media/WhatsApp_Image_2025-04-04_at_04.52.12_e46090e3-removebg-preview.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="SchoolMeg Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>SchoolMeg</span>
+      </div>
+
+      <span class="cs-badge">Educational Technology · Multi-Tenant ERP · Attendance &amp; Grading</span>
+      <h1 class="cs-title">SchoolMeg — Multi-Tenant School ERP &amp; Gate Admission Infrastructure</h1>
+      <p class="cs-tagline">
+        A production-grade school management platform engineered for Nigerian educational institutions, featuring tenant data isolation, CR80 PVC ID card studio, cryptographic QR gate attendance, automated ranking engines, and integer-kobo bursary accounting.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Chief Software Architect &amp; Full-Stack Lead</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Architecture</span>
+          <span class="cs-meta-value">Multi-Tenant MERN (Express + Vite/React)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Attendance Engine</span>
+          <span class="cs-meta-value">Cryptographic QR Code Scanning (Arrival/Departure)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Accounting Standard</span>
+          <span class="cs-meta-value">Strict Integer-Kobo Financial Ledger</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="#features" class="btn btn--outline">Modules Breakdown</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Core Features</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#verification" class="cs-toc-link">9. Testing &amp; Verification</a></li>
+            <li><a href="#impact" class="cs-toc-link">10. Operational Impact</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>SchoolMeg</strong> is an all-in-one educational management system built to digitize daily administrative, academic, and financial operations for Nigerian primary and secondary schools. It replaces paper logbooks, manual report card calculations, unverified school gate entries, and messy cash receipts with a centralized digital infrastructure.
+            </p>
+            <p class="cs-prose">
+              The platform is architected with strict <strong>multi-tenant data isolation</strong>, ensuring that independent educational institutions operate securely on a single backend infrastructure with zero data leakage. SchoolMeg unites six distinct user roles: Super Administrators, School Owners/Principals, Teachers, Gate Stewards, Bursars/Accountants, and Parents.
+            </p>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Real-World Problem</h2>
+            <p class="cs-prose">
+              Conventional school administration in developing educational markets suffers from pervasive operational bottlenecks:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Paper-Based Challenges</h4>
+                <ul>
+                  <li><strong>Manual Gate Logs &amp; Safety Risks:</strong> Security guards jotting names in paper notebooks, making it impossible for parents to verify whether their child safely entered or left school premises.</li>
+                  <li><strong>Slow &amp; Error-Prone Report Cards:</strong> Teachers spending weeks manually computing Continuous Assessment (CA) scores, exam totals, class rankings, and grade remarks by hand.</li>
+                  <li><strong>Float Precision Accounting Errors:</strong> Cash and tuition fee calculations using floating-point math often accumulate decimal rounding discrepancies in financial records.</li>
+                  <li><strong>Disconnected Parent Engagement:</strong> Parents relying on physical paper sheets that frequently get lost in student backpacks.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The SchoolMeg Engineering Solutions</h4>
+                <ul>
+                  <li><strong>Real-Time Gate Scanning State Machine:</strong> Cryptographic QR code scanning recording instantaneous timestamped arrival and departure events with audio confirmations.</li>
+                  <li><strong>Automated Nigerian Grading Engine:</strong> Real-time CA + Exam calculation, class position ranking with tie-breaking, and official terminal report card sheet generation.</li>
+                  <li><strong>Integer-Kobo Financial Accounting:</strong> All tuition fees, discounts, and payments tracked strictly in kobo integers (₦1 = 100 kobo), eliminating decimal arithmetic anomalies.</li>
+                  <li><strong>Unified Multi-Child Parent Portal:</strong> Mobile dashboard enabling parents to view gate check-in timelines, report cards, and payment ledgers across multiple siblings with one login.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Digital Solution Developed</h2>
+            <p class="cs-prose">
+              SchoolMeg was engineered from the ground up as a comprehensive multi-portal application:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🆔</span>
+                <h3 class="cs-feature-title">ISO CR80 ID Card Studio</h3>
+                <p class="cs-feature-desc">Interactive visual designer rendering standard ISO/IEC 7810 ID cards (85.60mm × 53.98mm) with high-res photo badges and opaque cryptographic QR codes.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🚪</span>
+                <h3 class="cs-feature-title">Gate &amp; Classroom Scanner</h3>
+                <p class="cs-feature-desc">Camera-integrated scanner PWA executing arrival/departure state transitions, duplicate scan debounce locks, and classroom roll-call sessions.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📈</span>
+                <h3 class="cs-feature-title">Academic &amp; Results Engine</h3>
+                <p class="cs-feature-desc">Configurable Nigerian grading standards (Nursery, Primary, Junior Secondary, Senior Secondary) with automated rank calculation and PDF export.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">💰</span>
+                <h3 class="cs-feature-title">Integer-Kobo Bursary</h3>
+                <p class="cs-feature-desc">Tuition assessment, sibling discount algorithms, partial installment tracking, and printable Nigerian standard fee receipts.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Core Implemented Modules</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Tenant Isolation &amp; Setup Wizard:</strong> 4-step school onboarding wizard collecting institutional metadata, LGA, academic session/terms, and initializing root administrators with scoped tenancy keys.</li>
+                <li><strong>Atomic Sequential ID Numbering:</strong> Database sequence counters generating non-colliding admission numbers (e.g. <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">SCH/2026/0001</code>) and staff codes across concurrent registration requests.</li>
+                <li><strong>Parent Guardian Deduplication:</strong> Automatically links newly registered students to existing parent accounts matching telephone records to avoid duplicate parent profiles.</li>
+                <li><strong>Cryptographic Opaque QR Barcodes:</strong> QR payloads formatted as <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">SM-STU-[CODE]-[HEX16]</code> ensuring students or unauthorized parties cannot forge physical ID cards.</li>
+                <li><strong>Comprehensive Audit Trail:</strong> Immutable audit logging capturing every score modification, payment transaction, student profile change, and role assignment.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture &amp; Data Isolation</h2>
+            <p class="cs-prose">
+              Multi-tenancy is enforced at the database level by indexing and scoping every query by <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">schoolId</code>:
+            </p>
+
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">SchoolMeg Multi-Tenant Architecture</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">Multi-Tenant MERN</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Frontend Tier</span>
+                  <div class="cs-tier-desc">Vite + React SPA, Plus Jakarta Sans typography, specialized sub-layouts (Admin, Teacher, Gate, Bursar, Parent), and CSS print engines for ID cards and receipts.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Tenancy Middleware</span>
+                  <div class="cs-tier-desc">Express middleware inspecting JWT session claims, verifying tenant status, and appending tenant boundary filters to all incoming MongoDB operations.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Business Services</span>
+                  <div class="cs-tier-desc"><code style="color:#FFC107;">idCardService</code>, <code style="color:#FFC107;">resultCalculationService</code> (grades, averages, rankings), <code style="color:#FFC107;">auditLogger</code>, <code style="color:#FFC107;">uploadService</code> (Cloudinary with base64 fallback).</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Data Models</span>
+                  <div class="cs-tier-desc">MongoDB collections: <code style="color:#FFC107;">School</code>, <code style="color:#FFC107;">Student</code>, <code style="color:#FFC107;">Staff</code>, <code style="color:#FFC107;">GateAttendanceEvent</code>, <code style="color:#FFC107;">SubjectResult</code>, <code style="color:#FFC107;">FeeAssessment</code>, <code style="color:#FFC107;">PaymentTransaction</code>. Indexed on <code style="color:#FFC107;">{ schoolId: 1, ... }</code>.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Multi-Tenant Architecture Design:</strong> Built the database boundary system ensuring complete data isolation between schools hosted on the shared cluster.</li>
+                <li><strong>ISO CR80 ID Card Engine:</strong> Developed the printable ID card template system calibrated to exact ISO physical measurements (85.60mm × 53.98mm) using high-precision CSS print units.</li>
+                <li><strong>Cryptographic QR Gate Scanner:</strong> Implemented the gatekeeper scanning application complete with audio cues, scan debouncing, and automated arrival/departure state transitions.</li>
+                <li><strong>Grading &amp; Ranking Algorithms:</strong> Authored the academic results computation service handling CA marks, exams, grade letter assignments, and class rank computation.</li>
+                <li><strong>Financial Accounting System:</strong> Engineered the integer-kobo tuition billing and fee installment ledger with printable receipt formatting.</li>
+                <li><strong>Integration Testing:</strong> Built 7 integration test suites covering authentication, student enrollment, ID generation, gate scanning, result compilation, and bursary ledger operations.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">React.js</span>
+              <span class="cs-tech-pill">Node.js</span>
+              <span class="cs-tech-pill">Vite</span>
+              <span class="cs-tech-pill">Zod Validation</span>
+              <span class="cs-tech-pill">JWT &amp; Secure Cookies</span>
+              <span class="cs-tech-pill">QRCode &amp; Canvas</span>
+              <span class="cs-tech-pill">Cloudinary API</span>
+              <span class="cs-tech-pill">Vitest</span>
+              <span class="cs-tech-pill">CSS Print Engine</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Realities</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. Integer-Kobo Financial Accounting</span>
+                <span class="cs-decision-badge">Financial Accuracy</span>
+              </div>
+              <p class="cs-decision-text">
+                Floating point mathematics in JavaScript (e.g. <code style="color:#FFC107;">0.1 + 0.2 === 0.30000000000000004</code>) is notoriously dangerous in billing systems. I mandated that all fee assessments, discounts, and payments are stored and calculated as integers representing kobo (1 Naira = 100 kobo). The currency is only converted to Naira strings for display formatting at the presentation layer.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. Scan Debouncing &amp; Double-Scan Prevention</span>
+                <span class="cs-decision-badge">Gate Hardware Reliability</span>
+              </div>
+              <p class="cs-decision-text">
+                When students file through school gates, barcode cameras can fire 10 frames per second on the same physical card. I implemented a time-window debounce cache (5-second throttle) on the client scanner coupled with an atomic server-side state machine that prevents duplicate arrival scans.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">3. CR80 Standards-Compliant Print CSS</span>
+                <span class="cs-decision-badge">Hardware Integration</span>
+              </div>
+              <p class="cs-decision-text">
+                Schools print plastic ID cards using thermal PVC card printers (e.g., Zebra, Evolis). Standard web pages scale unpredictably. I engineered pure CSS <code style="color:#FFC107;">@page</code> rules with zero print margins, exact millimetric dimensions, and 300 DPI vector rendering so cards print seamlessly directly from the browser without third-party design software.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Verification -->
+          <section id="verification" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Testing &amp; Verification Suite</h2>
+            <p class="cs-prose">
+              The backend architecture was validated through 7 comprehensive integration test suites using Vitest, asserting every critical operational workflow:
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">7</div>
+                <div class="cs-metric-label">Integration Test Suites</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">6</div>
+                <div class="cs-metric-label">Dedicated User Portals</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">100%</div>
+                <div class="cs-metric-label">Tenant Isolation Integrity</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">CR80</div>
+                <div class="cs-metric-label">ISO/IEC 7810 Compliant</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 10: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Operational Impact &amp; Value</h2>
+            <p class="cs-prose">
+              SchoolMeg modernizes educational institutions into efficient, accountable digital ecosystems. School principals gain real-time visibility into student attendance and fee collection, teachers generate error-free terminal reports in minutes instead of weeks, and parents enjoy complete peace of mind knowing the exact time their children enter and leave school gates.
+            </p>
+
+            <div class="cs-meta-grid" style="margin-top: 2rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Code Repositories</span>
+                <span class="cs-meta-value">Integrated full-stack system (<code style="color:#FFC107;">backend/</code> &amp; <code style="color:#FFC107;">frontend/</code>)</span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Audit Documentation</span>
+                <span class="cs-meta-value">Extensive Phase 1 Architecture &amp; Verification Specifications</span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="hirefit.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">HireFit AI CV Optimization</span>
+        </a>
+        <a href="pbat-koh.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">PBAT-KOH Mobilisation Platform</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>HireFit Case Study | Abimbola Samuel — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Technical Case Study: Engineering HireFit, an AI-powered CV optimization and career platform featuring a Zero-Fabrication Guarantee, 6-category ATS scoring, document parsing, and interactive diff editing." />
+  <link rel="canonical" href="https://psalmstrings.vercel.app/case-studies/hirefit.html" />
+  <link rel="shortcut icon" href="../media/hirefit-logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
+        ABIMBOLA SAMUEL
+      </a>
+      <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cs-hero" aria-label="HireFit Case Study Overview">
+    <div class="container">
+      <div class="cs-breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#work">Projects</a> <span>/</span> <span>HireFit</span>
+      </div>
+
+      <span class="cs-badge">HR Technology · Artificial Intelligence · Full-Stack</span>
+      <h1 class="cs-title">HireFit — Production AI CV Optimization &amp; Career Matching Engine</h1>
+      <p class="cs-tagline">
+        A full-stack career platform that analyzes and optimizes resumes against target job descriptions with a strict Zero-Fabrication Guarantee, 6-category ATS scoring, document parsing, and interactive before/after diff editing.
+      </p>
+
+      <!-- Quick Meta Bar -->
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Primary Role</span>
+          <span class="cs-meta-value">Full-Stack AI Solutions Architect</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">AI Integration</span>
+          <span class="cs-meta-value">Gemini API / LLM Structured Extraction</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Document Formats</span>
+          <span class="cs-meta-value">PDF &amp; DOCX (pdf-parse / mammoth)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">ATS Export</span>
+          <span class="cs-meta-value">3 Modular Print-Ready Templates</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a href="#architecture" class="btn btn--primary">Inspect Architecture ↓</a>
+        <a href="#decisions" class="btn btn--outline">Zero-Fabrication Design</a>
+        <a href="https://github.com/Psalmstrings" target="_blank" rel="noopener" class="btn btn--dark-outline">GitHub Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky Table of Contents -->
+        <aside class="cs-sidebar" aria-label="Table of Contents">
+          <div class="cs-sidebar-title">Contents</div>
+          <ul class="cs-toc-list">
+            <li><a href="#overview" class="cs-toc-link">1. Project Overview</a></li>
+            <li><a href="#problem" class="cs-toc-link">2. The Problem</a></li>
+            <li><a href="#solution" class="cs-toc-link">3. The Solution</a></li>
+            <li><a href="#features" class="cs-toc-link">4. Core Features</a></li>
+            <li><a href="#architecture" class="cs-toc-link">5. System Architecture</a></li>
+            <li><a href="#contributions" class="cs-toc-link">6. My Contributions</a></li>
+            <li><a href="#stack" class="cs-toc-link">7. Technology Stack</a></li>
+            <li><a href="#decisions" class="cs-toc-link">8. Engineering Decisions</a></li>
+            <li><a href="#impact" class="cs-toc-link">9. Impact &amp; Value</a></li>
+            <li><a href="#links" class="cs-toc-link">10. Project Links</a></li>
+          </ul>
+        </aside>
+
+        <!-- Case Study Article -->
+        <article class="cs-article">
+
+          <!-- Section 1: Overview -->
+          <section id="overview" class="cs-section">
+            <span class="cs-section-num">01</span>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p class="cs-prose">
+              <strong>HireFit</strong> is an advanced, production-grade career technology platform built to address one of the most persistent bottlenecks in modern hiring: the disconnect between candidate resumes and specific employer expectations.
+            </p>
+            <p class="cs-prose">
+              Rather than acting as a generic resume generator that creates synthetic, hallucinated career claims, HireFit is built on a <strong>Strict Zero-Fabrication Guarantee</strong>. It preserves the candidate's authentic employment history, education, and dates while parsing unstructured documents into structured schemas, scoring alignment across 6 evidence-based dimensions, and guiding candidates to reframe their real achievements in high-impact language aligned with Applicant Tracking Systems (ATS).
+            </p>
+
+            <div class="cs-media-wrap">
+              <img src="../media/hirefit-logo.png" alt="HireFit Platform Visual Identity" loading="lazy" style="max-height: 280px; object-fit: contain; margin: 0 auto; background: #0f172a; padding: 2rem;" />
+              <div class="cs-media-caption">Figure 3.1: HireFit brand identity and verified platform visual assets.</div>
+            </div>
+          </section>
+
+          <!-- Section 2: Problem -->
+          <section id="problem" class="cs-section">
+            <span class="cs-section-num">02</span>
+            <h2 class="cs-section-title">The Real-World Problem</h2>
+            <p class="cs-prose">
+              Job applicants and modern talent platforms encounter major friction when handling resumes:
+            </p>
+
+            <div class="cs-compare-grid">
+              <div class="cs-box cs-box--problem">
+                <h4>✕ The Job Search Pitfalls</h4>
+                <ul>
+                  <li><strong>The Generic CV Trap:</strong> Sending the exact same CV to dozens of distinct roles without aligning keywords or highlighting relevant competencies.</li>
+                  <li><strong>AI Hallucination &amp; Fabrication:</strong> Generic AI tools often invent job titles, companies, certifications, or statistics that candidates cannot defend during interviews.</li>
+                  <li><strong>Document Structure Destruction:</strong> Traditional resume optimizers discard the candidate's original layout, section ordering, and visual formatting.</li>
+                  <li><strong>Opaque Rejection Criteria:</strong> Candidates receive automated ATS rejections without knowing whether the gap was due to missing skills, poor phrasing, or formatting errors.</li>
+                </ul>
+              </div>
+              <div class="cs-box cs-box--solution">
+                <h4>✓ The HireFit Engineering Approach</h4>
+                <ul>
+                  <li><strong>Zero-Fabrication Architecture:</strong> Hard-coded prompt constraints that strictly forbid hallucinating employers, credentials, or metrics.</li>
+                  <li><strong>6-Category Multi-Dimensional Match Engine:</strong> Algorithmic scoring of Skills, Experience, Keywords, Responsibilities, Education, and ATS Readiness.</li>
+                  <li><strong>Structure-Preserving JSON Schema:</strong> Extracted resumes retain their precise section hierarchies, chronological orders, and formatting integrity.</li>
+                  <li><strong>Interactive Before/After Diff Inspector:</strong> Visual review pane enabling users to accept, reject, or fine-tune individual AI suggestions before committing.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Solution -->
+          <section id="solution" class="cs-section">
+            <span class="cs-section-num">03</span>
+            <h2 class="cs-section-title">The Solution Developed</h2>
+            <p class="cs-prose">
+              HireFit combines robust MERN-stack engineering with modern large language model integration to provide a comprehensive, transparent career optimization platform:
+            </p>
+
+            <div class="cs-feature-grid">
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📁</span>
+                <h3 class="cs-feature-title">CV Document Library</h3>
+                <p class="cs-feature-desc">Upload and manage multiple resume versions (.pdf, .docx up to 10MB) with Cloudinary cloud storage, local fallbacks, and safe cascade deletion.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">⚙️</span>
+                <h3 class="cs-feature-title">Multi-Format Text Extraction</h3>
+                <p class="cs-feature-desc">Native parsing pipeline utilizing <code style="font-size:0.85rem;">pdf-parse</code> and <code style="font-size:0.85rem;">mammoth</code> with scanned PDF detection and clear user guidance.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">🎯</span>
+                <h3 class="cs-feature-title">Evidence-Based Match Scoring</h3>
+                <p class="cs-feature-desc">Categorizes requirements as Matched, Partial Match, or Not Evidenced—avoiding negative assumptions while highlighting concrete gaps.</p>
+              </div>
+              <div class="cs-feature-card">
+                <span class="cs-feature-icon">📄</span>
+                <h3 class="cs-feature-title">ATS-Conscious PDF Export</h3>
+                <p class="cs-feature-desc">Three professionally engineered templates (Modern Professional, Minimal ATS, Executive) with client-side print-ready PDF compilation.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Features -->
+          <section id="features" class="cs-section">
+            <span class="cs-section-num">04</span>
+            <h2 class="cs-section-title">Core Implemented Capabilities</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>Interactive CV Diff Editor:</strong> Visual side-by-side comparison showing proposed changes, the specific AI rationale, and granular controls to accept, decline, or manually adjust each edit.</li>
+                <li><strong>Role-Specific Cover Letter Studio:</strong> Generates tailored, concise cover letters derived exclusively from verified CV experience with selectable tones (Confident, Professional, Technical).</li>
+                <li><strong>AI Interview Coach &amp; STAR Blueprints:</strong> Synthesizes tailored interview questions categorized into Technical, Behavioral, and CV-Specific questions, complete with STAR (Situation, Task, Action, Result) talking-point frameworks.</li>
+                <li><strong>Integrated Application Tracker:</strong> Kanban-style application pipeline tracking submissions across <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">Saved</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">Applied</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">Interview</code>, <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">Offer</code>, and <code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">Rejected</code> statuses linked to tailored CV snapshots.</li>
+                <li><strong>Granular Role-Based Access:</strong> User accounts for candidates and administrative portals with system-wide telemetry on parsed CVs and average match scores.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5: Architecture -->
+          <section id="architecture" class="cs-section">
+            <span class="cs-section-num">05</span>
+            <h2 class="cs-section-title">System Architecture &amp; Data Pipeline</h2>
+            <p class="cs-prose">
+              The application couples a modular Express backend with LLM orchestration pipelines:
+            </p>
+
+            <div class="cs-arch-box">
+              <div class="cs-arch-header">
+                <span class="cs-arch-title">HireFit Full-Stack AI Architecture</span>
+                <span style="font-size:0.8rem; color:#A3A3A3; font-family: monospace;">React + Node + LLM Pipeline</span>
+              </div>
+              <div class="cs-arch-flow">
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Client App</span>
+                  <div class="cs-tier-desc">React.js SPA with Pure CSS styling, custom diff comparison components, HTML2PDF document generator, and reactive form state managers.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Document Engine</span>
+                  <div class="cs-tier-desc">Multer file stream $\rightarrow$ MIME validator $\rightarrow$ <code style="color:#FFC107;">pdf-parse</code> / <code style="color:#FFC107;">mammoth</code> extraction $\rightarrow$ Cloudinary raw document bucket $\rightarrow$ text normalization pipeline.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">AI Orchestration</span>
+                  <div class="cs-tier-desc">Centralized LLM adapter (Gemini API / OpenAI SDK compatible) with JSON-schema output enforcement, prompt injection safeguards, and rule-based fallback handlers.</div>
+                </div>
+                <div class="cs-flow-tier">
+                  <span class="cs-tier-name">Database Layer</span>
+                  <div class="cs-tier-desc">MongoDB with Mongoose. Schemas: <code style="color:#FFC107;">User</code>, <code style="color:#FFC107;">Resume</code>, <code style="color:#FFC107;">JobAnalysis</code>, <code style="color:#FFC107;">OptimizationSnapshot</code>, <code style="color:#FFC107;">ApplicationTracker</code>.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Contributions -->
+          <section id="contributions" class="cs-section">
+            <span class="cs-section-num">06</span>
+            <h2 class="cs-section-title">My Technical Contributions</h2>
+            <div class="cs-prose">
+              <ul>
+                <li><strong>AI Prompt Engineering &amp; Guardrails:</strong> Authored zero-fabrication system prompts and structured output schemas ensuring the AI never invents phantom experiences.</li>
+                <li><strong>Document Processing Pipeline:</strong> Implemented resilient text extraction supporting complex multi-column PDFs, tables, and Word documents up to 10MB.</li>
+                <li><strong>Interactive Diff &amp; Editor:</strong> Engineered the side-by-side diff UI allowing users to preview suggested phrasing improvements before writing back to the document model.</li>
+                <li><strong>Export &amp; Print Stylesheet:</strong> Created print-optimized CSS (<code style="background:#f1f5f9; padding:2px 4px; border-radius:3px;">@media print</code>) and integrated client-side PDF generation for 3 ATS-conscious resume formats.</li>
+                <li><strong>Backend &amp; Database Architecture:</strong> Designed MongoDB models, JWT authentication, and Cloudinary cascade file asset cleanup.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Stack -->
+          <section id="stack" class="cs-section">
+            <span class="cs-section-num">07</span>
+            <h2 class="cs-section-title">Technology Stack</h2>
+            <div class="cs-tech-grid">
+              <span class="cs-tech-pill">React.js</span>
+              <span class="cs-tech-pill">Node.js</span>
+              <span class="cs-tech-pill">Express.js</span>
+              <span class="cs-tech-pill">MongoDB Atlas</span>
+              <span class="cs-tech-pill">Gemini API / LLM</span>
+              <span class="cs-tech-pill">pdf-parse</span>
+              <span class="cs-tech-pill">mammoth (.docx)</span>
+              <span class="cs-tech-pill">Cloudinary API</span>
+              <span class="cs-tech-pill">HTML2PDF.js</span>
+              <span class="cs-tech-pill">JWT &amp; Bcryptjs</span>
+              <span class="cs-tech-pill">Pure CSS3</span>
+            </div>
+          </section>
+
+          <!-- Section 8: Decisions -->
+          <section id="decisions" class="cs-section">
+            <span class="cs-section-num">08</span>
+            <h2 class="cs-section-title">Engineering Decisions &amp; Ethical AI Design</h2>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">1. The Zero-Fabrication Directive</span>
+                <span class="cs-decision-badge">Ethical Engineering</span>
+              </div>
+              <p class="cs-decision-text">
+                Many AI resume tools hallucinate credentials to inflate match scores. When candidates are interviewed, these false claims collapse. In HireFit, I designed the system prompt to explicitly restrict the AI from introducing unverified companies, titles, degrees, or quantitative results. The AI is limited to restructuring real bullet points with stronger action verbs, highlighting genuine keywords, and clarifying context.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">2. 'Not Evidenced' vs. 'Missing Skill' Taxonomy</span>
+                <span class="cs-decision-badge">UX Decision</span>
+              </div>
+              <p class="cs-decision-text">
+                Traditional match engines tell candidates "You lack skill X". However, candidates often possess skills that simply were not written down. HireFit frames these as "Not Evidenced in CV", guiding candidates to add the experience if they possess it, or focus their cover letter on how they plan to acquire it.
+              </p>
+            </div>
+
+            <div class="cs-decision-card">
+              <div class="cs-decision-header">
+                <span class="cs-decision-title">3. Hybrid Cloud &amp; Disk Storage Resilience</span>
+                <span class="cs-decision-badge">Reliability</span>
+              </div>
+              <p class="cs-decision-text">
+                To guarantee zero downtime even during third-party cloud API outages, document uploads utilize a dual-path pipeline: uploading raw assets to Cloudinary while maintaining a secure disk fallback with automatic retry queues.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9: Impact -->
+          <section id="impact" class="cs-section">
+            <span class="cs-section-num">09</span>
+            <h2 class="cs-section-title">Impact &amp; Operational Value</h2>
+            <p class="cs-prose">
+              HireFit transforms the resume tailoring experience from an agonizing, hours-long chore into an empowering, evidence-based process completed in minutes. By maintaining honesty and factual accuracy at its core, it gives job seekers the confidence that their application accurately reflects their abilities while maximizing technical visibility in ATS screening systems.
+            </p>
+
+            <div class="cs-metrics-grid">
+              <div class="cs-metric-card">
+                <div class="cs-metric-num highlight">6</div>
+                <div class="cs-metric-label">Scoring Dimensions</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">0</div>
+                <div class="cs-metric-label">Fabricated Facts Allowed</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">3</div>
+                <div class="cs-metric-label">ATS PDF Templates</div>
+              </div>
+              <div class="cs-metric-card">
+                <div class="cs-metric-num">10MB</div>
+                <div class="cs-metric-label">Max File Upload Capacity</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 10: Links -->
+          <section id="links" class="cs-section">
+            <span class="cs-section-num">10</span>
+            <h2 class="cs-section-title">Project Links &amp; References</h2>
+            <div class="cs-prose">
+              <p>
+                HireFit has been validated through live demonstration deployments and local testing harnesses.
+              </p>
+            </div>
+
+            <div class="cs-meta-grid" style="margin-top: 1.5rem;">
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Code Repositories</span>
+                <span class="cs-meta-value">Clean decoupled workspace (<code style="color:#FFC107;">client/</code> &amp; <code style="color:#FFC107;">server/</code>)</span>
+              </div>
+              <div class="cs-meta-item">
+                <span class="cs-meta-label">Deployment Architecture</span>
+                <span class="cs-meta-value">Vercel (React Frontend) &amp; Render (Node Backend)</span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Navigation -->
+  <section class="cs-nav-footer">
+    <div class="container">
+      <div class="cs-nav-grid">
+        <a href="tickza.html" class="cs-nav-card prev">
+          <span class="cs-nav-dir">← Previous Project</span>
+          <span class="cs-nav-name">Tickza Event Ticketing Infrastructure</span>
+        </a>
+        <a href="schoolmeg.html" class="cs-nav-card next">
+          <span class="cs-nav-dir">Next Project →</span>
+          <span class="cs-nav-name">SchoolMeg School Management System</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Abimbola Samuel</div>
+          <div class="footer__brand-title">Full-Stack Web Developer · Digital Technologist</div>
+          <div class="footer__tagline">I don't just build websites. I build digital systems that solve real problems.</div>
+        </div>
+        <div>
+          <span class="footer__col-heading">Case Studies</span>
+          <nav class="footer__nav" aria-label="Projects navigation">
+            <a href="tickza.html">Tickza (Event Commerce)</a>
+            <a href="campusmart.html">CampusMart (Marketplace)</a>
+            <a href="hirefit.html">HireFit (AI HR Tech)</a>
+            <a href="schoolmeg.html">SchoolMeg (School ERP)</a>
+            <a href="pbat-koh.html">PBAT-KOH (Mobilisation)</a>
+          </nav>
+        </div>
+        <div>
+          <span class="footer__col-heading">Connect</span>
+          <div class="footer__socials">
+            <a href="https://github.com/Psalmstrings/" class="footer__social-link" target="_blank" rel="noopener">→ GitHub</a>
+            <a href="https://wa.me/message/IAFOOBWCOL4VO1" class="footer__social-link" target="_blank" rel="noopener">→ WhatsApp</a>
+            <a href="https://x.com/psalmstrings_" class="footer__social-link" target="_blank" rel="noopener">→ X / Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Abimbola Samuel. All rights reserved.</span>
+        <span class="footer__copy-right">Designed &amp; Engineered by Abimbola Samuel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.cs-section');
+    const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
