@@ -24,18 +24,35 @@
   <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
 
   <!-- Navbar -->
+    <!-- Navbar -->
   <header class="navbar scrolled" id="navbar" role="banner">
     <div class="container navbar__inner">
       <a href="../index.html" class="navbar__logo" aria-label="Abimbola Samuel — Go to portfolio">
-        ABIMBOLA SAMUEL
+        <span class="navbar__logo-title">ABIMBOLA SAMUEL</span>
+        <span class="navbar__logo-subtitle">Case Study</span>
       </a>
+
+      <!-- Desktop & Mobile Nav Drawer -->
       <nav class="navbar__nav" id="navbar-nav" role="navigation" aria-label="Case study navigation">
-        <a href="../index.html#work">Selected Work</a>
-        <a href="../index.html#expertise">Expertise</a>
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#contact">Contact</a>
+        <a href="../index.html#home" class="navbar__link">Home</a>
+        <a href="../index.html#projects" class="navbar__link">Projects</a>
+        <a href="../index.html#expertise" class="navbar__link">Expertise</a>
+        <a href="../index.html#about" class="navbar__link">About</a>
+        <a href="../index.html#contact" class="navbar__link">Contact</a>
+        <a href="../index.html#projects" class="btn btn--primary navbar__mobile-cta">← All Projects</a>
       </nav>
-      <a href="../index.html#work" class="navbar__cta">← All Projects</a>
+
+      <!-- Desktop Actions -->
+      <div class="navbar__actions">
+        <a href="../index.html#projects" class="btn btn--primary navbar__cta">← All Projects</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -386,25 +403,49 @@
     </div>
   </footer>
 
-  <script>
+    <script>
+    'use strict';
+
+    // Mobile Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navbarNav = document.getElementById('navbar-nav');
+    if (hamburger && navbarNav) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = navbarNav.classList.toggle('open');
+        hamburger.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navbarNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navbarNav.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Smooth active state for TOC links on scroll
     const sections = document.querySelectorAll('.cs-section');
     const tocLinks = document.querySelectorAll('.cs-toc-link');
 
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const top = section.offsetTop - 120;
-        if (window.scrollY >= top) {
-          current = section.getAttribute('id');
-        }
-      });
-      tocLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    }, { passive: true });
+    if (sections.length > 0 && tocLinks.length > 0) {
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const top = section.offsetTop - 120;
+          if (window.scrollY >= top) {
+            current = section.getAttribute('id');
+          }
+        });
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }, { passive: true });
+    }
   </script>
 </body>
 </html>
